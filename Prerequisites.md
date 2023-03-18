@@ -10,3 +10,7 @@
 <p>You&apos;ll need to have the PostgreSQL development headers installed on your system in order to write an extension. These headers provide the necessary interfaces for communicating with PostgreSQL and are typically included with the PostgreSQL installation. Make sure you have the appropriate version of the headers for your PostgreSQL installation.</p>
 <h3>5. PostgreSQL Server Configuration</h3>
 <p>Finally, you&apos;ll need to make sure that your PostgreSQL server is configured to allow the installation and use of extensions. This typically involves setting the <code>shared_preload_libraries</code> configuration parameter to the name of your extension and restarting the PostgreSQL server. Consult the PostgreSQL documentation for more information on configuring extensions.</p>
+<h3>6. Make and GCC (for C/C++ extensions):</h3>
+<p>If you plan to write your extension in C or C++, you will need to have the make and GCC (GNU Compiler Collection) utilities installed on your system.</p>
+<h3>7. Knowledge of the extension API:</h3>
+<p>In order to write a PostgreSQL extension, you need to have a good understanding of the PostgreSQL extension API. This includes knowing how to define functions, types, and operators, and how to handle errors.</p>

@@ -22,7 +22,7 @@ https://www.percona.com/blog/writing-postgresql-extensions-is-fun-c-language/   
 http://big-elephants.com/2015-11/writing-postgres-extensions-part-v/   ->Writing Postgres Extensions Code<br>
 https://www.highgo.ca/2019/10/01/a-guide-to-create-user-defined-extension-modules-to-postgres/    ->Writing Postgres Extensions<br>
 https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no   ->Writing in C Language<br>
-https://postgreshelp.com/postgresql-extension/                         ->PostgreSQL Extension – Master Note<br>
+https://postgreshelp.com/postgresql-extension/                         ->PostgreS Extension – Master Note<br>
 
 
 <h3>Blogs</h3>

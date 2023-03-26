@@ -2,7 +2,7 @@
 
 <p>Extensions are a loaded set of functions. They enable additional functionality based on the needs of your application. 
 Extentions help Postgres extend beyond Core PostgreSTL funtionality and are easy ti use and develop.</p>
-<h3>Minimum Requirements for an Extention</h3>
+<h3>Minimum Requirements for an Extention Development:</h3>
 <ul>
   <li> Requires a control file
   <li> Requires a script of SQL commands with funtion definitions

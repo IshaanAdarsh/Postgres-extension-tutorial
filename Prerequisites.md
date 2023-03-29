@@ -13,4 +13,4 @@
 <h3>6. Make and GCC (for C/C++ extensions):</h3>
 <p>If you plan to write your extension in C or C++, you will need to have the make and GCC (GNU Compiler Collection) utilities installed on your system.</p>
 <h3>7. Knowledge of the extension API:</h3>
-<p>In order to write a PostgreSQL extension, you need to have a good understanding of the PostgreSQL extension API. This includes knowing how to define functions, types, and operators, and how to handle errors.</p>
+<p>In order to write a PostgreSQL extension, you need to have a good understanding of the PostgreSQL extension API. This includes knowing how to define functions, types, and operators, and how to handle errors. </p>

@@ -4,7 +4,7 @@
             <li>The first phase of the project will involve planning and scoping the work required. This will involve a detailed review of the existing documentation for the Postgres extension system and identifying areas that need improvement. We will also identify the programming languages and tools required for the project, as well as any dependencies or third-party libraries needed.</li>
         </ol>
     </li>
-    <li><h3>Development Phase:</h3><ol>
+    <li><h3>Development Phase: </h3><ol>
             <li>The development phase will involve creating the tutorial and sample code, as well as the testing framework for Postgres extensions. The tutorial will be written in clear and concise language and structured in a way that is easy for developers to follow. Sample code will be provided for each topic covered in the tutorial, demonstrating best practices for extension development. The testing framework will be designed to allow developers to easily create and run regression tests for their extensions.</li>
         </ol>
     </li>

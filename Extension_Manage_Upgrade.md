@@ -17,4 +17,4 @@
     <li>Document upgrade procedures: Document the steps required to upgrade your extension, including any dependencies or prerequisites.</li>
 </ol>
 <p style="margin: 0cm;font-size: medium;font-family: Calibri, sans-serif;color: rgb(0, 0, 0);font-style: normal;font-weight: 400;text-align: start;text-indent: 0px;text-decoration: none;">&nbsp;</p>
-<p style="margin: 0cm;font-size: medium;font-family: Calibri, sans-serif;color: rgb(0, 0, 0);font-style: normal;font-weight: 400;text-align: start;text-indent: 0px;text-decoration: none;">By following these guidelines, you can make your PostgreSQL extension easy to upgrade and maintain for your users.</p>
+<p style="margin: 0cm;font-size: medium;font-family: Calibri, sans-serif;color: rgb(0, 0, 0);font-style: normal;font-weight: 400;text-align: start;text-indent: 0px;text-decoration: none;"> By following these guidelines, you can make your PostgreSQL extension easy to upgrade and maintain for your users.</p>

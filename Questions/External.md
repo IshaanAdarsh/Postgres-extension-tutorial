@@ -13,21 +13,19 @@
 <p>&nbsp;</p>
 <p>For example, here's a simple function written in Python that returns the sum of two integers:</p>
 <p>&nbsp;</p>
-
-<code><p><em>import psycopg2</em></p></code>
-<code><p><em>def my_sum(a, b):</em></p></code>
-<code><p><em>&nbsp;&nbsp;&nbsp;&nbsp;conn = psycopg2.connect("dbname=mydb user=myuser")</em></p></code>
-<code><p><em>&nbsp;&nbsp;&nbsp;&nbsp;cur = conn.cursor()</em></p></code>
-<code><p><em>&nbsp;&nbsp;&nbsp;&nbsp;cur.execute("SELECT %s + %s", (a, b))</em></p></code>
-<code><p><em>&nbsp;&nbsp;&nbsp;&nbsp;result = cur.fetchone()[0]</em></p></code>
-<code><p><em>&nbsp;&nbsp;&nbsp;&nbsp;cur.close()</em></p></code>
-<code><p><em>&nbsp;&nbsp;&nbsp;&nbsp;conn.close()</em></p></code>
-<code><p><em>&nbsp;&nbsp;&nbsp;&nbsp;return result</em></p></code>
+<p><em><code>import psycopg2</code></em></p>
+<p><em><code>def my_sum(a, b):</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;<code>conn = psycopg2.connect("dbname=mydb user=myuser")</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;<code>cur = conn.cursor()</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;<code>cur.execute("SELECT %s + %s", (a, b))</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;<code>result = cur.fetchone()[0]</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;<code>cur.close()</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;<code>conn.close()</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;<code>return result</code></em></p>
 <p>&nbsp;</p>
 <ol>
 <li>Build the extension: In your extension's Makefile, include the necessary files and libraries for your external language. For example, to include Python:</li>
 </ol>
-<p>&nbsp;</p>
 <code>
 <p><em>MODULES = myextension</em></p>
 <p><em>DATA = myextension--1.0.sql</em></p>

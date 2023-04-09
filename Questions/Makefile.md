@@ -3,27 +3,22 @@
 <p>In the context of a PostgreSQL extension, a Makefile should describe how to build and install the extension, as well as any other components required for the extension to function.</p>
 <h2>How to Write a Makefile for a PostgreSQL Extension</h2>
 <p>Here's an example Makefile for a simple PostgreSQL extension written in C:</p>
-<p>&nbsp;</p>
-<p><em>MODULES = myextension</em></p>
-<p><em>DATA = myextension--1.0.sql</em></p>
-<p><em>PG_CONFIG = pg_config</em></p>
-<p><em>PGXS := $(shell $(PG_CONFIG) --pgxs)</em></p>
-<p><em>include $(PGXS)</em></p>
-<p><em>&nbsp;</em></p>
-<p><em>all: myextension.so</em></p>
-<p><em>&nbsp;</em></p>
-<p><em>myextension.so: myextension.o</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)</em></p>
-<p><em>&nbsp;</em></p>
-<p><em>myextension.o: myextension.c</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $&lt;</em></p>
+<p><em><code>MODULES = myextension</code></em></p>
+<p><em><code>DATA = myextension--1.0.sql</code></em></p>
+<p><em><code>PG_CONFIG = pg_config</code></em></p>
+<p><em><code>PGXS := $(shell $(PG_CONFIG) --pgxs)</code></em></p>
+<p><em><code>include $(PGXS)</code></em></p>
+<p><em><code>all: myextension.so</code></em></p>
+<p><em><code>myextension.so: myextension.o</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS)</code></em></p>
+<p><em><code>myextension.o: myextension.c</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $&lt;</code></em></p>
 <p><em>&nbsp;</em></p>
 <p><em>install: all</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(PGXS) install</em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(PGXS) install</code></em></p>
 <p><em>&nbsp;</em></p>
 <p><em>uninstall:</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(PGXS) uninstall</em></p>
-<p>&nbsp;</p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(PGXS) uninstall</code></em></p>
 <p>&nbsp;</p>
 <p>Let's break down each part of this Makefile:</p>
 <ul>
@@ -39,6 +34,5 @@
 <li><strong>uninstall</strong>: This target uninstalls the extension from the PostgreSQL installation directory.</li>
 </ul>
 <p>To build and install the extension, simply run the following commands in the directory containing the Makefile:</p>
-<p>&nbsp;</p>
-<p><em>$ make</em></p>
-<p><em>$ make install</em></p>
+<p><em><code>$ make</code></em></p>
+<p><em><code>$ make install</code></em></p>

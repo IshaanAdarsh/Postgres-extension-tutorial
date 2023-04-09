@@ -26,27 +26,21 @@
 <ol>
 <li>Build the extension: In your extension's Makefile, include the necessary files and libraries for your external language. For example, to include Python:</li>
 </ol>
-<code>
-<p><em>MODULES = myextension</em></p>
-<p><em>DATA = myextension--1.0.sql</em></p>
-<p><em>PG_CONFIG = pg_config</em></p>
-<p><em>PGXS := $(shell $(PG_CONFIG) --pgxs)</em></p>
-<p><em>REGRESS = myextension_test</em></p>
-<p><em>DOCS = README.md</em></p>
-<p><em>PYTHON_INCLUDE = /usr/include/python3.9</em></p>
-<p><em>PYTHON_LIB = /usr/lib/x86_64-linux-gnu/libpython3.9.so</em></p>
-<p><em>SHLIB_LINK += -lpython3.9</em></p>
-<p><em>include $(PGXS)</em></p>
-<p><em>&nbsp;</em></p>
-<p><em>myextension.so: myextension.o</em></p>
-<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS) $(PYTHON_LIB)</em></p>
-</code>
-<p>&nbsp;</p>
+<p><em><code>MODULES = myextension</code></em></p>
+<p><em><code>DATA = myextension--1.0.sql</code></em></p>
+<p><em><code>PG_CONFIG = pg_config</code></em></p>
+<p><em><code>PGXS := $(shell $(PG_CONFIG) --pgxs)</code></em></p>
+<p><em><code>REGRESS = myextension_test</code></em></p>
+<p><em><code>DOCS = README.md</code></em></p>
+<p><em><code>PYTHON_INCLUDE = /usr/include/python3.9</code></em></p>
+<p><em><code>PYTHON_LIB = /usr/lib/x86_64-linux-gnu/libpython3.9.so</code></em></p>
+<p><em><code>SHLIB_LINK += -lpython3.9</code></em></p>
+<p><em><code>include $(PGXS)</code></em></p>
+<p><em><code>myextension.so: myextension.o</code></em></p>
+<p><em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^ $(LIBS) $(PYTHON_LIB)</code></em></p>
 <ol>
 <li>Test the function: After building and installing the extension, you can test your function using the&nbsp;<strong>SELECT</strong>&nbsp;command. For example:</li>
 </ol>
-<code>
-<p><em>SELECT my_sum(1, 2);</em></p>
-</code>
+<p><em><code>SELECT my_sum(1, 2);</code></em></p>
 <p>&nbsp;</p>
 <p>This should return the value&nbsp;<code><strong>3</strong></code>.</p>

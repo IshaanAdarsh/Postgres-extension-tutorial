@@ -7,10 +7,10 @@
 <h2>How Does PGXN Work?</h2>
 <p>To use PGXN, you'll need to install the&nbsp;<code><strong>pgxnclient</strong></code>&nbsp;command-line tool. You can do this using the following command:</p>
 <p>&nbsp;</p>
-<code>
-<p><em>$ sudo apt-get install pgxnclient # for Debian/Ubuntu</em></p>
-<p><em>$ sudo yum install pgxnclient # for CentOS/Fedora</em></p>
-</code>
+
+<p><em><code>$ sudo apt-get install pgxnclient # for Debian/Ubuntu</code></em></p>
+<p><em><code>$ sudo yum install pgxnclient # for CentOS/Fedora</code></em></p>
+
 <p>&nbsp;</p>
 <p>Once you have&nbsp;<code><strong>pgxnclient&nbsp;</strong></code>installed, you can use it to search for and download extensions. For example, to search for extensions related to JSON, you can use the following command:</p>
 <p>&nbsp;</p>

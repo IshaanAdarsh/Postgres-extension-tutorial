@@ -13,20 +13,12 @@
 
 <p>&nbsp;</p>
 <p>Once you have&nbsp;<code><strong>pgxnclient&nbsp;</strong></code>installed, you can use it to search for and download extensions. For example, to search for extensions related to JSON, you can use the following command:</p>
-<p>&nbsp;</p>
-<code>
-<p><em>$ pgxnclient search json</em></p>
-</code>
+<p><em><code>$ pgxnclient search json</code></em></p>
 <p>&nbsp;</p>
 <p>This will return a list of extensions related to JSON. You can then use the&nbsp;<code><strong>install</strong></code>&nbsp;command to download and install an extension. For example, to install the&nbsp;<code><strong>pgjwt&nbsp;</strong></code>extension for working with JSON Web Tokens, you can use the following command:</p>
-<p>&nbsp;</p>
-<code>
-<p><em>$ pgxnclient install pgjwt</em></p>
-</code>
+<p><em><code>$ pgxnclient install pgjwt</code></em></p>
 <p>&nbsp;</p>
 <p>This will download and install the&nbsp;<strong>pgjwt</strong>&nbsp;extension, making it available for use in your PostgreSQL database.</p>
 <p>Once you've installed an extension, you can load it into your database using the&nbsp;<code><strong>CREATE EXTENSION</strong></code> command. For example, to load the&nbsp;<code><strong>pgjwt</strong></code>&nbsp;extension, you can use the following SQL command:</p>
-<p>&nbsp;</p>
-<code>
-<p><em>CREATE EXTENSION pgjwt;</em></p>
-</code>
+<p><em><code>CREATE EXTENSION pgjwt;</code></em></p>
+

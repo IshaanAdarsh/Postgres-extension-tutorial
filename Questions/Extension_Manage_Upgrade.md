@@ -7,7 +7,7 @@
 <li>Publish releases: Publish releases of your extension on a repository or download site, along with the release notes and changelog.</li>
 <li>Notify users: Notify users of new releases via email, social media, or other communication channels.</li>
 </ol>
-<h2>Extension Upgradability</h2>
+<h2>Extension Upgradability </h2>
 <p>To make your PostgreSQL extension upgradable, you should follow these guidelines:</p>
 <ol>
 <li>Maintain backward compatibility: Avoid making breaking changes to your extension's API or behaviour. If you need to make a breaking change, provide a migration guide or tool to help users upgrade.</li>

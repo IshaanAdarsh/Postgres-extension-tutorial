@@ -1,5 +1,5 @@
 <h2>Prerequisites for Writing an Extension</h2>
-<p>Before you can start writing a PostgreSQL extension, you&apos;ll need to make sure you have the following prerequisites in place:</p>
+<p>Before you can start writing a PostgreSQL extension, you&apos;ll need to make sure you have the following prerequisites in place: </p>
 
 <h3>1. PostgreSQL</h3>
 <p>First and foremost, you&apos;ll need to have PostgreSQL installed on your system. You can download the latest version of PostgreSQL from the official website at <a href="https://www.postgresql.org/download/" target="_new">postgresql.org</a>.</p>

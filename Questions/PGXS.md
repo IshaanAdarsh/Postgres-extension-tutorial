@@ -4,7 +4,7 @@
 <p><strong>Do I Need PGXS?</strong></p>
 <p>If you're building a simple PostgreSQL extension that consists of just one or a few source files, you may be able to build it without using PGXS. However, for more complex extensions that include multiple files and dependencies, PGXS can make the process much easier.</p>
 <p>In general, if you're building a PostgreSQL extension in C, you should consider using PGXS.</p>
-<p><strong>How Does PGXS Work? </strong></p>
+<p><strong>How Does PGXS Work?</strong></p>
 <p>To use PGXS, you'll need to create a Makefile for your extension that includes the appropriate PGXS rules. Here's an example Makefile:</p>
 <p><em><code>MODULES = myext</code></em></p>
 <p><em><code>PG_CONFIG = pg_config</code></em></p>

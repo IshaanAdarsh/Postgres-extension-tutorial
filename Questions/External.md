@@ -11,7 +11,7 @@
 <li>Write the function: Write a function in your external language that performs the desired operation. This function should communicate with the database using the appropriate communication protocol.&nbsp;</li>
 </ol>
 <p>&nbsp;</p>
-<p>For example, here's a simple function written in Python that returns the sum of two integers:</p>
+<p>For example, here's a simple function written in Python that returns the sum of two integers: </p>
 <p>&nbsp;</p>
 <p><em><code>import psycopg2</code></em></p>
 <p><em><code>def my_sum(a, b):</code></em></p>

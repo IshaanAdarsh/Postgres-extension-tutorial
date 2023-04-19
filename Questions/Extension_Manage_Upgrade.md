@@ -8,7 +8,7 @@
 <li>Notify users: Notify users of new releases via email, social media, or other communication channels.</li>
 </ol>
 <h2>Extension Upgradability </h2>
-<p>To make your PostgreSQL extension upgradable, you should follow these guidelines:</p>
+<p>To make your PostgreSQL extension upgradable, you should follow these guidelines: </p>
 <ol>
 <li>Maintain backward compatibility: Avoid making breaking changes to your extension's API or behaviour. If you need to make a breaking change, provide a migration guide or tool to help users upgrade.</li>
 <li>Use semantic versioning: Use semantic versioning to indicate the nature of changes made in each release. This helps users understand the impact of a new release on their systems.</li>

@@ -4,7 +4,7 @@
 <h3>1. PostgreSQL</h3>
 <p>First and foremost, you&apos;ll need to have PostgreSQL installed on your system. You can download the latest version of PostgreSQL from the official website at <a href="https://www.postgresql.org/download/" target="_new">postgresql.org</a>.</p>
 
-<h3>2. Target Language</h3>
+<h3>2. Target Language </h3>
 <p>You&apos;ll also need to have knowledge of the programming language you&apos;re planning to use for your extension. PostgreSQL supports a wide range of programming languages, including C, C++, Java, Python, and more. Choose a language that you&apos;re comfortable with and that&apos;s appropriate for your extension&apos;s purpose.</p>
 
 <h3>3. Build Tools</h3>

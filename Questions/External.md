@@ -8,7 +8,7 @@
 </ol>
 <p>&nbsp;</p>
 <ol>
-<li>Write the function: Write a function in your external language that performs the desired operation. This function should communicate with the database using the appropriate communication protocol.&nbsp;</li>
+<li>Write the function: Write a function in your external language that performs the desired operation. This function should communicate with the database using the appropriate communication protocol. &nbsp;</li>
 </ol>
 <p>&nbsp;</p>
 <p>For example, here's a simple function written in Python that returns the sum of two integers: </p>

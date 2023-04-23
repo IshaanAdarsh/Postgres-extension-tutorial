@@ -5,7 +5,7 @@
 <p>If you're building a PostgreSQL database and need to add functionality beyond what is included in the core PostgreSQL distribution, you may want to consider using PGXN to find and install extensions.</p>
 <p>PGXN provides a convenient and centralized repository of PostgreSQL extensions, making it easy to discover and download the extensions you need. However, if you're already familiar with a specific extension and know where to find it, you may not need to use PGXN.</p>
 <h2>How Does PGXN Work?</h2>
-<p>To use PGXN, you'll need to install the&nbsp;<code><strong>pgxnclient</strong></code>&nbsp;command-line tool. You can do this using the following command:</p>
+<p>To use PGXN, you'll need to install the&nbsp;<code><strong>pgxnclient</strong></code>&nbsp;command-line tool. You can do this using the following command: </p>
 <p>&nbsp;</p>
 
 <p><em><code>$ sudo apt-get install pgxnclient # for Debian/Ubuntu</code></em></p>

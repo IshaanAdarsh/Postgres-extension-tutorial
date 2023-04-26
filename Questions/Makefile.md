@@ -1,7 +1,7 @@
 <h2>What is a Makefile?</h2>
 <p>A Makefile is a build automation tool that can help you compile, link, and package your code. Makefiles typically consist of a set of rules that describe how to build different components of your software.</p>
 <p>In the context of a PostgreSQL extension, a Makefile should describe how to build and install the extension, as well as any other components required for the extension to function. </p>
-<h2>How to Write a Makefile for a PostgreSQL Extension</h2>
+<h2>How to Write a Makefile for a PostgreSQL Extension </h2>
 <p>Here's an example Makefile for a simple PostgreSQL extension written in C:</p>
 <p><em><code>MODULES = myextension</code></em></p>
 <p><em><code>DATA = myextension--1.0.sql</code></em></p>

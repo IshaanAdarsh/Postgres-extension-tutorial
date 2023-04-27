@@ -6,7 +6,7 @@
 <ul>
 <li><strong><em>Install the language:</em></strong>&nbsp;Use the&nbsp;<strong>CREATE LANGUAGE</strong>&nbsp;command to install the desired procedural language in your PostgreSQL database.&nbsp;</li>
 </ul>
-<p>For example, to install PL/Python:&nbsp;</p>
+<p>For example, to install PL/Python:&nbsp; </p>
 <p><em><code>CREATE LANGUAGE plpythonu;</code></em></p>
 <p>&nbsp;</p>
 <ul>

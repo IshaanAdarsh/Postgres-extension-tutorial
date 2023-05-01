@@ -1,7 +1,7 @@
 <h2>Extension Release Management</h2>
 <p>To manage releases of your PostgreSQL extension, you should follow these steps:</p>
 <ol>
-<li>Version your extension: Choose a version numbering scheme for your extension, such as<code><strong>major.minor.patch</strong></code>.&nbsp;For example,&nbsp;<code><strong>1.0.0</strong></code>&nbsp;would be the first major release,&nbsp;<code><strong>1.1.0</strong></code>&nbsp;would be a minor release with new features, and&nbsp;<code><strong>1.1.1</strong></code>&nbsp;would be a patch release with bug fixes.</li>
+<li>Version your extension: Choose a version numbering scheme for your extension, such as<code><strong>major.minor.patch</strong></code>.&nbsp;For example,&nbsp;<code><strong>1.0.0</strong></code>&nbsp;would be the first major release,&nbsp;<code><strong>1.1.0</strong></code>&nbsp;would be a minor release with new features, and&nbsp;<code><strong>1.1.1</strong></code>&nbsp;would be a patch release with bug fixes. </li>
 <li>Create release notes: Write release notes that describe the changes made in each release. This will help users understand what has changed and what they need to do to upgrade.</li>
 <li>Create a changelog: Create a changelog that documents all changes made to the extension, including bug fixes, new features, and deprecated functionality.</li>
 <li>Publish releases: Publish releases of your extension on a repository or download site, along with the release notes and changelog.</li>

@@ -1,5 +1,5 @@
 <h2>What are External Languages?</h2>
-<p>In addition to the procedural languages supported by PostgreSQL, you can also use external languages to write stored procedures, triggers, and other database objects. These languages are not built into PostgreSQL, but instead run in a separate process and communicate with the database using a communication protocol.</p>
+<p>In addition to the procedural languages supported by PostgreSQL, you can also use external languages to write stored procedures, triggers, and other database objects. These languages are not built into PostgreSQL, but instead run in a separate process and communicate with the database using a communication protocol. </p>
 <h2>How to Use External Languages for a PostgreSQL Extension</h2>
 <p>To use an external language in a PostgreSQL extension, you need to do the following:</p>
 <p>&nbsp;</p>

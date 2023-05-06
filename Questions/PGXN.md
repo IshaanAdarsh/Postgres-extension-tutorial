@@ -1,6 +1,6 @@
 <h2>What is PGXN?</h2>
 <p>PGXN stands for "PostgreSQL Extension Network". It is a community-driven repository of PostgreSQL extensions that makes it easy to discover, download, and install extensions for your PostgreSQL database.</p>
-<p>PGXN includes a web interface for browsing and searching extensions, as well as a command-line tool called <code><strong>pgxnclient</strong></code>&nbsp;for downloading and installing extensions.</p>
+<p>PGXN includes a web interface for browsing and searching extensions, as well as a command-line tool called <code><strong>pgxnclient</strong></code>&nbsp;for downloading and installing extensions. </p>
 <h2>Do I Need PGXN?</h2>
 <p>If you're building a PostgreSQL database and need to add functionality beyond what is included in the core PostgreSQL distribution, you may want to consider using PGXN to find and install extensions.</p>
 <p>PGXN provides a convenient and centralized repository of PostgreSQL extensions, making it easy to discover and download the extensions you need. However, if you're already familiar with a specific extension and know where to find it, you may not need to use PGXN.</p>

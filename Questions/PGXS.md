@@ -1,5 +1,5 @@
 <p><strong>What is PGXS?</strong></p>
-<p>PGXS stands for "PostgreSQL Extension Building Infrastructure". It is a set of Makefiles and scripts that simplify the process of building and installing PostgreSQL extensions.</p>
+<p>PGXS stands for "PostgreSQL Extension Building Infrastructure". It is a set of Makefiles and scripts that simplify the process of building and installing PostgreSQL extensions. </p>
 <p>PGXS is designed to work with the&nbsp;<code><strong>pg_config</strong></code>&nbsp;command, which is used to determine the configuration options and file locations for your PostgreSQL installation. By using PGXS, you can avoid the need to manually specify these options in your Makefile. </p>
 <p><strong>Do I Need PGXS?</strong></p>
 <p>If you're building a simple PostgreSQL extension that consists of just one or a few source files, you may be able to build it without using PGXS. However, for more complex extensions that include multiple files and dependencies, PGXS can make the process much easier.</p>

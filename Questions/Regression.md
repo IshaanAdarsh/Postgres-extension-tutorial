@@ -49,3 +49,4 @@
 <p>&nbsp;</p>
 <p>This will run all of the tests in your&nbsp;<code><strong>my_extension.sql</strong></code>&nbsp;file and report any failures.</p>
 <p>&nbsp;</p>
+<p>https://www.postgresql.org/docs/current/regress.html -> Regression Test</p>

@@ -7,6 +7,8 @@ https://www.postgresql.org/docs/15/xindex.html                         ->Interfa
 https://www.postgresql.org/docs/15/extend-extensions.html              ->Packaging Related Objects into an Extension<br>
 https://www.pgadmin.org/docs/pgadmin4/6.18/extension_dialog.html       ->PgAdmin (Docs)<br>
 https://www.postgresql.org/docs/15/extend-pgxs.html                    ->PGXS<br>
+https://www.postgresql.org/docs/current/extend.html                    ->Extensions<br>
+https://www.postgresql.org/docs/current/plpython.html                  ->PL/Python 
 
 <h3>3rd Party Sites:</h3>
 https://cloud.google.com/sql/docs/postgres/extensions                  ->Google Cloud (Configure PostgreSQL extensions)<br>

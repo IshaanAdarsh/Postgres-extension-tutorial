@@ -15,8 +15,20 @@
 	<h2>Steps to create the extension</h2>
 	<ol>
 		<li>Create a new directory for your extension</li>
-    <pre><code>$ mkdir myextension
-$ cd myextension
-</code></pre>
+<pre><code>$ mkdir myextension
+$ cd myextension</code></pre>
+		<li>Create a new file called myextension.control:</li>
+<pre><code>$ touch myextension.control</code></pre>
+		<li>Edit the myextension.control file and add the following contents:</li>
+<pre><code>comment = 'My Postgres extension'
+default_version = '1.0'
+module_pathname = '$libdir/myextension'
+relocatable = true</pre></code>
+		<li>Create a new file called myextension.py:</li>
+<pre><code>$ touch myextension.py</code></pre>
+		
+		
 </body>
 </html>
+
+		

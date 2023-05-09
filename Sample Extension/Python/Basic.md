@@ -4,7 +4,7 @@
 	<h1>Sample Postgres Extension with Python</h1>
 	<p>To illustrate the concepts covered in the tutorial, a sample Postgres extension can be developed using Python. Below is a detailed description of the process:</p>
 <p>
-	<h2>Prerequisites</h2>
+	<h2>Prerequisites </h2>
 	<ul>
 		<li>Postgres installed on your machine</li>
 		<li>Python installed on your machine</li>

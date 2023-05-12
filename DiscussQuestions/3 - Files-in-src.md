@@ -79,8 +79,8 @@ myextension_add(PG_FUNCTION_ARGS)
 The PG_FUNCTION_INFO_V1() macro declares the function to PostgreSQL. The Datum type is the generic type for function results. The PG_GETARG_INT32() macro gets the argument at the specified position and casts it to an int32_t type. The PG_RETURN_INT32() macro returns the specified value as an int32_t type.
 Once you have written the C or C++ code, you need to compile it into a shared object file. 
 
-You can use the make command to compile your code.The following is an example of a Makefile that compiles the C code:
 
+You can use the make command to compile your code.The following is an example of a Makefile that compiles the C code:
 ```sql
 
 EXTENSION = myextension

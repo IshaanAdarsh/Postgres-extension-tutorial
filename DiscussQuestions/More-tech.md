@@ -1,0 +1,18 @@
+For novice programmers with just information about the PostgreSQL and target language in Postgres, there are a few additional technologies that can be used for extension creation. These technologies include:
+
+-   pgxn is a tool that can be used to create PostgreSQL extensions using the Go programming language. pgxn is a powerful tool that can be used to create extensions that are easy to use and maintain.
+-   pgx is a library that can be used to create PostgreSQL extensions using the Python programming language. pgx is a powerful library that can be used to create extensions that are easy to use and maintain.
+-   pgi is a library that can be used to create PostgreSQL extensions using the Java programming language. pgi is a powerful library that can be used to create extensions that are easy to use and maintain.
+-   Node-pg-extension is a tool that can be used to create PostgreSQL extensions using the Node.js programming language. Node-pg-extension is a powerful tool that can be used to create extensions that are easy to use and maintain.
+-   RPostgreSQL is a library that can be used to create PostgreSQL extensions using the R programming language. RPostgreSQL is a powerful library that can be used to create extensions that are easy to use and maintain.
+-   PDO_pgsql is a driver that can be used to create PostgreSQL extensions using the PHP programming language. PDO_pgsql is a powerful driver that can be used to create extensions that are easy to use and maintain.
+-   sqlx is a library that can be used to create PostgreSQL extensions using the Go programming language. sqlx is a powerful library that can be used to create extensions that are easy to use and maintain.
+-   psycopg2 is a driver that can be used to create PostgreSQL extensions using the Python programming language. psycopg2 is a powerful driver that can be used to create extensions that are easy to use and maintain.
+-   jOOQ is a framework that can be used to create PostgreSQL extensions using the Java programming language. jOOQ is a powerful framework that can be used to create extensions that are easy to use and maintain.
+-   pgspecial is a tool that can be used to create PostgreSQL extensions using the C programming language. pgspecial is a powerful tool that can be used to create extensions that are easy to use and maintain.
+-   pgxn-pgspecial is a tool that can be used to create PostgreSQL extensions using the Go programming language and the pgspecial tool. pgxn-pgspecial is a powerful tool that can be used to create extensions that are easy to use and maintain.
+-   pgx-pgspecial is a library that can be used to create PostgreSQL extensions using the Python programming language and the pgspecial tool. pgx-pgspecial is a powerful library that can be used to create extensions that are easy to use and maintain.
+-   pgi-pgspecial is a library that can be used to create PostgreSQL extensions using the Java programming language and the pgspecial tool. pgi-pgspecial is a powerful library that can be used to create extensions that are easy to use and maintain.
+-   pg_dump is a tool that can be used to create a backup of a PostgreSQL database. pg_dump can be used to create a backup of an extension, which can then be used to restore the extension on another PostgreSQL server.
+-   pg_restore is a tool that can be used to restore a backup of a PostgreSQL database. pg_restore can be used to restore an extension that was created using pg_dump.
+-   pg_upgrade is a tool that can be used to upgrade a PostgreSQL database from one version to another. pg_upgrade can be used to upgrade an extension that was created using pg_dump.

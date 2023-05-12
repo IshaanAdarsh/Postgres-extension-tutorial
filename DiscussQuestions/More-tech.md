@@ -16,3 +16,5 @@ For novice programmers with just information about the PostgreSQL and target lan
 -   pg_dump is a tool that can be used to create a backup of a PostgreSQL database. pg_dump can be used to create a backup of an extension, which can then be used to restore the extension on another PostgreSQL server.
 -   pg_restore is a tool that can be used to restore a backup of a PostgreSQL database. pg_restore can be used to restore an extension that was created using pg_dump.
 -   pg_upgrade is a tool that can be used to upgrade a PostgreSQL database from one version to another. pg_upgrade can be used to upgrade an extension that was created using pg_dump.
+- Foreign Data Wrappers (FDW) - a PostgreSQL feature that allows you to access external data sources from within the database using SQL statements. FDWs can be used to integrate data from other databases, file systems, or web services into a PostgreSQL database.
+- Event Triggers - a PostgreSQL feature that allows you to define triggers that execute custom code in response to specific events that occur within the database, such as DDL statements, table modifications, or connection events.

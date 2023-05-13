@@ -12,6 +12,9 @@
 - [GIT Postgres](https://git.postgresql.org/gitweb/?p=postgresql.git)
 
 ## 3rd Party Sites:
+- [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)
+  - C + Postgres  
+  - First result when searching postgres extensions 
 - [Google Cloud (Configure PostgreSQL extensions)](https://cloud.google.com/sql/docs/postgres/extensions)
 - [PostgreSQL Extensions](https://www.educba.com/postgresql-extensions/)
 - [Compose (PostgreSQL Extention)](https://help.compose.com/docs/postgresql-extensions)
@@ -22,7 +25,6 @@
 - [EDB Docs (Postgres Extension)](https://www.enterprisedb.com/docs/biganimal/latest/using_cluster/03_modifying_your_cluster/extensions/)
 - [pgPedia (Docs)](https://pgpedia.info/c/create-extension.html)
 - [Writing in C Language](https://www.percona.com/blog/writing-postgresql-extensions-is-fun-c-language/)
-- [Writing Postgres Extensions Code](http://big-elephants.com/blog/categories/postgres/)
 - [Writing Postgres Extensions](https://www.highgo.ca/2019/10/01/a-guide-to-create-user-defined-extension-modules-to-postgres/)
 - [Writing in C Language](https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no)
 - [PostgreSQL Extension – Master Note](https://postgreshelp.com/postgresql-extension/)

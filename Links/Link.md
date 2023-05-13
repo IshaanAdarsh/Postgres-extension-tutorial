@@ -14,7 +14,10 @@
 ## 3rd Party Sites:
 - [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)
   - C + Postgres  
-  - Faulty C Code 
+  - Faulty C Code
+- [LinuxHint Blog](https://linuxhint.com/create-extension-postgres/)
+  - Extension using SQL
+  - Extension using Pgadmin
 - [Google Cloud (Configure PostgreSQL extensions)](https://cloud.google.com/sql/docs/postgres/extensions)
 - [PostgreSQL Extensions](https://www.educba.com/postgresql-extensions/)
 - [Compose (PostgreSQL Extention)](https://help.compose.com/docs/postgresql-extensions)

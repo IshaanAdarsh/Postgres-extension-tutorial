@@ -13,11 +13,13 @@
 
 ## 3rd Party Sites:
 - [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)
-  - C + Postgres  
-  - Faulty C Code
+  - C(Faulty) + Postgres  
 - [LinuxHint Blog](https://linuxhint.com/create-extension-postgres/)
   - Extension using SQL
   - Extension using Pgadmin
+- [Percona Blog](https://www.percona.com/blog/writing-postgresql-extensions-is-fun-c-language/)
+  - C+SQL+Postgres
+  - [Github(Extension)](https://github.com/ibrarahmad/Blog-Examples/tree/master/log)
 - [Google Cloud (Configure PostgreSQL extensions)](https://cloud.google.com/sql/docs/postgres/extensions)
 - [PostgreSQL Extensions](https://www.educba.com/postgresql-extensions/)
 - [Compose (PostgreSQL Extention)](https://help.compose.com/docs/postgresql-extensions)
@@ -27,7 +29,7 @@
 - [YugabyteDB (Postgres Extension)](https://docs.yugabyte.com/preview/explore/ysql-language-features/pg-extensions/)
 - [EDB Docs (Postgres Extension)](https://www.enterprisedb.com/docs/biganimal/latest/using_cluster/03_modifying_your_cluster/extensions/)
 - [pgPedia (Docs)](https://pgpedia.info/c/create-extension.html)
-- [Writing in C Language](https://www.percona.com/blog/writing-postgresql-extensions-is-fun-c-language/)
+
 - [Writing Postgres Extensions](https://www.highgo.ca/2019/10/01/a-guide-to-create-user-defined-extension-modules-to-postgres/)
 - [Writing in C Language](https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no)
 - [PostgreSQL Extension – Master Note](https://postgreshelp.com/postgresql-extension/)

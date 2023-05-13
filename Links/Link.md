@@ -20,8 +20,15 @@
 - [Percona Blog](https://www.percona.com/blog/writing-postgresql-extensions-is-fun-c-language/)
   - C+SQL+Postgres
   - [Github(Extension)](https://github.com/ibrarahmad/Blog-Examples/tree/master/log)
+- [Several9's Blog](https://severalnines.com/blog/creating-new-modules-using-postgresql-create-extension/)
+  - SQL+Postgres (hstore Example)
+  - Example: Oracle compatible NVL function
+- [*Postgres Extensions](https://www.highgo.ca/2019/10/01/a-guide-to-create-user-defined-extension-modules-to-postgres/)
+  - Extension Using plpqsql Language + Regression Test
+  - Extension Using C + Regression Test
+  - Global Makefile
 - [Google Cloud (Configure PostgreSQL extensions)](https://cloud.google.com/sql/docs/postgres/extensions)
-- [PostgreSQL Extensions](https://www.educba.com/postgresql-extensions/)
+- [PostgreSQL Extensions (Not Creation)](https://www.educba.com/postgresql-extensions/)
 - [Compose (PostgreSQL Extention)](https://help.compose.com/docs/postgresql-extensions)
 - [SupaBase(Postgres Extention)](https://supabase.com/docs/guides/database/extensions)
 - [Amazon(PostgresExtension)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.Extensions.html)
@@ -30,7 +37,7 @@
 - [EDB Docs (Postgres Extension)](https://www.enterprisedb.com/docs/biganimal/latest/using_cluster/03_modifying_your_cluster/extensions/)
 - [pgPedia (Docs)](https://pgpedia.info/c/create-extension.html)
 
-- [Writing Postgres Extensions](https://www.highgo.ca/2019/10/01/a-guide-to-create-user-defined-extension-modules-to-postgres/)
+
 - [Writing in C Language](https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no)
 - [PostgreSQL Extension – Master Note](https://postgreshelp.com/postgresql-extension/)
 

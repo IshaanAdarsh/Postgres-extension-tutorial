@@ -22,7 +22,7 @@
 - [EDB Docs (Postgres Extension)](https://www.enterprisedb.com/docs/biganimal/latest/using_cluster/03_modifying_your_cluster/extensions/)
 - [pgPedia (Docs)](https://pgpedia.info/c/create-extension.html)
 - [Writing in C Language](https://www.percona.com/blog/writing-postgresql-extensions-is-fun-c-language/)
-- [Writing Postgres Extensions Code]([http://big-elephants.com/2015-11/writing-postgres-extensions-part-v/](http://big-elephants.com/blog/categories/postgres/))
+- [Writing Postgres Extensions Code](http://big-elephants.com/blog/categories/postgres/)
 - [Writing Postgres Extensions](https://www.highgo.ca/2019/10/01/a-guide-to-create-user-defined-extension-modules-to-postgres/)
 - [Writing in C Language](https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no)
 - [PostgreSQL Extension – Master Note](https://postgreshelp.com/postgresql-extension/)

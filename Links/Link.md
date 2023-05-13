@@ -28,12 +28,12 @@
   - Extension Using C + Regression Test
   - Global Makefile
 - [WikiBooks (PostGis)](https://en.wikibooks.org/wiki/PostgreSQL/Extensions)
+- [Managing PostgreSQL extensions](https://docs.gitlab.com/ee/install/postgresql_extensions.html)
 - [Google Cloud (Configure PostgreSQL extensions)](https://cloud.google.com/sql/docs/postgres/extensions)
 - [PostgreSQL Extensions (Not Creation)](https://www.educba.com/postgresql-extensions/)
 - [Compose (PostgreSQL Extention)](https://help.compose.com/docs/postgresql-extensions)
 - [SupaBase(Postgres Extention)](https://supabase.com/docs/guides/database/extensions)
 - [Amazon(PostgresExtension)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.Extensions.html)
-- [Managing PostgreSQL extensions](https://docs.gitlab.com/ee/install/postgresql_extensions.html)
 - [YugabyteDB (Postgres Extension)](https://docs.yugabyte.com/preview/explore/ysql-language-features/pg-extensions/)
 - [EDB Docs (Postgres Extension)](https://www.enterprisedb.com/docs/biganimal/latest/using_cluster/03_modifying_your_cluster/extensions/)
 - [pgPedia (Docs)](https://pgpedia.info/c/create-extension.html)
@@ -46,3 +46,4 @@
 ## Blogs:
 - https://mail-dpant.medium.com/setting-up-postgresql-timescaledb-extension-10ac3b85a791
 - https://blog.toadworld.com/2017/02/28/creating-extensions-in-schemas
+- [PostgresConf South Africa 2019](https://www.youtube.com/watch?v=RXmzt4JwMDw)

@@ -14,7 +14,7 @@
 ## 3rd Party Sites:
 - [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)
   - C + Postgres  
-  - First result when searching postgres extensions 
+  - Faulty C Code 
 - [Google Cloud (Configure PostgreSQL extensions)](https://cloud.google.com/sql/docs/postgres/extensions)
 - [PostgreSQL Extensions](https://www.educba.com/postgresql-extensions/)
 - [Compose (PostgreSQL Extention)](https://help.compose.com/docs/postgresql-extensions)

@@ -7,6 +7,7 @@
 - [Packaging Related Objects into an Extension](https://www.postgresql.org/docs/15/extend-extensions.html)
 - [PgAdmin (Docs)](https://www.pgadmin.org/docs/pgadmin4/6.18/extension_dialog.html)
 - [PGXS](https://www.postgresql.org/docs/15/extend-pgxs.html)
+- [PGXN](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjXj8CMsfT-AhVDT2wGHbKZBdo4HhAWegQIChAB&url=https%3A%2F%2Fmanager.pgxn.org%2Fhowto&usg=AOvVaw32n2kRHVEY4hgA1pQlJG7M)
 - [Extensions](https://www.postgresql.org/docs/current/extend.html)
 - [PL/Python ](https://www.postgresql.org/docs/current/plpython.html)
 - [GIT Postgres](https://git.postgresql.org/gitweb/?p=postgresql.git)
@@ -27,23 +28,39 @@
   - Extension Using plpqsql Language + Regression Test
   - Extension Using C + Regression Test
   - Global Makefile
+- [Postgres + C](https://postgreshelp.com/postgresql-extension/)
+- [Postgres Extension + C](https://www.highgo.ca/2020/01/10/how-to-create-test-and-debug-an-extension-written-in-c-for-postgresql/)
 - [WikiBooks (PostGis)](https://en.wikibooks.org/wiki/PostgreSQL/Extensions)
-- [Managing PostgreSQL extensions](https://docs.gitlab.com/ee/install/postgresql_extensions.html)
+- [Gitlab -> Managing PostgreSQL extensions(doc)](https://docs.gitlab.com/ee/install/postgresql_extensions.html)
+- [Gitlab -> Managing PostgreSQL extensions(repo)](https://repository.prace-ri.eu/git/help/install/postgresql_extensions.md)
 - [Google Cloud (Configure PostgreSQL extensions)](https://cloud.google.com/sql/docs/postgres/extensions)
+  - Creation not specified
 - [PostgreSQL Extensions (Not Creation)](https://www.educba.com/postgresql-extensions/)
-- [Compose (PostgreSQL Extention)](https://help.compose.com/docs/postgresql-extensions)
-- [SupaBase(Postgres Extention)](https://supabase.com/docs/guides/database/extensions)
-- [Amazon(PostgresExtension)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.Extensions.html)
+- [Amazon(PostgresExtension)+RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.Extensions.html)
+- [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgres-extensions-postgis-full-text-search)
+  - PostGIS +  Extension with heroku pg:psql 
+- [Microsoft Azure Postgres](https://learn.microsoft.com/en-us/sql/azure-data-studio/extensions/postgres-extension?view=sql-server-ver16)
+- [SupaBase Docs(Postgres Extention)](https://supabase.com/docs/guides/database/extensions)
+- [Prisma Blog](https://www.prisma.io/docs/concepts/components/prisma-schema/postgresql-extensions)
+- [PostgreSQL + RUST](https://depth-first.com/articles/2021/08/25/postgres-extensions-in-rust/)
+  - [pgrx](https://github.com/tcdi/pgrx)
+  - [Blog](https://tech.marksblogg.com/postgresql-extension-rust.html)
+  - [Extension + pgx](https://kaiwern.com/posts/2022/07/20/writing-postgresql-extension-in-rust-with-pgx/)
+- [IBM Extenstion Management](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-extensions)
 - [YugabyteDB (Postgres Extension)](https://docs.yugabyte.com/preview/explore/ysql-language-features/pg-extensions/)
-- [EDB Docs (Postgres Extension)](https://www.enterprisedb.com/docs/biganimal/latest/using_cluster/03_modifying_your_cluster/extensions/)
+- [EDB Docs (Postgres Extension)](https://www.enterprisedb.com/docs/biganimal/latest/using_cluster/03_modifying_your_cluster/extensions/#working-with-extensions)
 - [pgPedia (Docs)](https://pgpedia.info/c/create-extension.html)
-
-
+- [DBI Blog(Extension Creation)](https://www.dbi-services.com/blog/creating-simple-extensions-for-postgresql/)
+- [DigitlOcean Docs](https://docs.digitalocean.com/products/databases/postgresql/details/supported-extensions/)
+  - Basic Commands + Supported Extensions
 - [Writing in C Language](https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no)
 - [PostgreSQL Extension – Master Note](https://postgreshelp.com/postgresql-extension/)
+- [Postgres Anonymizer](https://postgresql-anonymizer.readthedocs.io/en/latest/INSTALL/#install-on-redhat-centos)
+- [Amazon RDS + ExtCreation](https://pganalyze.com/blog/5mins-postgres-pg-tle-custom-extensions-aws-rds-aurora-trusted-languages-hooks)
 
 
 ## Blogs:
 - https://mail-dpant.medium.com/setting-up-postgresql-timescaledb-extension-10ac3b85a791
+- [VS code + Postgres Extension](https://ryanhutzley.medium.com/getting-started-with-the-postgresql-extension-for-vscode-d666c281ec72)
 - https://blog.toadworld.com/2017/02/28/creating-extensions-in-schemas
 - [PostgresConf South Africa 2019](https://www.youtube.com/watch?v=RXmzt4JwMDw)

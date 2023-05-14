@@ -1,1 +1,2 @@
-https://docs.google.com/document/d/1j9PHJTyt_yVKoKZuCWeQsFMAGaDTMyag8NLd5STzGgs/edit ->GSoD Project Report
+- [GSoD Project Report](https://docs.google.com/document/d/1j9PHJTyt_yVKoKZuCWeQsFMAGaDTMyag8NLd5STzGgs/edit)
+- [Paste to Markdown](https://euangoddard.github.io/clipboard2markdown/)

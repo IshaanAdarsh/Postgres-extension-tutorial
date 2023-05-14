@@ -53,10 +53,12 @@
 - [DBI Blog(Extension Creation)](https://www.dbi-services.com/blog/creating-simple-extensions-for-postgresql/)
 - [DigitlOcean Docs](https://docs.digitalocean.com/products/databases/postgresql/details/supported-extensions/)
   - Basic Commands + Supported Extensions
-- [Writing in C Language](https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no)
+- [Posgres Extension + C](https://dzone.com/articles/postgresql-simple-c-extension-development-for-a-no)
+  - Test Extension and Result
 - [PostgreSQL Extension – Master Note](https://postgreshelp.com/postgresql-extension/)
 - [Postgres Anonymizer](https://postgresql-anonymizer.readthedocs.io/en/latest/INSTALL/#install-on-redhat-centos)
 - [Amazon RDS + ExtCreation](https://pganalyze.com/blog/5mins-postgres-pg-tle-custom-extensions-aws-rds-aurora-trusted-languages-hooks)
+- [PL/Perl Blog(ExtCreation)](https://www.thelinuxfaq.com/646-install-and-create-perl-extension-in-postgresql-database)
 
 
 ## Blogs:
@@ -64,3 +66,4 @@
 - [VS code + Postgres Extension](https://ryanhutzley.medium.com/getting-started-with-the-postgresql-extension-for-vscode-d666c281ec72)
 - https://blog.toadworld.com/2017/02/28/creating-extensions-in-schemas
 - [PostgresConf South Africa 2019](https://www.youtube.com/watch?v=RXmzt4JwMDw)
+- [Homebrew Mac(Postgres)](https://marioyepes.com/install-postgresql-on-mac-with-brew/)

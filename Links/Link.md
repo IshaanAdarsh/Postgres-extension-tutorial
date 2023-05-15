@@ -22,7 +22,8 @@
 ## 3rd Party Sites:
 - [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)
   - C(Faulty) + Postgres  
-  - [Github Code](https://github.com/adjust/postgresql_extension_demo/tree/part_i)
+  - [Github FaultyCode](https://github.com/adjust/postgresql_extension_demo/tree/part_i)
+  - [Github CorrectCode](https://github.com/adjust/pg-base36)
 - [LinuxHint Blog](https://linuxhint.com/create-extension-postgres/)
   - Extension using SQL
   - Extension using Pgadmin

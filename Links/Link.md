@@ -4,17 +4,22 @@
 - [Alter Extension](https://www.postgresql.org/docs/current/sql-alterextension.html)
 - [Drop Extension](https://www.postgresql.org/docs/current/sql-dropextension.html)
 - [Interfacing Extensions to Indexes](https://www.postgresql.org/docs/15/xindex.html)
+- [Additional Extensions(Appendix F)](https://www.postgresql.org/docs/9.4/contrib.html)
+  - This appendix covers extensions and other server plug-in modules found in `contrib`.
 - [Packaging Related Objects into an Extension](https://www.postgresql.org/docs/15/extend-extensions.html)
 - [PgAdmin (Docs)](https://www.pgadmin.org/docs/pgadmin4/6.18/extension_dialog.html)
 - [PGXS](https://www.postgresql.org/docs/15/extend-pgxs.html)
 - [PGXN](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjXj8CMsfT-AhVDT2wGHbKZBdo4HhAWegQIChAB&url=https%3A%2F%2Fmanager.pgxn.org%2Fhowto&usg=AOvVaw32n2kRHVEY4hgA1pQlJG7M)
+  - [PGXN Search Engine](https://pgxn.org)
 - [Extensions](https://www.postgresql.org/docs/current/extend.html)
+- [Packaging Related Objects into an Extension](https://www.postgresql.org/docs/9.4/extend-extensions.html)
 - [PL/Python ](https://www.postgresql.org/docs/current/plpython.html)
 - [GIT Postgres](https://git.postgresql.org/gitweb/?p=postgresql.git)
 
 ## 3rd Party Sites:
 - [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)
   - C(Faulty) + Postgres  
+  - [Github Code](https://github.com/adjust/postgresql_extension_demo/tree/part_i)
 - [LinuxHint Blog](https://linuxhint.com/create-extension-postgres/)
   - Extension using SQL
   - Extension using Pgadmin

@@ -1,8 +1,9 @@
 ## Local:
 - [Software Catalogue - PostgreSQL extensions](https://www.postgresql.org/download/products/6-postgresql-extensions/)
-- [Create Extension](https://www.postgresql.org/docs/current/sql-createextension.html)
-- [Alter Extension](https://www.postgresql.org/docs/current/sql-alterextension.html)
-- [Drop Extension](https://www.postgresql.org/docs/current/sql-dropextension.html)
+- Commands to make/drop/alter Extensions:
+  - [Create Extension](https://www.postgresql.org/docs/current/sql-createextension.html)
+  - [Alter Extension](https://www.postgresql.org/docs/current/sql-alterextension.html)
+  - [Drop Extension](https://www.postgresql.org/docs/current/sql-dropextension.html)
 - [Interfacing Extensions to Indexes](https://www.postgresql.org/docs/15/xindex.html)
 - [Additional Extensions(Appendix F)](https://www.postgresql.org/docs/9.4/contrib.html)
   - This appendix covers extensions and other server plug-in modules found in `contrib`.

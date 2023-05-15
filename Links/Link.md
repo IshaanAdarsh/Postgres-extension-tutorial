@@ -5,7 +5,7 @@
   - [Alter Extension](https://www.postgresql.org/docs/current/sql-alterextension.html)
   - [Drop Extension](https://www.postgresql.org/docs/current/sql-dropextension.html)
 - [Interfacing Extensions to Indexes](https://www.postgresql.org/docs/15/xindex.html)
-- [Additional Extensions(Appendix F)](https://www.postgresql.org/docs/9.4/contrib.html)
+- [Additional Extensions(Appendix F)](https://www.postgresql.org/docs/current/contrib.html)
   - This appendix covers extensions and other server plug-in modules found in `contrib`.
 - [Packaging Related Objects into an Extension](https://www.postgresql.org/docs/15/extend-extensions.html)
 - [PgAdmin (Docs)](https://www.pgadmin.org/docs/pgadmin4/6.18/extension_dialog.html)
@@ -16,6 +16,7 @@
 - [Packaging Related Objects into an Extension](https://www.postgresql.org/docs/9.4/extend-extensions.html)
 - [PL/Python ](https://www.postgresql.org/docs/current/plpython.html)
 - [GIT Postgres](https://git.postgresql.org/gitweb/?p=postgresql.git)
+- [C-Language Postgres Functions](https://www.postgresql.org/docs/current/xfunc-c.html)
 
 ## 3rd Party Sites:
 - [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)

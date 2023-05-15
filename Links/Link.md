@@ -17,6 +17,7 @@
 - [PL/Python ](https://www.postgresql.org/docs/current/plpython.html)
 - [GIT Postgres](https://git.postgresql.org/gitweb/?p=postgresql.git)
 - [C-Language Postgres Functions](https://www.postgresql.org/docs/current/xfunc-c.html)
+- [Reporting Errors Within the Server](https://www.postgresql.org/docs/current/error-message-reporting.html)
 
 ## 3rd Party Sites:
 - [Big Elephant Blog](http://big-elephants.com/blog/categories/postgres/)

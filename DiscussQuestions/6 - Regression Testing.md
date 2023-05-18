@@ -17,7 +17,8 @@ Here are some other ways to write a singular regression test which works for all
 
 ## Regression Testing Plan:
 
--   Test Name: Test the installation of the extension
+### Test Name: Test the installation of the extension
+
 -   Test Description: This test will verify that the extension can be installed and loaded successfully.
 -   Test Data: The test data will be a clean PostgreSQL database.
 -   Expected Results: The extension should be installed and loaded successfully.
@@ -28,7 +29,7 @@ Here are some other ways to write a singular regression test which works for all
     4.  Verify that the extension is loaded successfully.
 -   Pass/Fail Criteria: The test will pass if the extension is installed and loaded successfully. The test will fail if the extension cannot be installed or loaded.
 
-Test Name: Test the basic functionality of the extension
+### Test Name: Test the basic functionality of the extension
 
 -   Test Description: This test will verify that the basic functionality of the extension is working properly.
 -   Test Data: The test data will be a set of sample data that is representative of the data that the extension will be used with.
@@ -39,7 +40,7 @@ Test Name: Test the basic functionality of the extension
     3.  Verify that the results are correct.
 -   Pass/Fail Criteria: The test will pass if the extension can perform all of its basic functions on the sample data and the results are correct. The test will fail if the extension cannot perform any of its basic functions or if the results are incorrect.
 
-Test Name: Test the edge cases of the extension
+### Test Name: Test the edge cases of the extension
 
 -   Test Description: This test will verify that the extension can handle edge cases gracefully.
 -   Test Data: The test data will be a set of edge cases that are representative of the data that the extension will be used with.
@@ -50,7 +51,7 @@ Test Name: Test the edge cases of the extension
     3.  Verify that the results are correct.
 -   Pass/Fail Criteria: The test will pass if the extension can handle all of the edge cases gracefully and the results are correct. The test will fail if the extension cannot handle any of the edge cases or if the results are incorrect.
 
-Test Name: Test the performance of the extension
+### Test Name: Test the performance of the extension
 
 -   Test Description: This test will verify that the extension is performing well.
 -   Test Data: The test data will be a large set of data that is representative of the data that the extension will be used with.
@@ -61,7 +62,7 @@ Test Name: Test the performance of the extension
     3.  Measure the time it takes to perform the functions.
 -   Pass/Fail Criteria: The test will pass if the extension can perform its functions on the large set of data in a reasonable amount of time. The test will fail if the extension takes too long to perform the functions.
 
-Test Name: Test the scalability of the extension
+### Test Name: Test the scalability of the extension
 
 -   Test Description: This test will verify that the extension can scale to handle large amounts of data.
 -   Test Data: The test data will be a set of data that is gradually increased in size.

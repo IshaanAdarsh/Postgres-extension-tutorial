@@ -52,10 +52,10 @@ The following is a brief description of the file in the `src` directory:
     └── myextension.c
 ```
 
-The `control` directory contains the control file for the extension. The control file is a text file that tells PostgreSQL about the extension. The control file must have the extension name, the extension version, and the extension author. The control file must also have a list of the functions and data types that are provided by the extension.
-The `data` directory contains the SQL data file for the extension. The SQL data file is a text file that contains the SQL statements that are needed to create the objects that are used by the extension. This may include tables, functions, procedures, and views.
-The `include` directory contains the header file for the extension. The header file is a C or C++ header file that contains the declarations for the functions and data types that are provided by the extension.
-The `src` directory contains the source code for the extension. The source code is the actual code that implements the functions and data types that are provided by the extension.
+- The `control` directory contains the control file for the extension. The control file is a text file that tells PostgreSQL about the extension. The control file must have the extension name, the extension version, and the extension author. The control file must also have a list of the functions and data types that are provided by the extension.
+- The `data` directory contains the SQL data file for the extension. The SQL data file is a text file that contains the SQL statements that are needed to create the objects that are used by the extension. This may include tables, functions, procedures, and views.
+- The `include` directory contains the header file for the extension. The header file is a C or C++ header file that contains the declarations for the functions and data types that are provided by the extension.
+- The `src` directory contains the source code for the extension. The source code is the actual code that implements the functions and data types that are provided by the extension.
 
 ## Type 3:
 ```

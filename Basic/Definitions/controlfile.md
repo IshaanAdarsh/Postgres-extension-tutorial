@@ -1,3 +1,4 @@
+# Control File:
 A control file is a special file that is used to store information about the state of a PostgreSQL database cluster. It is located in the cluster's data directory, and it is used by the PostgreSQL server to initialize the cluster when it starts up. The control file contains information such as the following:
 
 -   The name of the cluster

@@ -1,3 +1,4 @@
+# Makefile:
 **Purpose of Makefile:** 
 Makefile is a build automation tool used to manage and control the compilation and building of software projects. It specifies the dependencies between various files and provides a set of instructions (rules) for compiling and linking them. Makefiles are particularly useful for large projects with multiple source files and complex build processes.
 

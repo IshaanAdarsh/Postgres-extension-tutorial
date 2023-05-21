@@ -111,6 +111,8 @@ The `libdir` value obtained from `pg_config` can be used in your extension's con
 ```sql
 CREATE EXTENSION my_extension;
 ```
+<img width="584" alt="Screenshot 2023-05-21 at 5 34 26 PM" src="https://github.com/IshaanAdarsh/Postgres-extension-tutorial/assets/100434702/370b2c64-6f29-480b-b1de-7219a0981c18">
+
 
 -   Replace `my_extension` with the actual name of your extension.
 
@@ -125,6 +127,9 @@ or
 ```sql
 \dx
 ```
+<img width="583" alt="Screenshot 2023-05-21 at 5 34 14 PM" src="https://github.com/IshaanAdarsh/Postgres-extension-tutorial/assets/100434702/59b4259e-c8e8-4e91-832f-83bbfc555808">
+
+
 -   Verify that your extension is listed among the installed extensions.
 
 ### Step 7: Test the Extension

@@ -23,10 +23,38 @@ relocatable = true
 # 1.0
 # my_extension--1.0.sql
 ```
-> The syntax error in line 9 of your control file seems to be caused by the incorrect use of the double-dash (`--`) comment syntax. In the control file, comments should be preceded by a hash (`#`) symbol, not double-dashes.
 
--   Replace `my_extension` with the actual name of your extension.
--   Provide a brief description of your extension in the comment field.
+<!-- Error: To resolve the error "extension 'my_extension' has no installation script nor update path for version '1.0'", you can follow these steps and use the provided code as an example:
+ - Open the control file (my_extension.control) associated with your extension.
+ - Update the control file to include the installation script and update path for version '1.0'. 
+  - Replace `my_extension` with the actual name of your extension.
+  - Provide a brief description of your extension in the comment field.
+Old Code:
+```control
+comment = 'Description of your extension'
+default_version = '1.0'
+module_pathname = '$libdir/extension_name'
+relocatable = true
+```
+-->
+
+
+<!--Error: The syntax error in line 9 of your control file seems to be caused by the incorrect use of the double-dash (`--`) comment syntax. In the control file, comments should be preceded by a hash (`#`) symbol, not double-dashes.
+Old Code:
+```control
+# my_extension.control
+
+comment = 'My Extension'
+default_version = '1.0'
+module_pathname = '$libdir/my_extension'
+relocatable = true
+
+# Installation script for version 1.0
+--1.0
+-- my_extension--1.0.sql
+```
+-->
+
 
 ### Step 2: Define the Extension SQL File (extension\_name.sql)
 

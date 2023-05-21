@@ -3,55 +3,103 @@ To create a PostgreSQL extension, you need at least two files:
 -   A control file, which tells PostgreSQL some basic information about the extension, such as its name, version, and schema.
 -   A SQL script file, which contains the SQL commands to create the extension's objects.
 
-The control file must be named `extension_name.control` and placed in the `SHAREDIR/extension` directory. The SQL script file must be named `extension--version.sql` and can be placed in the same directory as the control file or in a different directory specified in the control file.
+## A Postgres extension using only a control file and an SQL file:
 
-The control file contains the following information:
+Step 1: Define the Extension Control File (extension\_name.control)
 
--   The extension name.
--   The extension version.
--   The schema in which to install the extension's objects.
--   The author of the extension.
--   A description of the extension.
-
-The SQL script file contains the SQL commands to create the extension's objects. These objects can include functions, data types, operators, and index support methods.
-
-Once you have created the control file and the SQL script file, you can use the `CREATE EXTENSION` command to load the extension into your PostgreSQL database.
-
-Here is an example of a control file for a PostgreSQL extension called `my_extension`:
+-   Create a new text file named `extension_name.control`.
+-   Open the file in a text editor.
+-   Add the following lines to the control file:
 
 ```control
-extension_name = my_extension
-version = 1.0
-schema = public
-author = Bard
-description = This extension provides a new function called `my_function`.
+# my_extension.control
 
+comment = 'My Extension'
+default_version = '1.0'
+module_pathname = '/opt/homebrew/lib/my_extension'
+relocatable = true
+
+# Installation script for version 1.0
+# 1.0
+# my_extension--1.0.sql
 ```
+> The syntax error in line 9 of your control file seems to be caused by the incorrect use of the double-dash (`--`) comment syntax. In the control file, comments should be preceded by a hash (`#`) symbol, not double-dashes.
 
-Here is an example of a SQL script file for the `my_extension` extension:
+-   Replace `my_extension` with the actual name of your extension.
+-   Provide a brief description of your extension in the comment field.
+
+Step 2: Define the Extension SQL File (extension\_name.sql)
+
+-   Create another text file named `my_extension--1.0.sql`.
+-   Open the file in a text editor.
+-   Add SQL statements to define the objects and functionality of your extension.
+-   For example, you can include CREATE TABLE, CREATE FUNCTION, or any other SQL statements specific to your extension.
+
+an example of how you can define the Extension SQL File (`extension_name.sql`):
 
 ```sql
+-- my_extension--1.0.sql
 
-CREATE FUNCTION my_function(text)
-RETURNS text
-AS
-$func$
-SELECT 'Hello, ' || $1;
-$func$ LANGUAGE sql;
+-- Create necessary objects for version 1.0
+CREATE TABLE my_table (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
 
+CREATE FUNCTION my_function() RETURNS void AS $$
+BEGIN
+  -- Function logic goes here
+END;
+$$ LANGUAGE plpgsql;
 ```
+-   Save the SQL file.
 
-Once you have created the control file and the SQL script file, you can load the extension into your PostgreSQL database using the following command:
+Step 3: Create the Extension
+
+-   Open a terminal or command prompt.
+-   Navigate to the directory where you saved the control and SQL files.
+To find the `libdir` directory where PostgreSQL looks for extension libraries, you can use the `pg_config` utility provided with your PostgreSQL installation.
+
+1.  Open a terminal or command prompt.
+    
+2.  Run the following command to display the `libdir` value:
+    ```bash
+    pg_config --libdir
+    ```
+    This command will print the absolute path to the `lib` directory.
+    
+
+The `libdir` value obtained from `pg_config` can be used in your extension's control file to specify the correct directory for the shared library installation.
+
+Step 4: Start the PostgreSQL Command Line Interface (CLI)
+
+-   Run the `psql` command to start the PostgreSQL CLI.
+-   Provide the necessary credentials to connect to your PostgreSQL database.
+
+Step 5: Create the Extension
+
+-   Run the following command in the PostgreSQL CLI:
 
 ```sql
 CREATE EXTENSION my_extension;
-
 ```
 
-After the extension has been loaded, you can use the `my_function` function in your PostgreSQL queries. For example, the following query will return the string "Hello, World":
+-   Replace `my_extension` with the actual name of your extension.
 
+Step 6: Verify the Extension
 
-``` sql
-SELECT my_function('World');
+-   Run the following command to see a list of installed extensions:
 
+```sql
+SELECT * FROM pg_extension;
 ```
+or
+```sql
+\dx
+```
+-   Verify that your extension is listed among the installed extensions.
+
+Step 7: Test the Extension
+
+-   Run SQL queries or commands to test the functionality of your extension.
+-   Use the objects and features defined in the SQL file to perform desired operations.

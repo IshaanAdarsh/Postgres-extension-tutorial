@@ -5,7 +5,7 @@ To create a PostgreSQL extension, you need at least two files:
 
 ## A Postgres extension using only a control file and an SQL file:
 
-Step 1: Define the Extension Control File (extension\_name.control)
+### Step 1: Define the Extension Control File (extension\_name.control)
 
 -   Create a new text file named `extension_name.control`.
 -   Open the file in a text editor.
@@ -16,7 +16,7 @@ Step 1: Define the Extension Control File (extension\_name.control)
 
 comment = 'My Extension'
 default_version = '1.0'
-module_pathname = '/opt/homebrew/lib/my_extension'
+module_pathname = '$libdir/my_extension'
 relocatable = true
 
 # Installation script for version 1.0
@@ -28,7 +28,7 @@ relocatable = true
 -   Replace `my_extension` with the actual name of your extension.
 -   Provide a brief description of your extension in the comment field.
 
-Step 2: Define the Extension SQL File (extension\_name.sql)
+### Step 2: Define the Extension SQL File (extension\_name.sql)
 
 -   Create another text file named `my_extension--1.0.sql`.
 -   Open the file in a text editor.
@@ -54,7 +54,7 @@ $$ LANGUAGE plpgsql;
 ```
 -   Save the SQL file.
 
-Step 3: Create the Extension
+### Step 3: Create the Extension
 
 -   Open a terminal or command prompt.
 -   Navigate to the directory where you saved the control and SQL files.
@@ -71,12 +71,12 @@ To find the `libdir` directory where PostgreSQL looks for extension libraries, y
 
 The `libdir` value obtained from `pg_config` can be used in your extension's control file to specify the correct directory for the shared library installation.
 
-Step 4: Start the PostgreSQL Command Line Interface (CLI)
+### Step 4: Start the PostgreSQL Command Line Interface (CLI)
 
 -   Run the `psql` command to start the PostgreSQL CLI.
 -   Provide the necessary credentials to connect to your PostgreSQL database.
 
-Step 5: Create the Extension
+### Step 5: Create the Extension
 
 -   Run the following command in the PostgreSQL CLI:
 
@@ -86,7 +86,7 @@ CREATE EXTENSION my_extension;
 
 -   Replace `my_extension` with the actual name of your extension.
 
-Step 6: Verify the Extension
+### Step 6: Verify the Extension
 
 -   Run the following command to see a list of installed extensions:
 
@@ -99,7 +99,7 @@ or
 ```
 -   Verify that your extension is listed among the installed extensions.
 
-Step 7: Test the Extension
+### Step 7: Test the Extension
 
 -   Run SQL queries or commands to test the functionality of your extension.
 -   Use the objects and features defined in the SQL file to perform desired operations.

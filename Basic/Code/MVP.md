@@ -5,7 +5,7 @@ To create a PostgreSQL extension, you need at least two files:
 
 ## A Postgres extension using only a control file and an SQL file:
 
-### Step 1: Define the Extension Control File (extension\_name.control)
+### Step 1: Define the Extension Control File (extension\_name.control) 
 
 -   Create a new text file named `extension_name.control`.
 -   Open the file in a text editor.

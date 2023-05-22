@@ -136,3 +136,21 @@ or
 
 -   Run SQL queries or commands to test the functionality of your extension.
 -   Use the objects and features defined in the SQL file to perform desired operations.
+
+```sql
+-- regress.sql
+
+-- Create a sample table
+CREATE TABLE test_table (
+    id serial PRIMARY KEY,
+    name text
+);
+
+-- Test the uppercase function
+INSERT INTO test_table (name) VALUES ('hello');
+SELECT name, uppercase(name) FROM test_table;
+-- The expected result should be 'HELLO' for the name column
+
+-- Cleanup
+DROP TABLE test_table;
+```

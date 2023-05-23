@@ -11,8 +11,15 @@ The tutorial should be a quick start guide that assumes only knowledge of Postgr
   - C,C++,Python,Java,Ruby,JavaScript (PLV8),Perl,PHP,.NET,etc.
 
 ### How to start writing an extension
+- Defining a Directory structure for a PostgreSQL extension
+  - Type 1, 2, 3
+- Highlight the important files and directories involved in the extension development process.
+- Providing the MVP (Minimum Viable Product) tutorial
+- Explain the typical workflow for creating, compiling, installing, and using an extension.
+
+### How to write a Makefile and what it should do
 - 
--   How to write a Makefile and what it should do
+
 -   Do I need PGXS? How does it work?
 -   Do I need PGXN? How does it work?
 -   How to use Postgres Procedural Languages for the extension

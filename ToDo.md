@@ -1,4 +1,4 @@
-The tutorial should be a quick start guide that assumes only knowledge of Postgres and the target language:
+# Tutorial Contents: 
 
 ### Prerequisites for writing an extension:
 - Understanding the Postgres extension architecture and how it works
@@ -50,9 +50,23 @@ The tutorial should be a quick start guide that assumes only knowledge of Postgr
 - How PGXN Works (How to set up and use PGXN to publish and distribute the extension to other users)
 - Using PGXN for Extension Installation
 
-### How to use Postgres Procedural Languages for the extension:
+### Procedural Languages:
+- List Supported Procedural Languages like PL/pgSQL, PL/Python, PL/Perl, PL/Tcl, PL/Java, PL/PHP
+- Enabling Procedural Languages (using `CREATE LANGUAGE` command)
+- Writing Functions and Stored Procedures
+- Using Procedural Language Functions in Extensions
+- Interaction with PostgreSQL Data
+- Role of Procedural Language in Packaging and Distribution
 
+### External Languages:
+- Language Compatibility with Postgres
+- Language-Specific Libraries and APIs
+- Language Bindings or Extensions
+- Using External Languages in Extensions
+  - How to call external programs or libraries from the extension code using the EXECUTE command or other methods
+- Security Considerations
+- Packaging and Dependencies
 
--   How to use languages external to Postgres for the extension
--   How to write regression tests for the extension
+### How to write regression tests for the extension:
+
 -   Extension release management and upgradability

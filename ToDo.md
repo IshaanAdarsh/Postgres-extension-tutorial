@@ -5,11 +5,17 @@
 - Understanding the Postgres extension architecture and how it works
 - Explain what a Postgres extension is and its purpose.
 - Highlight the benefits of creating extensions for Postgres
-- Provide a list of software and tools required for developing a Postgres extension.
-  - Sql Script File, Makefile, Control File, etc.
+
 - Ensure that Postgres and the necessary development libraries are installed and properly set up.
 - Specify the supported target languages and their corresponding development environments.
   - C,C++,Python,Java,Ruby,JavaScript (PLV8),Perl,PHP,.NET,etc.
+
+### Anatomy of a PostgreSQL Extension:
+- Provide a list of software and tools required for developing a functioning Postgres extension and define thier use in the extension ecosystem.
+  - Sql Script File
+  - Makefile
+  - Control File
+  - Code File
 
 ### How to start writing an extension:
 - Defining a Directory structure for a PostgreSQL extension
@@ -82,6 +88,7 @@
   - Use the testing framework's provided APIs
 - Test Execution and Reporting
 - Test Coverage and Maintenance
+- Handling errors and debugging
 
 ### Extension release management and upgradability:
 - Versioning Scheme 
@@ -95,6 +102,11 @@
   - Utilize a continuous integration (CI) system to automate the build, testing, and deployment of your extension.
 - Release Channels and Notifications
 - User Feedback and Issue Tracking
+
+### Best Practices and Advanced Topics
+- Optimizing extension performance
+- Integration with other PostgreSQL features (e.g., foreign data wrappers, event triggers)
+- Documentation, support, and community engagement for the extension
 
 ## Sample Extensions:
 - Make sample extension with basic code as examples, as a part of the introduction to Extensions:

@@ -7,7 +7,7 @@
 - Highlight the benefits of creating extensions for Postgres
 - Ensure that Postgres and the necessary development libraries are installed and properly set up.
 - Specify the supported target languages and their corresponding development environments.
-  - C,C++,Python,Java,Ruby,JavaScript (PLV8),Perl,PHP,.NET,etc.
+  - C, C++, Python, Java, Ruby, JavaScript(PLV8), Perl, PHP, .NET, etc.
 
 ### Anatomy of a PostgreSQL Extension:
 - Provide a list of software and tools required for developing a functioning Postgres extension and define thier use in the extension ecosystem.

@@ -1,5 +1,6 @@
 # Tutorial Contents: 
 
+## Definitions and Basic Code:
 ### Prerequisites for writing an extension:
 - Understanding the Postgres extension architecture and how it works
 - Explain what a Postgres extension is and its purpose.
@@ -94,3 +95,13 @@
   - Utilize a continuous integration (CI) system to automate the build, testing, and deployment of your extension.
 - Release Channels and Notifications
 - User Feedback and Issue Tracking
+
+## Sample Extensions:
+- Make sample extension with basic code as examples, as a part of the introduction to Extensions:
+  - SQL
+  - Python
+  - Java
+  - Javascript
+
+## Links and further edu:
+Provide Links to deeper concepts and technology which helps in extension creation

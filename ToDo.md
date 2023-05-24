@@ -104,4 +104,4 @@
   - Javascript
 
 ## Links and further edu:
-Provide Links to deeper concepts and technology which helps in extension creation
+- Provide a curated list of external resources, such as official documentation, relevant blog posts, tutorials, and community forums, for further learning and support.

@@ -68,5 +68,29 @@
 - Packaging and Dependencies
 
 ### How to write regression tests for the extension:
+- Test Case Selection
+  - Identify the key functionalities and use cases
+- Test Environment Setup
+- Test Fixture and Data Preparation
+  - Consider using a fixture management tool or scripting language to automate the setup and teardown process for test data.
+- Test Framework Selection: Test case management, assertions, and result reporting
+  - pgTAP
+  - pg_regress
+  - custom frameworks built using languages like Python or Perl
+- Test Case Definition
+  - Use the testing framework's provided APIs
+- Test Execution and Reporting
+- Test Coverage and Maintenance
 
--   Extension release management and upgradability
+### Extension release management and upgradability:
+- Versioning Scheme 
+  -  Semantic Versioning (SemVer)
+- Release Documentation
+- Release Testing
+- Compatibility Consideration
+- Backward Compatibility
+- Upgradability Testing
+- Continuous Integration and Deployment
+  - Utilize a continuous integration (CI) system to automate the build, testing, and deployment of your extension.
+- Release Channels and Notifications
+- User Feedback and Issue Tracking

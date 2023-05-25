@@ -66,11 +66,8 @@
 
 ### External Languages:
 - Language Compatibility with Postgres
-- Language-Specific Libraries and APIs
-- Language Bindings or Extensions
 - Using External Languages in Extensions
   - How to call external programs or libraries from the extension code using the EXECUTE command or other methods
-- Security Considerations
 - Packaging and Dependencies
 
 ### How to write regression tests for the extension:
@@ -93,10 +90,6 @@
 - Versioning Scheme 
   -  Semantic Versioning (SemVer)
 - Release Documentation
-- Release Testing
-- Compatibility Consideration
-- Backward Compatibility
-- Upgradability Testing
 - Continuous Integration and Deployment
   - Utilize a continuous integration (CI) system to automate the build, testing, and deployment of your extension.
 - Release Channels and Notifications

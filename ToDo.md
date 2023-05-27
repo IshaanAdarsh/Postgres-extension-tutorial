@@ -32,7 +32,7 @@
   - `PG_CONFIG`
   - `EXTENSION`
   - `DATA`
-  - `MODULES
+  - `MODULES`
 - Specify Build Targets
   - `all`
   - `install`

@@ -55,6 +55,7 @@
   - Quality Control
 - How PGXN Works (How to set up and use PGXN to publish and distribute the extension to other users)
 - Using PGXN for Extension Installation
+- `pg_regress`
 
 ### Procedural Languages:
 - List Supported Procedural Languages like PL/pgSQL, PL/Python, PL/Perl, PL/Tcl, PL/Java, PL/PHP

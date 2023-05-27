@@ -171,3 +171,31 @@ SELECT my_function() = 'Hello, World!' AS test_result;
 SELECT COUNT(*) = 10 AS test_result FROM my_table;
 ```
 - Save the `my_extension--regress.sql` file.
+
+#### 2) Run the Regression Tests
+- Open a terminal or command prompt.
+- Navigate to the directory where the `my_extension--regress.sql` file is located.
+- Run the following command to execute the regression tests:
+
+```bash
+pg_regress my_extension
+```
+- The `pg_regress` utility will execute the regression tests defined in the `my_extension--regress.sql` file and display the test results. 
+- On succesfully passing the regression test, it will display the following output.
+
+```sql
+============================================
+  my_extension regression tests
+============================================
+
+running test query1 (test case 1)... ok
+running test query2 (test case 2)... ok
+
+============================================
+  my_extension regression test summary
+============================================
+
+  passed 2/2
+
+1..2
+```

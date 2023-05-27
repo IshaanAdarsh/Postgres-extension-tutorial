@@ -18,7 +18,9 @@
 
 ### How to start writing an extension:
 - Defining a Directory structure for a PostgreSQL extension
-  - Type 1, 2, 3
+  - Type 1
+  - Type 2
+  - Type 3
 - Highlight the important files and directories involved in the extension development process.
 - Providing the MVP (Minimum Viable Product) tutorial
   - MVP = SQL Script File + Control File

@@ -147,3 +147,27 @@ The `pg_extension` query shows that the extension exists with the following deta
 -   `extversion`: Version of the extension (`1.0`)
 -   `extconfig`: Configuration options for the extension
 -   `extcondition`: Condition for the extension
+
+### Step 8: Regression Testing:
+- Regression testing is a crucial step in the development of a Postgres extension to ensure that existing functionality continues to work correctly after making changes or introducing new features.
+- Prerequisites:
+ - PostgreSQL database installed and running
+ - "my_extension" extension already installed
+
+#### 1) Create a Regression Test File:
+- Create a new file called `my_extension--regress.sql`. This file will contain the regression tests for the extension.
+- Open the `my_extension--regress.sql` file in a text editor.
+- Add the necessary SQL statements to test the functionality of the "my_extension" extension.
+
+```sql
+-- Test Case 1: Test the my_function() function
+-- Input: None
+-- Expected Output: 'Hello, World!'
+SELECT my_function() = 'Hello, World!' AS test_result;
+
+-- Test Case 2: Test the my_table data
+-- Input: None
+-- Expected Output: 10 rows
+SELECT COUNT(*) = 10 AS test_result FROM my_table;
+```
+- Save the `my_extension--regress.sql` file.

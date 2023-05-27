@@ -132,25 +132,18 @@ or
 
 -   Verify that your extension is listed among the installed extensions.
 
-### Step 7: Test the Extension
-
--   Run SQL queries or commands to test the functionality of your extension.
--   Use the objects and features defined in the SQL file to perform desired operations.
+### Step 7: Checking the extensions details:
 
 ```sql
--- regress.sql
-
--- Create a sample table
-CREATE TABLE test_table (
-    id serial PRIMARY KEY,
-    name text
-);
-
--- Test the uppercase function
-INSERT INTO test_table (name) VALUES ('hello');
-SELECT name, uppercase(name) FROM test_table;
--- The expected result should be 'HELLO' for the name column
-
--- Cleanup
-DROP TABLE test_table;
+SELECT * FROM pg_extension WHERE extname = 'my_extension';
 ```
+The `pg_extension` query shows that the extension exists with the following details:
+
+-   `oid`: Object ID of the extension
+-   `extname`: Name of the extension (`my_extension`)
+-   `extowner`: Owner of the extension
+-   `extnamespace`: OID of the schema where the extension is installed
+-   `extrelocatable`: Indicates whether the extension is relocatable (`t` for true)
+-   `extversion`: Version of the extension (`1.0`)
+-   `extconfig`: Configuration options for the extension
+-   `extcondition`: Condition for the extension

@@ -96,7 +96,7 @@
 - Release Channels and Notifications
 - User Feedback and Issue Tracking
 
-### Best Practices and Advanced Topics
+## Advanced Topics:
 - Optimizing extension performance
 - Integration with other PostgreSQL features (e.g., foreign data wrappers, event triggers)
 - Documentation, support, and community engagement for the extension

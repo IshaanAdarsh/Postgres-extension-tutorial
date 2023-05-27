@@ -96,11 +96,6 @@
 - Release Channels and Notifications
 - User Feedback and Issue Tracking
 
-## Advanced Topics:
-- Optimizing extension performance
-- Integration with other PostgreSQL features (e.g., foreign data wrappers, event triggers)
-- Documentation, support, and community engagement for the extension
-
 ## Sample Extensions:
 - Make sample extension with basic code as examples, as a part of the introduction to Extensions:
   - SQL
@@ -110,3 +105,8 @@
 
 ## Links and further edu:
 - Provide a curated list of external resources, such as official documentation, relevant blog posts, tutorials, and community forums, for further learning and support.
+
+## Advanced Topics:
+- Optimizing extension performance
+- Integration with other PostgreSQL features (e.g., foreign data wrappers, event triggers)
+- Documentation, support, and community engagement for the extension

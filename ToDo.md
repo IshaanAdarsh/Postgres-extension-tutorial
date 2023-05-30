@@ -2,10 +2,10 @@
 
 ## Definitions and Basic Code:
 ### Prerequisites for writing an extension:
-- Understanding the Postgres extension architecture and how it works
 - Explain what a Postgres extension is and its purpose.
 - Highlight the benefits of creating extensions for Postgres
-- Ensure that Postgres and the necessary development libraries are installed and properly set up.
+- Understanding the Postgres extension architecture and how it works
+  - Ensure that Postgres and the necessary development libraries are installed and properly set up.
 - Specify the supported target languages and their corresponding development environments.
   - C, C++, Python, Java, Ruby, JavaScript(PLV8), Perl, PHP, .NET, etc.
 

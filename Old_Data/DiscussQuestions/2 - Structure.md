@@ -1,5 +1,5 @@
 # Directory structure for a PostgreSQL extension:
-## Need of Code Directory and Code Hierarchy:
+## Need of Code Directory and Code Hierarchy: 
 
 The need of a code director in extension building is to have a single point of control for the code. This allows for easier management and maintenance of the code, as well as improved collaboration between developers.
 A code director can also help to improve the quality of the code by enforcing coding standards and best practices. Additionally, a code director can help to identify and fix bugs more quickly.

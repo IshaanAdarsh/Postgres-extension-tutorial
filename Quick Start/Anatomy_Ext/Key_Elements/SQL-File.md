@@ -20,6 +20,7 @@ The role of a SQL script file in PostgreSQL extensions is crucial. It serves the
 
 In summary, a SQL script file in PostgreSQL extensions plays a vital role in defining the extension's objects, behavior, and functionality. It ensures the proper installation, initialization, and operation of the extension within the PostgreSQL database. It also serves as a documentation and reference source for developers working with the extension.
 
+## Creating the SQL-Script File for PostgreSQL Extension:
 Writing a SQL script file is an essential part of creating a PostgreSQL extension. It helps developers define the objects and behavior of the extension by using SQL statements. Here's a quick start guide on how to write a SQL script file for creating a PostgreSQL extension:
 
 1.  **Define the extension's requirements:** Before writing the SQL script file, make sure you have a clear understanding of the requirements and functionality of your extension. Determine what objects, such as tables, functions, or data types, need to be created or modified.

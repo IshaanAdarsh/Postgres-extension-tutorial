@@ -1,3 +1,4 @@
+# Makefile:
 A Makefile is a text file that contains a set of instructions (rules) for building and managing software projects. In the context of PostgreSQL extensions, a Makefile is used to automate the compilation, installation, and cleanup processes associated with the extension's source code.
 
 The role of a Makefile in PostgreSQL extensions can be summarized as follows:

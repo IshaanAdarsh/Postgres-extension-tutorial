@@ -1,7 +1,7 @@
 # SQL Script File:
 An SQL script file is a text file that contains a series of SQL statements. These statements can be used to create, modify, or delete data in a PostgreSQL database. SQL script files can be used to automate tasks, such as loading data into a database or running reports. They can also be used to share SQL code with others.
 
-There are several ways to use an SQL script file in PostgreSQL. One way is to use the psql command-line client. To do this, you would first need to connect to the PostgreSQL server using psql. Once you are connected, you can then use the `\i` command to execute the SQL script file.
+There are several ways to use an SQL script file in PostgreSQL. One way is to use the psql command-line client. To do this, you would first need to connect to the PostgreSQL server using psql. Once you are connected, you can then use the `\i` command to execute the SQL script file. 
 
 Another way to use an SQL script file is to use the PostgreSQL graphical user interface (GUI). To do this, you would first need to open the PostgreSQL GUI. Once the GUI is open, you can then navigate to the "File" menu and select "Execute SQL File." This will open a dialog box where you can select the SQL script file that you want to execute.
 

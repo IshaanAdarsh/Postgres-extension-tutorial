@@ -24,6 +24,7 @@ When writing documentation for a PostgreSQL extension, it's important to provide
 
 By following these guidelines, you can create comprehensive and user-friendly documentation that will help developers understand and utilize your PostgreSQL extension effectively.
 
+## Creating Documentation for PostgreSQL Extension:
 Regarding the storage of documentation in the directory hierarchy of a PostgreSQL extension, there is no specific location designated for it. However, it is common practice to include documentation files in the extension's source code repository or distribution package.
 
 Here are some common approaches for storing documentation:

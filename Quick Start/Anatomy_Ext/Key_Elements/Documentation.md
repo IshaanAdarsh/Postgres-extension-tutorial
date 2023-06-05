@@ -1,3 +1,5 @@
+# Documentation:
+
 When writing documentation for a PostgreSQL extension, it's important to provide clear and concise instructions on how to install, configure, and use the extension effectively. Here's a quick start guide on how to go about writing documentation for your extension:
 
 1.  **Introduction:** Start with a brief introduction that explains the purpose and benefits of the extension. Clearly state the problem it solves or the functionality it provides. This will help developers understand the value of the extension.

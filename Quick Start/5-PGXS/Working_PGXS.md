@@ -1,11 +1,7 @@
-# Working of PGXS
-PGXS (PostgreSQL Extension Building Infrastructure) provides a set of rules and macros that automate the compilation and installation of PostgreSQL extensions. To use PGXS to build your extension, follow these steps:
-
-1.  Set up the Extension Directory Structure: Create a directory for your extension and organize the necessary files within it. The directory should typically include source code files, SQL script files, a control file, a Makefile, and any additional files required for the extension.
+Makefile Configuration with PGXS: To configure your Makefile with PGXS, you need to include the PGXS Makefile and set the necessary variables. The PGXS Makefile provides rules and macros that simplify the extension building process.
     
-2.  Include PGXS Makefile: In your extension's Makefile, include the PGXS Makefile using the `include` directive. This will import the necessary rules and macros for building extensions.
-    
-
+   The `include` directive is used to include the PGXS Makefile in your extension's Makefile. This imports the rules and macros needed for building the extension.
+   
 ```makefile
 MODULES = my_extension
 EXTENSION = my_extension
@@ -14,13 +10,18 @@ PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
-
-3.  Define Extension-Specific Variables: Set the necessary variables in your Makefile to configure the build process for your extension. For example, `MODULES` should list the names of the C files containing the extension's code, `EXTENSION` should specify the name of the extension, and `DATA` should specify the SQL script file(s) that define the extension's objects and behaviors.
     
-4.  Build the Extension: Run the `make` command to build the extension. PGXS will automatically compile the source code files, link against the required libraries, and generate the necessary object files and shared library for your extension.
+   In the above example, `MODULES` lists the names of the C files containing the extension's code, `EXTENSION` specifies the name of the extension, `DATA` specifies the SQL script file(s) that define the extension's objects and behaviors, `PG_CONFIG` specifies the path to the `pg_config` utility, and `PGXS` uses `pg_config` to determine the location of the PGXS Makefile.
     
-5.  Install the Extension: Once the extension is built, run the `make install` command to install it into your PostgreSQL installation. This will copy the necessary files to the appropriate directories, ensuring that the extension is available for use within the database.
+2.  Build Commands with PGXS: PGXS simplifies the build process by providing predefined build commands that handle the compilation, linking, and generation of necessary files for the extension.
+    
+    -   `make`: The `make` command triggers the build process. When you run `make`, PGXS will compile the source code files, link against the required libraries, and generate the necessary object files and shared library for your extension.
+    
+    -   `make install`: The `make install` command installs the extension into your PostgreSQL installation. It copies the necessary files to the appropriate directories, ensuring that the extension is available for use within the database.
+    
+    -   `make clean`: The `make clean` command removes the build artifacts. It deletes the generated object files, shared library, and other temporary files.
+    
+    Running these commands with PGXS simplifies the build process and ensures that your extension is built, installed, and cleaned up efficiently.
+    
 
-6.  Clean Up: To remove the build artifacts, you can run the `make clean` command. This will delete the generated object files, shared library, and other temporary files.
-
-By following these steps and utilizing PGXS, you can automate the compilation and installation of your extension. PGXS handles the complexities of building extensions, such as managing dependencies, generating required files, and integrating with PostgreSQL's build system. This allows you to focus on developing the functionality of your extension while benefiting from the streamlined build process provided by PGXS.
+By utilizing the Makefile configuration with PGXS and executing the appropriate build commands, you can automate the compilation and installation of your PostgreSQL extension.

@@ -105,9 +105,6 @@
   - Java
   - Javascript
 
-## Links and further edu:
-- Provide a curated list of external resources, such as official documentation, relevant blog posts, tutorials, and community forums, for further learning and support.
-
 ## Advanced Topics:
 - Optimizing extension performance
 - Integration with other PostgreSQL features (e.g., foreign data wrappers, event triggers)

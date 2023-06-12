@@ -2,7 +2,7 @@
 Tutorial Contents:
 ==================
 
-- [Prerequisites for writing an extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/edit/main/QuickStart.md#what-is-a-postgres-extension-is-and-its-purpose)
+- [Prerequisites for writing an extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/QuickStart.md#what-is-a-postgres-extension-is-and-its-purpose)
 - [Anatomy of a PostgreSQL Extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/Quick%20Start/detail.md#anatomy-of-a-postgresql-extension)
 - [How to start writing an extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/Quick%20Start/detail.md#how-to-start-writing-an-extension)
 - [How to write a Makefile and what it should do](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/Quick%20Start/detail.md#how-to-write-a-makefile-and-what-it-should-do)

@@ -14,7 +14,7 @@ Targets in a Makefile represent files or actions that need to be built or execut
 
 ### Code snippets explaining each target:
 
-```makefile
+```makefile 
 # Target: build
 # Builds the extension shared library
 build: my_extension.so

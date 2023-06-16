@@ -12,5 +12,5 @@ It is a build framework provided by PostgreSQL for simplifying the process of bu
 5.  **Integration with Other PostgreSQL Tools:** PGXS integrates seamlessly with other PostgreSQL tools and utilities, such as pg_config and pg_ctl. It automatically detects the PostgreSQL installation directory, fetches necessary configuration parameters, and provides utility functions for common tasks like installation, uninstallation, and testing of extensions.
 
 6.  **Simplified Maintenance and Upgrades:** PGXS simplifies the maintenance and upgrading of extensions. It provides standardized targets for cleaning build artifacts, uninstalling extensions, running regression tests, and generating SQL script files. This helps in maintaining the extension codebase and ensures smooth upgrades to newer versions of PostgreSQL.
-
+ 
 Overall, PGXS simplifies the extension building process by providing a consistent and standardized build framework. It abstracts away the complexities of compilation, linking, and installation, allowing developers to focus on the actual functionality of their extensions. It promotes code reusability, portability, and ease of maintenance, making it an invaluable tool for extension developers in the PostgreSQL ecosystem.

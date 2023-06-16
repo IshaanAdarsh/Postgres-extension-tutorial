@@ -35,6 +35,6 @@ Writing a SQL script file is an essential part of creating a PostgreSQL extensio
 
 6.  **Add necessary comments:** Include comments within the script file to provide explanations or clarify the purpose of specific SQL statements. This helps other developers understand the code and makes it easier to maintain and troubleshoot the extension.
 
-7.  **Test the SQL script:** Before finalizing the SQL script file, it's essential to test it to ensure that the SQL statements execute successfully without any errors. Use a tool like the `psql` command-line client or a PostgreSQL GUI to execute the script and verify its functionality.
+7.  **Test the SQL script:** Before finalizing the SQL script file, it's essential to test it to ensure that the SQL statements execute successfully without any errors. Use a tool like the `psql` command-line client or a PostgreSQL GUI to execute the script and verify its functionality. 
 
 By following this quick start guide, you can create a well-structured and functional SQL script file for your PostgreSQL extension. It helps developers define the extension's behavior, create necessary objects, and implement the desired functionality within the PostgreSQL database.

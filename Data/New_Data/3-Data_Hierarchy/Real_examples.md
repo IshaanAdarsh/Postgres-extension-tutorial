@@ -14,7 +14,7 @@ Here are the existing extensions (pg\_stat\_statements, PostGIS, pgcrypto) categ
         
         This extension follows a basic directory structure with the SQL script, control file, and a README file.
         
-2.  Standard:
+2.  Standard: 
     
     -   `pgcrypto`:
         

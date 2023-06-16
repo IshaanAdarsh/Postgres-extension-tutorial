@@ -33,7 +33,7 @@ Here are some common approaches for storing documentation:
 
 2.  **Documentation folder:** You can create a separate folder named "doc" or "documentation" in the root directory of your extension. Within this folder, you can store various documentation files in different formats, such as plain text, Markdown, HTML, or PDF.
 
-3.  **Online documentation:** If you have a dedicated website or online documentation platform for your extension, you can store the documentation files there and provide a link to access them.
+3.  **Online documentation:** If you have a dedicated website or online documentation platform for your extension, you can store the documentation files there and provide a link to access them. 
 
 4.  **Integration with PostgreSQL documentation:** If your extension becomes part of the official PostgreSQL distribution or is included in a package manager, you may follow the PostgreSQL documentation conventions. In this case, the documentation may be integrated into the main PostgreSQL documentation system.
 

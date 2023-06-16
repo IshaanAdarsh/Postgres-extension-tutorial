@@ -91,7 +91,7 @@ A quick start guide on how to write a Makefile for creating a PostgreSQL extensi
     
     In the above example, the `test` target invokes a script (`run_tests.sh`) to run the extension's tests, and the `docs` target generates documentation using a tool like Doxygen.
     
-5.  **Specify Phony Targets**: Specify any targets that are not associated with actual files as phony targets. This ensures that the specified targets are always executed, even if a file with the same name exists. For example:
+5.  **Specify Phony Targets**: Specify any targets that are not associated with actual files as phony targets. This ensures that the specified targets are always executed, even if a file with the same name exists. For example: 
     
     ```Makefile
     # Define the phony targets that are not associated with files

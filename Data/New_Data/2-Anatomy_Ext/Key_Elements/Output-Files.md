@@ -42,6 +42,6 @@ When building a PostgreSQL extension, creating an appropriate build output is cr
     
 9.  **Package the build output:** Package the build output into a distributable format, such as a tarball or a zip file. This allows users to easily install and deploy the extension on their PostgreSQL instances.
     
-10.  **Provide installation instructions:** Document the installation process and provide clear instructions for users on how to install the extension using the generated build output. Include any specific configuration steps or dependencies that need to be addressed during installation.
+10.  **Provide installation instructions:** Document the installation process and provide clear instructions for users on how to install the extension using the generated build output. Include any specific configuration steps or dependencies that need to be addressed during installation. 
 
 By following these steps, you can create a well-structured and functional build output for your PostgreSQL extension. The build output simplifies the installation process, ensures compatibility with PostgreSQL, and provides users with the necessary files to utilize the extension's functionality effectively.

@@ -6,7 +6,7 @@ Here are some key points to understand about Makefile and its use in PostgreSQL 
 
 2.  **Syntax:** Makefile uses a specific syntax, where rules are defined with targets, dependencies, and commands. Each rule specifies how to build a specific target file and lists the dependencies required for the build.
 
-3.  **Targets:** Targets in a Makefile represent files or actions that need to be built or executed. For a PostgreSQL extension, common targets include building shared libraries, generating SQL script files, compiling code, running regression tests, and installing the extension.
+3.  **Targets:** Targets in a Makefile represent files or actions that need to be built or executed. For a PostgreSQL extension, common targets include building shared libraries, generating SQL script files, compiling code, running regression tests, and installing the extension. 
 
 4.  **Dependencies:** Dependencies define the prerequisites for building a target. If a target depends on certain files or other targets, Makefile ensures that those dependencies are built or executed first.
 

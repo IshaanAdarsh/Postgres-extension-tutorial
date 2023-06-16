@@ -43,7 +43,7 @@ When creating a PostgreSQL extension, writing a Control file is an essential ste
 
 6.  **Save the Control file**: Once you have defined all the necessary metadata and instructions, save the Control file with the appropriate name and extension.
 
-Writing a Control file helps developers by:
+Writing a Control file helps developers by: 
 
 -   Providing a standardized format for organizing and documenting extension metadata.
 -   Enabling users and administrators to easily understand the purpose and requirements of the extension.

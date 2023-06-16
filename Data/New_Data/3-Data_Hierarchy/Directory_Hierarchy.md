@@ -9,7 +9,7 @@ According to the PostgreSQL documentation, the extension's files should be organ
 It emphasizes the importance of clarity, maintainability, and adherence to PostgreSQL extension development practices. Therefore, you have the flexibility to choose a directory structure that best suits your extension's requirements while following the guidelines and recommendations outlined in the documentation.
 
 # Proposed Changes:
-When creating a directory structure for a PostgreSQL extension, there are various approaches you can take depending on the complexity and requirements of your extension. Here are three commonly used directory structures for PostgreSQL extensions:
+When creating a directory structure for a PostgreSQL extension, there are various approaches you can take depending on the complexity and requirements of your extension. Here are three commonly used directory structures for PostgreSQL extensions: 
 
 
 ## Basic Directory Structure: 

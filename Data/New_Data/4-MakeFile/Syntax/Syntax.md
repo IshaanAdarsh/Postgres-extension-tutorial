@@ -1,4 +1,4 @@
-the syntax of a Makefile:
+# Syntax of a Makefile:
 
 1.  Targets: Targets represent files or actions that need to be built or executed. They are defined on the left side of a rule and are followed by a colon (:). For example:
     

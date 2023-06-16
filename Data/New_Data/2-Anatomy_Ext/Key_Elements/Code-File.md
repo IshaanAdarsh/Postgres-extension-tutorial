@@ -61,7 +61,7 @@ Sure! Here's a quick start guide on writing code files for a PostgreSQL extensio
 
 7.  **Build and Compile the Extension:** Once the code file is ready, compile it into a shared library or binary that can be loaded by PostgreSQL. The compilation process may involve specifying compiler flags, linking against necessary libraries, and following language-specific build practices. Refer to the documentation for your chosen programming language and build system for instructions on how to compile extensions.
 
-8.  **Test and Debug:** Test your extension to ensure that it functions correctly within a PostgreSQL environment. Use testing frameworks, unit tests, or manual testing methods to verify the behavior of your extension. Debug any issues or errors that arise during testing and make necessary adjustments to your code.
+8.  **Test and Debug:** Test your extension to ensure that it functions correctly within a PostgreSQL environment. Use testing frameworks, unit tests, or manual testing methods to verify the behavior of your extension. Debug any issues or errors that arise during testing and make necessary adjustments to your code. 
 
 9.  **Package and Distribute:** Prepare your extension for distribution by packaging it along with the necessary files, such as the control file, SQL script files, and documentation. Create a distribution package that can be easily installed by users or provide clear instructions on how to manually install the extension.
 

@@ -18,7 +18,7 @@ include $(PGXS)
     -   `make`: The `make` command triggers the build process. When you run `make`, PGXS will compile the source code files, link against the required libraries, and generate the necessary object files and shared library for your extension.
     
     -   `make install`: The `make install` command installs the extension into your PostgreSQL installation. It copies the necessary files to the appropriate directories, ensuring that the extension is available for use within the database.
-    
+     
     -   `make clean`: The `make clean` command removes the build artifacts. It deletes the generated object files, shared library, and other temporary files.
     
     Running these commands with PGXS simplifies the build process and ensures that your extension is built, installed, and cleaned up efficiently.

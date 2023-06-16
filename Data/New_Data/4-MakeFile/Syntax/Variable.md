@@ -1,4 +1,3 @@
-
 # Variables:
 Variables in a Makefile allow you to define and use reusable values throughout the file. This makes it easier to configure and maintain your build process. Here's a quick start guide on using variables in a Makefile for a PostgreSQL extension:
 

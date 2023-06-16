@@ -1,4 +1,3 @@
-
 In order to integrate a PostgreSQL extension with the PostgreSQL database, the Makefile plays a crucial role. It allows you to define the necessary rules and commands to ensure proper integration, such as setting compiler flags, linking against PostgreSQL libraries, and installing files in the appropriate PostgreSQL directories.
 
 Here's an explanation of how the Makefile helps in integrating the extension with PostgreSQL using examples:

@@ -1,7 +1,7 @@
 # Regression Test
 - A regression test is a type of test performed on a PostgreSQL extension to ensure that it continues to function correctly after making changes or updates. It involves running a predefined set of test cases that cover various aspects of the extension's functionality. The purpose of regression testing is to identify any regression or unintended side effects that may have been introduced by recent modifications to the extension's code.
 
-The role of regression testing in PostgreSQL extensions is crucial for maintaining the stability and reliability of the extension. Here are some key aspects of regression testing and its role:
+The role of regression testing in PostgreSQL extensions is crucial for maintaining the stability and reliability of the extension. Here are some key aspects of regression testing and its role: 
 
 1.  **Ensuring Correctness:** Regression tests verify that the existing functionality of the extension is not broken by new code changes. By running the same set of test cases before and after making modifications, regression tests can detect any deviations in the extension's behavior, such as incorrect results, unexpected errors, or performance issues.
 

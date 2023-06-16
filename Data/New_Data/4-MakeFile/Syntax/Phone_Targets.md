@@ -45,7 +45,7 @@ rm /path/to/postgresql/extensions/extension.so
 
 ```
 
-In this example, we have defined the phony targets using the `.PHONY` directive:
+In this example, we have defined the phony targets using the `.PHONY` directive: 
 
 -   `all` is not defined as a phony target because it represents a file target (the `extension.so` shared library).
     

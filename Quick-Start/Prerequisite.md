@@ -69,15 +69,15 @@ The C programming language is widely used for developing PostgreSQL extensions. 
 ## C++: 
 PostgreSQL also supports C++ for extension development. C++ allows object-oriented programming and provides additional features over the C language.
  - Development Environment: Similar to C, you need a C++ compiler and the development libraries for PostgreSQL.
- - Build System: C++ extensions can use Makefiles or build systems like CMake or Autotools for compilation and linking.
+ - Build System: `C++` extensions can use Makefiles or build systems like CMake or Autotools for compilation and linking.
 
 ## PL/pgSQL:
-PL/pgSQL is the default procedural language of PostgreSQL. It is similar to SQL and allows you to write stored procedures, functions, and triggers using SQL-like syntax.
- - Development Environment: No additional development environment is required. You can write PL/pgSQL functions directly in the PostgreSQL database using SQL client tools.
+`PL/pgSQL` is the default procedural language of PostgreSQL. It is similar to `SQL` and allows you to write stored procedures, functions, and triggers using SQL-like syntax.
+ - Development Environment: No additional development environment is required. You can write `PL/pgSQL` functions directly in the PostgreSQL database using SQL client tools.
 
 ## SQL:
-PostgreSQL extensions can be created using pure SQL. SQL-based extensions are useful for defining data structures, views, and other database objects.
- - Development Environment: SQL-based extensions are written directly in SQL and can be created using any SQL client tool or command-line interface that can connect to PostgreSQL.
+PostgreSQL extensions can be created using pure `SQL`. SQL-based extensions are useful for defining data structures, views, and other database objects.
+ - Development Environment: SQL-based extensions are written directly in SQL and can be created using any `SQL client tool` or command-line interface that can connect to PostgreSQL.
 
 ## Python:
 PostgreSQL has excellent support for the Python programming language. The `plpython` extension enables you to write extension functions using Python. Python is known for its simplicity and readability.

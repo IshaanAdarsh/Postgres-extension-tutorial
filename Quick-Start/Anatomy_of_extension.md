@@ -1,6 +1,6 @@
-The anatomy of a PostgreSQL extension consists of various components that work together to define and extend the functionality of the database. Here are the key elements:
+#### The anatomy of a PostgreSQL extension consists of various components that work together to define and extend the functionality of the database. Here are the key elements:
 
-# 1. SQL-Script File:
+# 1) SQL-Script File:
 A SQL script file is a text file that contains a series of SQL statements used to define the objects and behavior of a PostgreSQL extension. These statements can include creating tables, defining functions, creating data types, setting up permissions, and performing various database operations.
 
 The role of a SQL script file in PostgreSQL extensions is crucial. It serves the following purposes:
@@ -38,9 +38,9 @@ Writing a SQL script file is an essential part of creating a PostgreSQL extensio
 
 7.  **Test the SQL script:** Before finalizing the SQL script file, it's essential to test it to ensure that the SQL statements execute successfully without any errors. Use a tool like the `psql` command-line client or a PostgreSQL GUI to execute the script and verify its functionality.
 
-By following this quick start guide, you can create a well-structured and functional SQL script file for your PostgreSQL extension. It helps developers define the extension's behavior, create necessary objects, and implement the desired functionality within the PostgreSQL database.
+By following this quick start guide, you can create a well-structured and functional SQL script file for your PostgreSQL extension. It helps developers define the extension's behaviour, create necessary objects, and implement the desired functionality within the PostgreSQL database.
 
-# 2. Control File:
+# 2) Control File:
 
 A Control file, also known as a control file template or control file script, is an essential component of a PostgreSQL extension. It provides metadata and configuration information necessary for the installation, upgrade, and management of the extension.
 
@@ -56,7 +56,7 @@ The role of a Control file in PostgreSQL extensions is as follows:
 
 5.  **Uninstallation instructions**: The Control file defines the steps for uninstalling the extension. It specifies the SQL script file(s) or commands needed to remove the extension's objects and revert any changes made during installation.
 
-6.  **Configuration options**: The Control file allows you to define custom configuration options for the extension. These options can be set by users or administrators to modify the behavior or settings of the extension according to their needs.
+6.  **Configuration options**: The Control file allows you to define custom configuration options for the extension. These options can be set by users or administrators to modify the behaviour or settings of the extension according to their needs.
 
 7.  **Permissions and privileges**: The Control file can specify the required permissions and privileges that users must have to install, upgrade, or use the extension effectively. This helps ensure proper security and access control for the extension's functionality.
 
@@ -96,7 +96,7 @@ Writing a Control file helps developers by:
 Remember to follow the specific format and guidelines defined by PostgreSQL when writing the Control file. The Control file plays a crucial role in the successful deployment and usage of your PostgreSQL extension.
 
 
-# 3. Code File:
+# 3) Code File:
 Code File: A code file in the context of PostgreSQL extensions refers to the source code file that contains the implementation of the extension's functionality. It is typically written in the C programming language and is responsible for defining the extension's functions, data types, operators, and other database entities.
 
 The code file plays a crucial role in the development of a PostgreSQL extension as it implements the logic and behavior of the extension's functionality. It allows developers to extend the capabilities of PostgreSQL by adding custom functionality that is not available in the core database system.
@@ -166,7 +166,7 @@ Sure! Here's a quick start guide on writing code files for a PostgreSQL extensio
 Writing code files for a PostgreSQL extension allows you to extend the functionality of the database and provide additional features tailored to your specific needs. It provides flexibility and customization options, enabling you to enhance the capabilities of PostgreSQL and cater to unique requirements.
 
 
-# 4. Makefile:
+# 4) Makefile:
 A Makefile is a text file that contains a set of instructions (rules) for building and managing software projects. In the context of PostgreSQL extensions, a Makefile is used to automate the compilation, installation, and cleanup processes associated with the extension's source code.
 
 The role of a Makefile in PostgreSQL extensions can be summarized as follows:
@@ -271,7 +271,7 @@ A quick start guide on how to write a Makefile for creating a PostgreSQL extensi
 
 Writing a Makefile for your PostgreSQL extension helps automate the compilation and installation process. It allows developers to easily build and install the extension with a single command. The Makefile simplifies the development workflow, enhances code maintainability, and ensures consistent and reproducible builds. It also enables integration with other development tools and workflows, making it easier to collaborate and automate tasks related to the extension's development.
 
-# 5. Documentation:
+# 5) Documentation:
 
 When writing documentation for a PostgreSQL extension, it's important to provide clear and concise instructions on how to install, configure, and use the extension effectively. Here's a quick start guide on how to go about writing documentation for your extension:
 
@@ -314,7 +314,7 @@ It's important to ensure that the documentation files are included when packagin
 
 Remember to keep the documentation up to date as you make changes or release new versions of the extension. Clear and well-maintained documentation greatly enhances the usability and adoption of your PostgreSQL extension.
 
-# 6. Regression Test
+# 6) Regression Test
 - A regression test is a type of test performed on a PostgreSQL extension to ensure that it continues to function correctly after making changes or updates. It involves running a predefined set of test cases that cover various aspects of the extension's functionality. The purpose of regression testing is to identify any regression or unintended side effects that may have been introduced by recent modifications to the extension's code.
 
 The role of regression testing in PostgreSQL extensions is crucial for maintaining the stability and reliability of the extension. Here are some key aspects of regression testing and its role: 
@@ -368,7 +368,7 @@ Benefits for the Developer:
 
 Writing comprehensive regression tests for your PostgreSQL extension is an investment in quality
 
-# 7. Output Files:
+# 7) Output Files:
 Build Output: The build output refers to the compiled and packaged artifacts that result from building your PostgreSQL extension. These artifacts include the shared libraries, SQL scripts, control files, and other files necessary for installing and using the extension.
 
 The build output serves several important roles in PostgreSQL extensions:

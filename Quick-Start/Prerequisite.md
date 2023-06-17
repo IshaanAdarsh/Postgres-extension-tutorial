@@ -5,19 +5,19 @@ A PostgreSQL extension is a modular unit that extends the functionality of the P
 
 The purpose of PostgreSQL extensions is to provide a way to package and distribute additional functionality for PostgreSQL in a standardized and manageable manner. Here are some key points about the purpose of PostgreSQL extensions:
 
-- Modularity: Extensions allow you to organize related database objects into a single package. This modular approach makes it easier to develop, maintain, and distribute custom functionality. It promotes code reuse and separation of concerns by encapsulating related objects within an extension.
+- **Modularity:** Extensions allow you to organize related database objects into a single package. This modular approach makes it easier to develop, maintain, and distribute custom functionality. It promotes code reuse and separation of concerns by encapsulating related objects within an extension.
 
-- Reusability: Extensions promote code reusability by providing a standardized and portable way to package and distribute database functionality. Developers can create extensions that solve common problems or provide common functionalities, allowing others to easily incorporate those features into their own databases.
+- **Reusability:** Extensions promote code reusability by providing a standardized and portable way to package and distribute database functionality. Developers can create extensions that solve common problems or provide common functionalities, allowing others to easily incorporate those features into their own databases.
 
-- Customization: Extensions enable you to customize PostgreSQL to suit your specific requirements. You can add new data types, functions, or operators that are not available in the core PostgreSQL distribution. This flexibility allows you to extend the capabilities of the database to handle specialized data or perform specific operations.
+- **Customization:** Extensions enable you to customize PostgreSQL to suit your specific requirements. You can add new data types, functions, or operators that are not available in the core PostgreSQL distribution. This flexibility allows you to extend the capabilities of the database to handle specialized data or perform specific operations.
 
-- Simplified Installation: Extensions provide a standardized installation process. They package all the necessary files, including the control file and installation scripts, making it easy to install and manage the extension within a PostgreSQL database. This simplifies the deployment of additional functionality and reduces the chances of errors during installation.
+- **Simplified Installation:** Extensions provide a standardized installation process. They package all the necessary files, including the control file and installation scripts, making it easy to install and manage the extension within a PostgreSQL database. This simplifies the deployment of additional functionality and reduces the chances of errors during installation.
 
-- Version Compatibility: Extensions are designed to be compatible across different versions of PostgreSQL. They abstract the implementation details and provide a consistent interface, allowing extensions to work seamlessly across compatible versions. This makes it easier to upgrade or migrate your database while retaining the functionality provided by the extensions.
+- **Version Compatibility:** Extensions are designed to be compatible across different versions of PostgreSQL. They abstract the implementation details and provide a consistent interface, allowing extensions to work seamlessly across compatible versions. This makes it easier to upgrade or migrate your database while retaining the functionality provided by the extensions.
 
-- Community Contributions: PostgreSQL has a vibrant and active community that develops and maintains a wide range of extensions. These extensions cover various domains such as GIS, full-text search, JSON processing, time-series data, and more. By leveraging existing extensions, developers can benefit from community expertise and avoid reinventing the wheel.
+- **Community Contributions:** PostgreSQL has a vibrant and active community that develops and maintains a wide range of extensions. These extensions cover various domains such as GIS, full-text search, JSON processing, time-series data, and more. By leveraging existing extensions, developers can benefit from community expertise and avoid reinventing the wheel.
 
-- Performance Optimization: Extensions can also be used to optimize the performance of your PostgreSQL database. They can provide advanced indexing techniques, caching mechanisms, or query optimization algorithms that improve query execution speed and overall database performance.
+- **Performance Optimization:** Extensions can also be used to optimize the performance of your PostgreSQL database. They can provide advanced indexing techniques, caching mechanisms, or query optimization algorithms that improve query execution speed and overall database performance.
 
 Overall, PostgreSQL extensions enhance the flexibility, customization, and extensibility of the PostgreSQL database system. They allow developers and users to tailor the database to their specific needs, leverage community-contributed functionality, and simplify the installation and management of additional features.
 
@@ -27,32 +27,32 @@ It allows developers to create custom features, data types, functions, operators
 ## Basic Architecture: 
 The extension architecture follows a modular approach, where each extension is packaged as a separate unit. Let's explore the key components and how they work together:
 
-1. Extension Control File:
+1. **Extension Control File:**
     -   The extension control file, typically named `extension_name.control`, is a plain text file that provides metadata and instructions about the extension.
     -   It contains information such as the extension name, version, description, dependencies, installation script, and configuration options.
     -   This file is used by PostgreSQL to manage the extension's installation, upgrade, and removal.
 
-2. Extension SQL File:
+2. **Extension SQL File:**
     -   The extension SQL file, typically named `extension_name.sql`, contains the SQL statements required to create the extension's objects in the database.
     -   It can include table definitions, function definitions, views, triggers, and other database objects specific to the extension.
     -   The SQL file is executed during the installation process to set up the extension's functionality in the database.
 
-3. Extension Library:
+3. **Extension Library:**
     -   Some extensions may require additional libraries or shared objects to provide their functionality.
     -   The extension library is a compiled binary or a collection of source files that implement the extension's core functionality.
     -   The library is typically written in C or another programming language and interacts with PostgreSQL through the Extension API.
 
-4. Extension API:
+4. **Extension API:**
     -   PostgreSQL provides an Extension API, a set of interfaces and functions that allow extensions to interact with the database system.
     -   Extensions can register hooks, define custom functions, operators, and data types, and override or extend PostgreSQL's behavior.
     -   The Extension API enables seamless integration of the extension's functionality with the core database system.
 
-5. Installation and Management:
+5. **Installation and Management:**
     -   Extensions are installed using SQL commands, such as `CREATE EXTENSION` or `ALTER EXTENSION`, which reference the extension's control file.
     -   During installation, PostgreSQL reads the control file, validates dependencies, executes the installation script, and sets up the extension in the database.
     -   Extensions can be managed using SQL commands to enable, disable, upgrade, or uninstall them.
 
-6.  Extension Upgrades:
+6.  **Extension Upgrades:**
     -   The extension control file specifies the version of the extension, allowing PostgreSQL to manage upgrades seamlessly.
     -   When a new version of an extension is installed, PostgreSQL compares the version specified in the control file with the installed version.
     -   If an upgrade script is provided, it is executed to migrate data or perform other necessary changes during the upgrade process.

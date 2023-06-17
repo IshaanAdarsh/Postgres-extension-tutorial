@@ -20,7 +20,7 @@ PostgreSQL extensions provide a way to package and distribute additional functio
 
 Overall, PostgreSQL extensions enhance the flexibility, customization, and extensibility of the PostgreSQL database system. They allow developers and users to tailor the database to their specific needs, leverage community-contributed functionality, and simplify the installation and management of additional features.
 
-## Basic Architecture: 
+# Basic Architecture: 
 The extension architecture follows a modular approach, where each extension is packaged as a separate unit. Let's explore the key components and how they work together:
 
 1. **Extension Control File:**

@@ -1,4 +1,4 @@
-# PGXS (PostgreSQL Extension Building Infrastructure):
+# PGXS (PostgreSQL Extension Building Infrastructure): 
 It is a build framework provided by PostgreSQL for simplifying the process of building extensions. It offers a standardized way to compile, install, and manage extensions, making it easier for developers to create robust and portable PostgreSQL extensions. Here are the benefits of using PGXS:
 
 1.  **Standardized Build Process:** PGXS provides a standardized build process for PostgreSQL extensions. It abstracts away the complexities of compiling and linking against PostgreSQL libraries, handling dependencies, and generating necessary files. This simplifies the build process and ensures consistent behavior across different platforms.

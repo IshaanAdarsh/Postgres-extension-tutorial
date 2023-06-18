@@ -1,10 +1,10 @@
 # What is a Postgres extension and its purpose:
 
-A PostgreSQL extension is a modular unit that extends the functionality of the PostgreSQL database system. It allows you to add custom features, data types, functions, operators, and other database objects to tailor PostgreSQL to specific needs and requirements.
+A PostgreSQL extension is a modular unit that extends the functionality of the PostgreSQL database system. It allows you to add custom features, data types, functions, operators, and other database objects to tailor PostgreSQL to specific needs and requirements. 
 
 PostgreSQL extensions provide a way to package and distribute additional functionality for PostgreSQL in a standardized and manageable manner. Here are some key points about the purpose of PostgreSQL extensions:
 
-- **Modularity:** Extensions allow you to organize related database objects into a single package. This modular approach makes it easier to develop, maintain, and distribute custom functionality. It promotes code reuse and separation of concerns by encapsulating related objects within an extension.
+- **Modularity:** Extensions allow you to organize related database objects into a single package. This modular approach makes it easier to develop, maintain, and distribute custom functionality. It promotes code reuse and separation of concerns by encapsulating related objects within an extension. 
 
 - **Reusability:** Extensions promote code reusability by providing a standardized and portable way to package and distribute database functionality. Developers can create extensions that solve everyday problems or provide common functionalities, allowing others to easily incorporate those features into their own databases.
 
@@ -16,9 +16,9 @@ PostgreSQL extensions provide a way to package and distribute additional functio
 
 - **Community Contributions:** PostgreSQL has a vibrant and active community that develops and maintains a wide range of extensions. These extensions cover various domains such as GIS, full-text search, JSON processing, time-series data, and more. By leveraging existing extensions, developers can benefit from community expertise and avoid reinventing the wheel.
 
-- **Performance Optimization:** Extensions can also be used to optimize the performance of your PostgreSQL database. They can provide advanced indexing techniques, caching mechanisms, or query optimization algorithms that improve query execution speed and overall database performance.
+- **Performance Optimization:** Extensions can also be used to optimize the performance of your PostgreSQL database. They can provide advanced indexing techniques, caching mechanisms, or query optimization algorithms that improve query execution speed and overall database performance. 
 
-Overall, PostgreSQL extensions enhance the flexibility, customization, and extensibility of the PostgreSQL database system. They allow developers and users to tailor the database to their specific needs, leverage community-contributed functionality, and simplify the installation and management of additional features.
+Overall, PostgreSQL extensions enhance the flexibility, customization, and extensibility of the PostgreSQL database system. They allow developers and users to tailor the database to their specific needs, leverage community-contributed functionality, and simplify the installation and management of additional features. 
 
 # Basic Architecture: 
 The extension architecture follows a modular approach, where each extension is packaged as a separate unit. Let's explore the key components and how they work together:
@@ -32,7 +32,7 @@ The extension architecture follows a modular approach, where each extension is p
     - The extension SQL file, typically named `extension_name.sql`, contains the SQL statements required to create the extension's objects in the database.
     - It can include table definitions, function definitions, views, triggers, and other database objects specific to the extension.
     - The SQL file is executed during the installation process to set up the extension's functionality in the database.
-
+ 
 3. **Extension Library:**
     - Some extensions may require additional libraries or shared objects to provide their functionality.
     - The extension library is a compiled binary or a collection of source files that implement the extension's core functionality.
@@ -43,7 +43,7 @@ The extension architecture follows a modular approach, where each extension is p
     - Extensions can register hooks, define custom functions, operators, and data types, and override or extend PostgreSQL's behaviour.
     - The Extension API enables seamless integration of the extension's functionality with the core database system.
 
-5. **Installation and Management:**
+5. **Installation and Management:** 
     - Extensions are installed using SQL commands, such as `CREATE EXTENSION` or `ALTER EXTENSION`, which reference the extension's control file.
     - During installation, PostgreSQL reads the control file, validates dependencies, executes the installation script, and sets up the extension in the database.
     - Extensions can be managed using SQL commands to enable, disable, upgrade, or uninstall them.
@@ -60,7 +60,7 @@ PostgreSQL supports various target languages for extension development. Here is 
 
 ## C:
 The C programming language is widely used for developing PostgreSQL extensions. It offers direct access to PostgreSQL internals and provides high performance.
- - Development Environment: To develop C-based extensions for PostgreSQL, you need a C compiler (such as GCC) and the necessary development libraries for PostgreSQL. 
+ - Development Environment: To develop C-based extensions for PostgreSQL, you need a C compiler (such as GCC) and the necessary development libraries for PostgreSQL.  
    - On Linux systems, you may need to install the `postgresql-server-dev` package. 
    - On macOS, you can use Xcode Command Line Tools or install PostgreSQL via Homebrew. 
    - On Windows, you can use Microsoft Visual Studio or MinGW.

@@ -1,6 +1,6 @@
 # Postgres Documentation:
 The official PostgreSQL documentation does not specify a specific directory hierarchy for extension development. However, it provides recommendations and guidelines on organizing the files and directories within an extension.
-
+ 
 According to the PostgreSQL documentation, the extension's files should be organized in a logical manner, making it easy to understand and maintain the codebase. 
 - It suggests placing the SQL script files in a separate directory and using a consistent naming convention for those files. 
 - It also recommends using a control file to provide metadata and configuration information about the extension.

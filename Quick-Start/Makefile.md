@@ -116,7 +116,8 @@ In this example, we have:
     
 You can customize this example by modifying the variables, adding more targets, or including additional rules based on your specific requirements.
 
-# Target:
+# Further Explanation:
+## Target:
 Targets in a Makefile represent files or actions that need to be built or executed. They define the tasks that the Makefile will perform. Here are some common targets used in a Makefile for a PostgreSQL extension:
 
 1.  **all**: This is the default target that is typically used to build the entire extension. It can depend on other targets, such as `build` or `install`, to perform necessary tasks.
@@ -176,8 +177,6 @@ uninstall:
 # Cleans the build artifacts
 clean:
     rm -f my_extension.so my_extension.o helper.o my_extension.sql
-
-
 ```
 
 In this example, we have the following targets:
@@ -196,7 +195,7 @@ In this example, we have the following targets:
     
 -   `clean`: This target cleans the build artifacts by removing the shared library, object files, and generated SQL script.
     
-# Dependencies:
+## Dependencies:
 Dependencies in a Makefile are used to define the prerequisites for building a target. They ensure that the required files or other targets are built or executed before the target is processed. Dependencies help in maintaining the correct build order and avoid unnecessary recompilation.
 
 In the context of a PostgreSQL extension, dependencies can be used to express the relationship between different components of the extension. For example, if the shared library depends on certain object files, the Makefile can specify those object files as dependencies for the library target. This ensures that the object files are built before the library is created.
@@ -211,7 +210,7 @@ Dependencies play a crucial role in the build process of a PostgreSQL extension 
 
 By defining dependencies accurately in the Makefile, you can ensure a smooth and efficient build process for your PostgreSQL extension. Makefile takes care of resolving the dependencies and executing the necessary build steps in the correct order, saving developers time and effort in managing the build manually.
 
-a PostgreSQL extension consists of multiple source files that need to be compiled into object files and then linked together to create a shared library. The shared library will be used by the extension for its functionality.
+A PostgreSQL extension consists of multiple source files that need to be compiled into object files and then linked together to create a shared library. The shared library will be used by the extension for its functionality.
 
 Here's a sample Makefile that demonstrates the use of dependencies in building a PostgreSQL extension:
 
@@ -246,7 +245,7 @@ clean:
 
 - By specifying the dependencies correctly, Makefile will automatically determine the build order and execute the necessary compilation and linking commands. If any source file or object file is modified, only the affected components will be recompiled, resulting in an efficient incremental build process.
 
-# Variables:
+## Variables:
 Variables in a Makefile allow you to define and use reusable values throughout the file. This makes it easier to configure and maintain your build process. Here's a quick start guide on using variables in a Makefile for a PostgreSQL extension:
 
 ```makefile
@@ -314,7 +313,7 @@ In this example, we're using variables to define various aspects of the build pr
 
 By using variables, you can easily modify the compiler flags, directory paths, or any other configuration options in a centralized manner. This improves the maintainability and flexibility of your Makefile for the PostgreSQL extension.
 
-# Rules and Commands:
+## Rules and Commands:
 In a Makefile, rules define how to build a target and specify the dependencies and commands associated with that target. Here's a detailed quick start guide on rules and commands in a Makefile for a PostgreSQL extension:
 
 ```makefile
@@ -371,7 +370,7 @@ In this example, we have several rules defined in the Makefile:
 
 By using rules and commands, you define the relationships between targets and dependencies and specify the actions required to build those targets. The commands associated with each rule are executed when the dependencies are not up to date or when explicitly specified. This allows you to automate the build process and perform actions such as compiling, linking, copying, or cleaning based on the specified rules.
 
-# Phony targets
+## Phony targets
 In a Makefile are used to define actions that are not associated with actual files. These targets are typically used for tasks such as cleaning up temporary files, running tests, installing or uninstalling the extension, or performing other non-file-related actions. Phony targets help separate these build actions from file targets and prevent conflicts with actual file names.
 
 ```makefile

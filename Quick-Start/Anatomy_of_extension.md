@@ -1,6 +1,6 @@
 #### The anatomy of a PostgreSQL extension consists of various components that work together to define and extend the functionality of the database. Here are the key elements:
 
-# 1) SQL-Script File:
+# 1) SQL-Script File: 
 A SQL script file is a text file that contains a series of SQL statements used to define the objects and behavior of a PostgreSQL extension. These statements can include creating tables, defining functions, creating data types, setting up permissions, and performing various database operations.
 
 The role of a SQL script file in PostgreSQL extensions is crucial. It serves the following purposes:

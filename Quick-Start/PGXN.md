@@ -1,4 +1,4 @@
-# PGXN (PostgreSQL Extension Network):
+# PGXN (PostgreSQL Extension Network): 
 - It is a collaborative platform and centralized repository for PostgreSQL extensions. It provides a platform for developers to share, distribute, and collaborate on PostgreSQL extensions, enhancing the overall ecosystem and community support for PostgreSQL.
 
 Benefits of PGXN include:

@@ -3,7 +3,7 @@ To set up and use PGXN to publish and distribute your extension to other users, 
 
 1.  **Set up a PGXN Account:** Visit the PGXN website (<https://pgxn.org/>) and create an account. This will allow you to manage your extensions and publish them on the PGXN repository.
 
-2.  **Prepare Your Extension:** Ensure that your extension is properly developed, tested, and ready for distribution. Make sure you have a well-documented README file, SQL scripts, and any necessary code files or dependencies.
+2.  **Prepare Your Extension:** Ensure that your extension is properly developed, tested, and ready for distribution. Make sure you have a well-documented README file, SQL scripts, and any necessary code files or dependencies. 
 
 3.  **Create a PGXN Metadata File:** PGXN requires a metadata file that provides information about your extension. Create a file named `META.json` (or `META.yml`) that includes details such as the extension name, version, author, description, dependencies, and other relevant information. Refer to the PGXN documentation for the required format and fields.
 

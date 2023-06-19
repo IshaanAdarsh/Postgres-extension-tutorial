@@ -15,7 +15,7 @@ When developing a PostgreSQL extension that uses external languages, packaging a
     
     -   Test the extension with different versions of the external language(s) to ensure compatibility and provide guidelines for users regarding the supported versions.
     -   Document any known issues or limitations when using specific versions of the external language(s) with the extension.
-4.  Packaging Tools:
+4.  Packaging Tools: 
     
     -   Utilize packaging tools such as PGXN (PostgreSQL Extension Network) or PGXS (PostgreSQL Extension Build Infrastructure) to package the extension along with its dependencies and external language components.
     -   These tools help streamline the packaging process, handle versioning, and provide a standardized structure for distributing the extension.

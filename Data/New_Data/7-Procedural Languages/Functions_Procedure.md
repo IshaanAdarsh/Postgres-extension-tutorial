@@ -1,4 +1,4 @@
-## Writing Functions and Stored Procedures: 
+## Writing Functions and Stored Procedures:  
 Functions and stored procedures are essential components of a PostgreSQL extension. They allow you to define custom behavior and perform operations on the database data. Here's a quick start on how to write functions and stored procedures in PostgreSQL extensions:
 
 1.  **Select a Procedural Language:** Choose a procedural language supported by PostgreSQL that best suits your needs, such as PL/pgSQL, PL/Python, PL/Perl, PL/Java, or others.

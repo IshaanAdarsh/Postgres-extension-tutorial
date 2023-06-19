@@ -18,7 +18,7 @@ PostgreSQL supports several procedural languages that can be used in extension c
 
 9.  **PL/JavaScript**: PL/JavaScript allows you to write PostgreSQL functions and procedures using JavaScript. It leverages the V8 JavaScript engine for efficient execution and enables the use of JavaScript libraries and frameworks within PostgreSQL.
 
-10. **PL/Python3** (Python 3 version of PL/Python)
+10. **PL/Python3** (Python 3 version of PL/Python) 
 
 11. **PL/Proxy**
 

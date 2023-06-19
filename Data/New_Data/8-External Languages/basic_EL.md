@@ -65,7 +65,7 @@ $$;
 4.  Registration and Usage:
 
 ```sql
--- Install and enable the extension
+-- Install and enable the extension 
 CREATE EXTENSION example;
 
 -- Call the Python function

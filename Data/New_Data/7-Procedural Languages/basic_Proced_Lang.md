@@ -62,7 +62,7 @@ To use a procedural language in a PostgreSQL extension, you need to define and i
     ```bash
     $ make
     $ make install
-    ```
+    ``` 
     
     This compiles the code, builds the extension, and installs it in the appropriate PostgreSQL directories.
     

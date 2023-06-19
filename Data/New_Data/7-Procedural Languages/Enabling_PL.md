@@ -1,4 +1,4 @@
-There are a few different ways to enable procedural languages in PostgreSQL. Here are the common methods:
+There are a few different ways to enable procedural languages in PostgreSQL. Here are the common methods: 
 
 1.  Using the `CREATE LANGUAGE` Command: The `CREATE LANGUAGE` command is the simplest way to enable a procedural language. You can execute this command in a PostgreSQL database to enable the desired language.
 

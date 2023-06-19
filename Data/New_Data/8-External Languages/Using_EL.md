@@ -21,7 +21,7 @@ To call external programs or libraries from the extension code, you can use the 
 1.  **EXECUTE Command:** PostgreSQL's `EXECUTE` command allows executing dynamic SQL statements or arbitrary commands. You can use it to execute external programs or commands using the operating system shell. For example:
     
     ```sql
-    EXECUTE '/path/to/external_program argument1 argument2';
+    EXECUTE '/path/to/external_program argument1 argument2'; 
     ```
     
     Note that using the `EXECUTE` command to execute external programs can introduce security risks and should be used with caution.

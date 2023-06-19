@@ -22,7 +22,7 @@ The procedural language plays an important role in the packaging and distributio
     
 4.  Package Functions and Stored Procedures: Organize the functions and stored procedures into logical units or modules. This could be based on functionality, domain, or any other relevant criteria. Group related functions together to create a cohesive and modular extension structure.
     
-5.  Document Functions and Usage: Provide comprehensive documentation for each function, including details about input parameters, return types, expected behavior, and usage examples. Clear documentation is essential for users to understand how to utilize your extension effectively.
+5.  Document Functions and Usage: Provide comprehensive documentation for each function, including details about input parameters, return types, expected behavior, and usage examples. Clear documentation is essential for users to understand how to utilize your extension effectively. 
     
 6.  Handle Dependencies: If your extension relies on external libraries or modules, ensure that these dependencies are properly managed and documented. Provide instructions for installing and configuring any required dependencies to ensure smooth integration with your extension.
     

@@ -19,7 +19,6 @@ PostgreSQL extensions provide a way to package and distribute additional functio
 - **Performance Optimization:** Extensions can also be used to optimize the performance of your PostgreSQL database. They can provide advanced indexing techniques, caching mechanisms, or query optimization algorithms that improve query execution speed and overall database performance.  
  
 Overall, PostgreSQL extensions enhance the flexibility, customization, and extensibility of the PostgreSQL database system. They allow developers and users to tailor the database to their specific needs, leverage community-contributed functionality, and simplify the installation and management of additional features.  
- 
 # Basic Architecture:  
 The extension architecture follows a modular approach, where each extension is packaged as a separate unit. Let's explore the key components and how they work together: 
  
@@ -44,7 +43,7 @@ The extension architecture follows a modular approach, where each extension is p
     - The Extension API enables seamless integration of the extension's functionality with the core database system. 
 
 5. **Installation and Management:**  
-    - Extensions are installed using SQL commands, such as `CREATE EXTENSION` or `ALTER EXTENSION`, which reference the extension's control file. 
+    - Extensions are installed using the SQL command `CREATE EXTENSION`, and updated with the `ALTER EXTENSION` command, both of which reference the extension's control file. 
     - During installation, PostgreSQL reads the control file, validates dependencies, executes the installation script, and sets up the extension in the database. 
     - Extensions can be managed using SQL commands to enable, disable, upgrade, or uninstall them. 
 

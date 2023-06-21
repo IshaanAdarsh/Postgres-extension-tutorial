@@ -1,4 +1,4 @@
-## Test result:
+## Test result: 
 Test result analysis is an essential step in regression testing for a PostgreSQL extension. It involves analyzing the test results, identifying failures or unexpected behaviors, and taking appropriate actions to debug and fix the issues. Here's a detailed explanation of how to perform test result analysis and provide code snippets for illustration:
 
 1. Test Result Output: Ensure that your regression testing framework provides detailed output of the test results. This may include information such as the number of tests executed, the number of tests passed and failed, and any error messages or stack traces associated with the failed tests.

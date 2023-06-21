@@ -1,4 +1,4 @@
-# Extension Release Management and Upgradability:
+# Extension Release Management and Upgradability: 
 Extension release management and upgradability are important aspects to consider when developing and maintaining PostgreSQL extensions. Here are some key points to keep in mind:
 
 1.  **Versioning:** Use a clear and consistent versioning scheme for your extension. Semantic versioning (e.g., MAJOR.MINOR.PATCH) is commonly used. This helps users understand the compatibility and significance of different releases.

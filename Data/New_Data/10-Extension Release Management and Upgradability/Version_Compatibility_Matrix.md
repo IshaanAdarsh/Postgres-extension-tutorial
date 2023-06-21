@@ -15,7 +15,7 @@ Maintaining a version compatibility matrix for your PostgreSQL extension is esse
    | 1.0.0             | 9.6 - 12           | libfoo 2.0.0        |
    | 1.1.0             | 9.6 - 13           | libfoo 2.1.0        |
    | 2.0.0             | 10 - 14            | libfoo 2.2.0        |
-   ```
+   ``` 
 
 2. Include Compatibility Information in Documentation: Incorporate the version compatibility matrix into your extension's documentation. This can be in the form of a dedicated section outlining the supported PostgreSQL versions and dependencies for each release. Clearly communicate the minimum and maximum versions of PostgreSQL that are compatible with each release.
 

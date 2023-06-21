@@ -41,7 +41,7 @@ Preparing relevant test data is essential for comprehensive testing of a Postgre
      ```
 
 4. Include Edge Cases: Ensure that the test data includes edge cases and boundary values to test the extension's behavior in extreme scenarios. For example, testing with empty strings, null values, minimum and maximum values, and invalid inputs.
-
+ 
 5. Test Data Maintenance: Regularly update and maintain the test data as the extension evolves or new features are added. This ensures that the tests remain relevant and cover the required scenarios.
 
 By preparing comprehensive and diverse test data, you can thoroughly evaluate the functionality, performance, and data handling capabilities of the PostgreSQL extension. It helps uncover bugs, edge case issues, and ensures that the extension behaves correctly across different scenarios and data types.

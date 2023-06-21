@@ -1,4 +1,4 @@
-## Test Coverage: 
+## Test Coverage:  
 Test coverage refers to the extent to which your test cases cover the functionality and use cases of your extension. It ensures that your tests exercise all the major features and scenarios, including various input scenarios, edge cases, and potential error conditions. Achieving comprehensive test coverage helps in identifying and addressing potential issues and ensures the robustness and reliability of your extension.
 
 Here's a detailed explanation of how to achieve comprehensive test coverage along with code snippets:

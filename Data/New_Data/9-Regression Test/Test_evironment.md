@@ -30,7 +30,7 @@ INSERT INTO my_extension_test.users (name, age) VALUES ('John', 25), ('Alice', 3
 psql -c "ALTER SYSTEM SET my_extension.enable_test_feature = 'on';"
 ```
 
-4. Test Environment Initialization: Before running the tests, initialize the test environment by performing any necessary setup tasks. This may include installing the extension, loading test fixtures, or setting up test accounts. Here's an example of initializing the test environment using a script:
+4. Test Environment Initialization: Before running the tests, initialize the test environment by performing any necessary setup tasks. This may include installing the extension, loading test fixtures, or setting up test accounts. Here's an example of initializing the test environment using a script: 
 
 ```shell
 psql -d my_extension_test -f setup_test_environment.sql

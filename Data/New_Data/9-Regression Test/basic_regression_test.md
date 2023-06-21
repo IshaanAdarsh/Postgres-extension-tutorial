@@ -1,5 +1,5 @@
 # Regression Testing:
-Regression testing in PostgreSQL extension creation refers to the process of systematically testing the extension's functionality to ensure that it continues to work correctly after making changes or updates. It involves running a set of predefined test cases to verify that the extension behaves as expected and doesn't introduce any new bugs or issues.
+Regression testing in PostgreSQL extension creation refers to the process of systematically testing the extension's functionality to ensure that it continues to work correctly after making changes or updates. It involves running a set of predefined test cases to verify that the extension behaves as expected and doesn't introduce any new bugs or issues. 
 
 ## Purpose:
 The purpose of regression testing is to catch any regressions, which are unexpected changes in the behavior of the extension that negatively impact its functionality. By running regression tests, developers can identify and fix any issues that may have been introduced during the development process or due to changes in the environment.

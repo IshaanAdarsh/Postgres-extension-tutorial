@@ -35,7 +35,7 @@ Continuous Integration (CI) is a software development practice that involves reg
            - sudo apt-get install postgresql-server-dev-$PGVERSION
          script:
            - make install
-           - make installcheck
+           - make installcheck 
    ```
 
    In this example, the CI pipeline is divided into two stages: `build` and `test`. In the `build` stage, the extension is built, and in the `test` stage, the extension is installed and regression tests are executed using `make installcheck`.

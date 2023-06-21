@@ -1,4 +1,4 @@
-## Release Channels:
+## Release Channels: 
 Using multiple release channels can help cater to different user needs and provide flexibility in delivering your PostgreSQL extension. Here's a detailed explanation of release channels and code snippets to illustrate the concept:
 
 1. Define release channels: Start by defining the different release channels you want to offer. Common channels include:

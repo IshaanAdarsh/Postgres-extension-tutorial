@@ -78,7 +78,7 @@ For example, `test.out` may contain:
  t
 ```
 
-4. Test Suite Definition: Create a test suite definition file that specifies the list of test directories to be executed by `pg_regress`. This file is usually named `regress.conf` and resides in the root directory of your extension.
+4. Test Suite Definition: Create a test suite definition file that specifies the list of test directories to be executed by `pg_regress`. This file is usually named `regress.conf` and resides in the root directory of your extension. 
 
 ```
 test_1

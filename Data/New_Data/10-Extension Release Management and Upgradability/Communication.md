@@ -23,7 +23,7 @@ Version 1.0.0
    - Issue Tracker: Set up an issue tracker (e.g., GitHub Issues) where users can report bugs, suggest enhancements, or ask questions. Respond promptly to issues and engage with users to provide solutions or workarounds.
    - Mailing List or Forum: Maintain a mailing list or forum where users can post their queries, share experiences, and seek help from other community members. Actively participate in discussions and provide guidance when needed.
    - Community Chat or Slack: Create a community chat or Slack channel to facilitate real-time conversations among users and developers. This allows for quick troubleshooting, sharing of knowledge, and fostering a sense of community.
-   - Email Support: Provide an email address where users can directly reach out for support. Respond to inquiries in a timely manner and provide assistance as needed.
+   - Email Support: Provide an email address where users can directly reach out for support. Respond to inquiries in a timely manner and provide assistance as needed. 
 
 4. Documentation and FAQs: Maintain comprehensive documentation that covers installation instructions, configuration options, usage guidelines, and troubleshooting tips. Include frequently asked questions (FAQs) to address common issues and provide solutions. Regularly update the documentation to reflect changes in the extension.
 

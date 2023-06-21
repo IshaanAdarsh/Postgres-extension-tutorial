@@ -18,7 +18,7 @@ Datum extension_version(PG_FUNCTION_ARGS)
     text *version = cstring_to_text(EXTENSION_VERSION);
     PG_RETURN_TEXT_P(version);
 }
-```
+``` 
 
 In this example, the extension version is defined as "1.0.0" using the `EXTENSION_VERSION` macro. The `extension_version` function is a simple example of how you can expose the version information to users. This function can be used to retrieve the version of the extension by executing a query like `SELECT extension_version();` in PostgreSQL.
 

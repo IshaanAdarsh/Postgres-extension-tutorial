@@ -1,4 +1,4 @@
-## Changelog:
+## Changelog: 
 Maintaining a changelog is an essential practice in extension release management. A changelog is a file that provides a comprehensive and organized list of changes, enhancements, and bug fixes for each release of your PostgreSQL extension. It serves as a communication tool between you and the users, helping them understand the modifications made and the impact they may have on their existing installations. Here's a detailed explanation of how to maintain a changelog and an example code snippet:
 
 1. Changelog Format: The changelog is typically written in a human-readable format, such as Markdown or plain text. It consists of a list of entries, with each entry corresponding to a specific release. Each entry includes the release version, release date, and a description of the changes made.

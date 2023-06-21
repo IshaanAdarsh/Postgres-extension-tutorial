@@ -36,7 +36,7 @@ When releasing a new version of your PostgreSQL extension, it's important to con
 
    Customize the upgrade script based on the changes introduced in your new version. Ensure that the script is idempotent and can be safely executed multiple times without causing conflicts or errors.
 
-3. Provide clear instructions: Alongside the upgrade scripts, provide clear instructions or guidelines for users to follow during the upgrade process. Include step-by-step instructions, prerequisites, and any special considerations. Explain the purpose of the upgrade and the potential impact on the existing database. Consider providing backup recommendations to ensure users can restore their data if needed.
+3. Provide clear instructions: Alongside the upgrade scripts, provide clear instructions or guidelines for users to follow during the upgrade process. Include step-by-step instructions, prerequisites, and any special considerations. Explain the purpose of the upgrade and the potential impact on the existing database. Consider providing backup recommendations to ensure users can restore their data if needed. 
 
 4. Documentation: Document the upgrade process in your extension's documentation. Include details about the upgrade scripts, their purpose, and how to execute them. Provide examples and explanations to guide users through the upgrade process.
 

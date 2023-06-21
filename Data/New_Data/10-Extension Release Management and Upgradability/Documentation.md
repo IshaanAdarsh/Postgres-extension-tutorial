@@ -56,7 +56,7 @@ Maintaining up-to-date and comprehensive documentation is essential for extensio
 4. Version-specific documentation: If there are breaking changes or migration steps involved when upgrading to a new version of your extension, clearly document these in the documentation. Explain what has changed, why it was changed, and provide step-by-step instructions for users to migrate their existing installations. Here's an example of version-specific documentation:
 
    ```markdown
-   ## Upgrading to Version X.Y.Z
+   ## Upgrading to Version X.Y.Z 
 
    ### Breaking Changes
 

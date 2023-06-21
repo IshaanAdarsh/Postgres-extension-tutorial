@@ -44,7 +44,7 @@ Encouraging users to provide feedback, report bugs, and suggest improvements is 
      Start a new thread or join an existing one to get involved!
      ```
 
-3. Engage with the Community: Actively participate in discussions, respond to user feedback, and acknowledge bug reports. This shows users that their feedback is valued and fosters a collaborative community around your extension.
+3. Engage with the Community: Actively participate in discussions, respond to user feedback, and acknowledge bug reports. This shows users that their feedback is valued and fosters a collaborative community around your extension. 
 
    - Example code snippet for acknowledging bug reports:
 

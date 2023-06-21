@@ -38,6 +38,6 @@ Performing thorough regression testing on new releases is crucial to ensure the 
 
 4. Analyze test results: Analyze the test results to identify any failures or unexpected behaviors. Investigate the failed test cases to understand the cause of the failure. Debug and fix the issues as necessary. Maintain a test log or report that provides an overview of the test execution and results for reference.
 
-5. Test coverage and iteration: Continuously improve the test coverage by identifying any gaps in the existing test cases and adding new ones as needed. Iterate the regression testing process with each new release or major update to ensure ongoing stability and compatibility.
+5. Test coverage and iteration: Continuously improve the test coverage by identifying any gaps in the existing test cases and adding new ones as needed. Iterate the regression testing process with each new release or major update to ensure ongoing stability and compatibility. 
 
 By performing thorough regression testing, you can ensure that your extension works as intended across different versions of PostgreSQL, various configurations, and common use cases. The test scripts help verify the expected outcomes and behaviors, while the analysis of test results helps identify and resolve any issues. Continuous improvement of test coverage ensures ongoing stability and compatibility of the extension.

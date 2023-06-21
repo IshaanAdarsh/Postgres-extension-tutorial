@@ -1,4 +1,4 @@
-## Compatibility:
+## Compatibility: 
 Ensuring backward compatibility is crucial for extension release management. It allows users to upgrade to newer versions of the extension without facing compatibility issues and ensures a smooth transition. Here's a detailed explanation of how to ensure backward compatibility and some code snippets:
 
 1. Documentation: Maintain comprehensive documentation that outlines the supported versions of PostgreSQL and any specific requirements or limitations for each version. Clearly communicate any changes in behavior or deprecated features to help users understand the impact on their existing installations.

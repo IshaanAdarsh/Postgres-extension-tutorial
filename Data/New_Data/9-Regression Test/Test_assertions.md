@@ -39,4 +39,4 @@ Test assertions are critical in validating the behavior and correctness of a Pos
 
 4. Reporting Assertion Failures: Ensure that the test framework or test runner reports failures or exceptions when an assertion fails. This helps identify which specific test case failed and provides details for debugging.
 
-By defining and implementing test assertions, you can verify that the extension produces the expected outcomes and behaves correctly under different scenarios. Assertions provide a mechanism for automated testing and help detect regressions, ensuring the extension's reliability and stability.
+By defining and implementing test assertions, you can verify that the extension produces the expected outcomes and behaves correctly under different scenarios. Assertions provide a mechanism for automated testing and help detect regressions, ensuring the extension's reliability and stability. 

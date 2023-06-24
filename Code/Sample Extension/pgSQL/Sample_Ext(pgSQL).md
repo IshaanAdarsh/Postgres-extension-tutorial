@@ -1,3 +1,4 @@
+# pgSQL Extension:
 A quick start guide for creating a sample Postgres pgSQL extension:
 
 Step 1: Setting up the development environment

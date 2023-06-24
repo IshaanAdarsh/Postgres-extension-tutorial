@@ -103,9 +103,7 @@ Step 6: Update the Makefile
 Open the `Makefile` and update it with the following content:
 
 ```Makefile
-EXT
-
-ENSION = sample_extension
+EXTENSION = sample_extension
 DATA = sample_extension--1.0.sql
 
 PG_CONFIG = pg_config

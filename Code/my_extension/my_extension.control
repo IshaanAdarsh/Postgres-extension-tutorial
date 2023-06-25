@@ -1,0 +1,10 @@
+# my_extension.control
+
+comment = 'My Extension'
+default_version = '1.0'
+module_pathname = '/opt/homebrew/lib/my_extension'
+relocatable = true
+
+# Installation script for version 1.0
+# 1.0
+# my_extension--1.0.sql

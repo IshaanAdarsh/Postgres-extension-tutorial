@@ -164,6 +164,7 @@ include $(PGXS)
 ```
 
 - **REGRESS variable**: The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress.sql`. This file will contain the SQL commands for the regression tests to be executed.
+
 - These changes in the `Makefile` enable the `my_extension--regress.sql` file to be recognized during the installation process, allowing the regression tests to be executed using `make installcheck` 
 
 

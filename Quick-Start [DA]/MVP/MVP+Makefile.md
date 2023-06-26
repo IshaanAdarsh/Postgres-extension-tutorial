@@ -148,6 +148,22 @@ my_function
 ```
 Remember to replace `my_table` with the actual table name you have chosen, and adjust the function call as needed based on your specific implementation.
 
-<!--
 ## Regression Testing:
--->
+
+### Step 1: Update the Makefile:
+- In the given code, the changes made to the `Makefile` are related to the addition of a new variable called `REGRESS` and the inclusion of a new SQL file `my_extension--regress.sql`.
+
+```makefile
+EXTENSION = my_extension
+DATA = my_extension--1.0.sql
+REGRESS = my_extension--regress.sql
+
+PG_CONFIG  ?= pg_config
+PGXS := $(shell $(PG_CONFIG) --pgxs)
+include $(PGXS)
+```
+
+- **REGRESS variable**: The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress.sql`. This file will contain the SQL commands for the regression tests to be executed.
+- These changes in the `Makefile` enable the `my_extension--regress.sql` file to be recognized during the installation process, allowing the regression tests to be executed using `make installcheck` 
+
+

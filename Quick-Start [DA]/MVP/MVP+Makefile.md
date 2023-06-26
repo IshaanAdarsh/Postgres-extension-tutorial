@@ -150,7 +150,40 @@ Remember to replace `my_table` with the actual table name you have chosen, and a
 
 ## Regression Testing:
 
-### Step 1: Update the Makefile:
+### Step 1: Create a Regression Test Script:
+
+-   Create a new file called `my_extension_regression.sql`.
+
+```bash
+$ touch my_extension--1.0.sql
+```
+
+- Open the `my_extension_regression.sql` file and add the following content keeping in mind these instructions:
+
+  -   Write SQL statements that test the functionality of your `my_extension`.
+
+  -   Include a combination of `CREATE`, `INSERT`, `UPDATE`, `DELETE`, and `SELECT` statements to cover various scenarios.
+
+  -   Make sure to test both positive and negative scenarios to validate the behavior of your extension.
+
+```sql
+-- regression test script for my_extension
+
+-- Create the my_table table
+CREATE TABLE my_table (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+-- Test the my_function function
+SELECT my_function();
+
+-- Verify the data in the my_table table
+SELECT * FROM my_table;
+```
+
+### Step 2: Update the Makefile:
+
 - In the given code, the changes made to the `Makefile` are related to the addition of a new variable called `REGRESS` and the inclusion of a new SQL file `my_extension--regress.sql`.
 
 ```makefile

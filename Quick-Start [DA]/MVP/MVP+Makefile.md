@@ -3,7 +3,7 @@ A basic tutorial on creating a PostgreSQL extension using the bare minimum files
 
 - A **control file**, which tells PostgreSQL some basic information about the extension, such as its name, version, and schema.
 - A **SQL script file**, which contains the SQL commands to create the extension's objects.
-- A **Makefile** it is an optional but highly recommended file that helps automate the build process of the extension. It defines the compilation and installation steps, making it easier to build and install the extension on different systems.
+- A **Makefile** is an optional but highly recommended file that helps automate the build process of the extension. It defines the compilation and installation steps, making it easier to build and install the extension on different systems.
 
 ## A Postgres extension using only a control file, an SQL file and a Makefile:
 
@@ -107,3 +107,47 @@ $ make install
 CREATE EXTENSION IF NOT EXITS "my_extension";
 ```
 - The CREATE EXTENSION statement is executed in PostgreSQL to create the extension.
+
+## Implementation of the Extension:
+Once you have successfully implemented the `my_extension` in your PostgreSQL database, you can use it as follows:
+
+### 1. Query the `my_table` table:
+   - You can query the `my_table` table like any other table in your database. For example, you can retrieve all rows from the table using the following SQL query:
+   ```sql
+   SELECT * FROM my_table;
+   ```
+#### Output:
+```sql
+id | name
+----+------
+(0 rows)
+```
+
+
+### 2. Call the `my_function` function:
+   - To execute the `my_function` function, you can use the `SELECT` statement with the function call. For example:
+   ```sql
+   SELECT my_function();
+   ```
+#### Output:
+```sql
+my_function
+-------------
+
+(1 row)
+```
+
+   The function will be executed, and any side effects, such as inserting a row into the `my_table` table, will take place.
+
+#### Output:
+```sql
+ id |  name
+----+---------
+  1 | Example
+(1 row)
+```
+Remember to replace `my_table` with the actual table name you have chosen, and adjust the function call as needed based on your specific implementation.
+
+<!--
+## Regression Testing:
+-->

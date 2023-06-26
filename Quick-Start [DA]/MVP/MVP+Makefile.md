@@ -79,7 +79,11 @@ PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
 Solution: Makefile is lacking the entry `EXTENSION = my_extension`
-Reason: That's why `make install` doesn't copy the `*.control` file, and that's why `CREATE EXTENSION` fails.-->
+Reason: That's why `make install` doesn't copy the `*.control` file, and that's why `CREATE EXTENSION` fails.
+
+NOTE: make: Nothing to be done for 'all' 
+Makefile doesn't have any MODULE or other binary to build. You can go directly to the make install step
+-->
 
 ```makefile
 EXTENSION = my_extension
@@ -155,7 +159,7 @@ Remember to replace `my_table` with the actual table name you have chosen, and a
 -   Create a new file called `my_extension_regression.sql`.
 
 ```bash
-$ touch my_extension--1.0.sql
+$ touch my_extension_regression.sql
 ```
 
 - Open the `my_extension_regression.sql` file and add the following content keeping in mind these instructions:
@@ -164,7 +168,7 @@ $ touch my_extension--1.0.sql
 
   -   Include a combination of `CREATE`, `INSERT`, `UPDATE`, `DELETE`, and `SELECT` statements to cover various scenarios.
 
-  -   Make sure to test both positive and negative scenarios to validate the behavior of your extension.
+  -   Make sure to test both positive and negative scenarios to validate the behaviour of your extension.
 
 ```sql
 -- regression test script for my_extension

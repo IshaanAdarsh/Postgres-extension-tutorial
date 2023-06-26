@@ -1,4 +1,4 @@
-# MVP (SQL+Control+Makefile):
+# Minimum Viable Product (SQL+Control+Makefile):
 A basic tutorial on creating a PostgreSQL extension using the bare minimum files and a Makefile:
 
 - A **control file**, which tells PostgreSQL some basic information about the extension, such as its name, version, and schema.

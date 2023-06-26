@@ -1,0 +1,9 @@
+# my_extension.control
+
+comment = 'Minimal Viable Product'
+default_version = '1.0'
+relocatable = true
+
+# Installation script for version 1.0
+# 1.0
+# my_extension--1.0.sql

@@ -1,9 +1,11 @@
-# Minimum Viable Product (SQL+Control+Makefile):
+# Minimum Viable Product:
 A basic tutorial on creating a PostgreSQL extension using the bare minimum files and a Makefile:
 
 - A **control file**, which tells PostgreSQL some basic information about the extension, such as its name, version, and schema.
 - A **SQL script file**, which contains the SQL commands to create the extension's objects.
 - A **Makefile** is an optional but highly recommended file that helps automate the build process of the extension. It defines the compilation and installation steps, making it easier to build and install the extension on different systems.
+
+# [CODE](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/tree/main/Code/my_extension)
 
 ## A Postgres extension using only a control file, an SQL file and a Makefile:
 
@@ -49,16 +51,11 @@ $ touch my_extension--1.0.sql
 ```sql
 -- extension--1.0.sql
 -- my_extension--1.0.sql
-
 -- Create necessary objects for version 1.0
 CREATE TABLE my_table (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL
 );
-
-CREATE FUNCTION my_function() RETURNS void AS $$
-INSERT INTO my_table (name) VALUES ('Example');
-$$ LANGUAGE sql;
 ```
 
 ### Step 4: Create the Makefile
@@ -126,36 +123,17 @@ id | name
 ----+------
 (0 rows)
 ```
-
-
-### 2. Call the `my_function` function:
-   - To execute the `my_function` function, you can use the `SELECT` statement with the function call. For example:
-   ```sql
-   SELECT my_function();
-   ```
-#### Output:
-```sql
-my_function
--------------
-
-(1 row)
-```
-
-   The function will be executed, and any side effects, such as inserting a row into the `my_table` table, will take place.
-
-#### Output:
-```sql
- id |  name
-----+---------
-  1 | Example
-(1 row)
-```
 Remember to replace `my_table` with the actual table name you have chosen, and adjust the function call as needed based on your specific implementation.
 
 ## Regression Testing:
 
-### Step 1: Create a Regression Test Script:
+### Step 1: Create the Extension SubDirectory for Regression SQL File:
+- Create a subdirectory for your regression file. Name it `sql`
 
+```bash
+$ mkdir sql
+$ cd sql
+```
 -   Create a new file called `my_extension_regression.sql`.
 
 ```bash
@@ -172,39 +150,70 @@ $ touch my_extension_regression.sql
 
 ```sql
 -- regression test script for my_extension
-
 -- Create the my_table table
 CREATE TABLE my_table (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL
 );
-
--- Test the my_function function
-SELECT my_function();
-
+-- Delete existing rows from my_table
+DELETE FROM my_table;
 -- Verify the data in the my_table table
 SELECT * FROM my_table;
 ```
 
 ### Step 2: Update the Makefile:
 
-- In the given code, the changes made to the `Makefile` are related to the addition of a new variable called `REGRESS` and the inclusion of a new SQL file `my_extension--regress.sql`.
+- In the given code, the changes made to the `Makefile` are related to the addition of a new variable called `REGRESS` and the inclusion of a new SQL file `my_extension--regress`.
 
 ```makefile
 EXTENSION = my_extension
 DATA = my_extension--1.0.sql
-REGRESS = my_extension--regress.sql
+REGRESS = my_extension--regress
 
 PG_CONFIG  ?= pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
 
-- The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress.sql`. This file will contain the SQL commands for the regression tests to be executed.
+- The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress`. This file will contain the SQL commands for the regression tests to be executed.
 
 - These changes in the `Makefile` enable the `my_extension--regress.sql` file to be recognized during the installation process, allowing the regression tests to be executed using `make installcheck` 
 
-### Step 3: Run `make installcheck`:
+### Step 3: Create the Extension SubDirectory for Expected Result:
+- Create a subdirectory for your regression file. Name it `expected`
+
+```bash
+$ mkdir expected
+$ cd expected
+```
+-   Create a new file called `my_extension--regress.out`.
+
+```bash
+$ touch my_extension--regress.out
+```
+
+- Add your assumption of what will be the result of the regression test:
+
+```out
+-- regression test script for my_extension
+-- Create the my_table table
+CREATE TABLE my_table (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+-- Delete existing rows from my_table
+DELETE FROM my_table;
+-- Verify the data in the my_table table
+SELECT * FROM my_table;
+ id | name 
+----+------
+(0 rows)
+
+```
+
+- If the expected file matched the results, the teat is passed.
+
+### Step 4: Run `make installcheck`:
 
 - Navigate to the directory containing your extension's code and Makefile.
 - Run the following command to execute the `make installcheck` target:
@@ -226,42 +235,40 @@ include $(PGXS)
   - Analyze the output and any error messages to identify and address any issues encountered during the regression testing.
 
 It is important to note that the success or failure of the `make installcheck` command depends on the correctness of your extension's implementation and the accuracy of the regression test script (`my_extension--regress.sql`). Ensure that the regression test script covers the necessary test cases and verifies the expected behaviour of your extension.
+<!--
+# Ran into a Shitload of problems in the make installcheck. The main takeaways:
+- Change the REGRESS Variable value from REGRESS = my_extension--regress.sql to REGRESS = my_extension--regress
+- Make sure all your code is working (my_function was acting weird, will figure out the issue)
+- Shit from 13 years ago can help you -> for reference https://github.com/IshaanAdarsh/Postgres-extension-tutorial/issues/15
+- Keep a track of the problems you face using GitHub issues, so you can track the problem thoroughly.
+-->
 
 ### Step 4: Analysing the output:
 The successful output of the `make installcheck` command for the `my_extension` extension:
-```sql
+
+```bash
+echo "+++ regress install-check in  +++" && /Users/spartacus/.pgenv/pgsql-15.0/lib/pgxs/src/makefiles/../../src/test/regress/pg_regress --inputdir=./ --bindir='/Users/spartacus/.pgenv/pgsql-15.0/bin'    --dbname=contrib_regression my_extension--regress
 +++ regress install-check in  +++
 (using postmaster on Unix socket, default port)
 ============== dropping database "contrib_regression" ==============
+SET
 DROP DATABASE
 ============== creating database "contrib_regression" ==============
 CREATE DATABASE
 ALTER DATABASE
-============== installing extension "my_extension" ==============
-CREATE EXTENSION
-SET
-CREATE TABLE
-CREATE FUNCTION
-============== running regression test queries ==============
-SELECT
---------
-(1 row)
+ALTER DATABASE
+ALTER DATABASE
+ALTER DATABASE
+ALTER DATABASE
+ALTER DATABASE
+============== running regression test queries        ==============
+test my_extension--regress        ... ok           17 ms
 
- my_function
---------------
-
-(1 row)
-
- id |  name  
-----+--------
-  1 | Example
-(1 row)
-============== dropping database "contrib_regression" ==============
-DROP DATABASE
-============== cleaning up ==============
-CLEANUP
-
+=====================
+ All 1 tests passed.
+=====================
 ```
 - The output includes information about creating the test database, installing the extension, executing the test queries, and finally cleaning up the database.
+
 
 

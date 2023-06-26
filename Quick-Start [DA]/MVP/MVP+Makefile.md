@@ -196,8 +196,68 @@ PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
 
-- **REGRESS variable**: The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress.sql`. This file will contain the SQL commands for the regression tests to be executed.
+- The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress.sql`. This file will contain the SQL commands for the regression tests to be executed.
 
 - These changes in the `Makefile` enable the `my_extension--regress.sql` file to be recognized during the installation process, allowing the regression tests to be executed using `make installcheck` 
+
+### Step 3: Run `make installcheck`:
+
+- Navigate to the directory containing your extension's code and Makefile.
+- Run the following command to execute the `make installcheck` target:
+   ```
+   make installcheck
+   ```
+
+   This command will initiate the installation and regression testing process for your extension.
+
+#### Working of the command `make installcheck`:
+- The `make installcheck` command will internally execute the `pg_regress` utility with the appropriate parameters. It will connect to a PostgreSQL server and run the regression tests specified in the `my_extension--regress.sql` file.
+
+- Review the output of the `make installcheck` command to see the results of the regression tests. The command will display the progress and status of each test case.
+
+  - If all the tests pass successfully, you will see a summary indicating that the regression tests have passed.
+
+  - If any tests fail, the output will provide information about the specific test case that failed and any relevant error messages.
+
+  - Analyze the output and any error messages to identify and address any issues encountered during the regression testing.
+
+It is important to note that the success or failure of the `make installcheck` command depends on the correctness of your extension's implementation and the accuracy of the regression test script (`my_extension--regress.sql`). Ensure that the regression test script covers the necessary test cases and verifies the expected behaviour of your extension.
+
+### Step 4: Analysing the output:
+The successful output of the `make installcheck` command for the `my_extension` extension:
+```sql
++++ regress install-check in  +++
+(using postmaster on Unix socket, default port)
+============== dropping database "contrib_regression" ==============
+DROP DATABASE
+============== creating database "contrib_regression" ==============
+CREATE DATABASE
+ALTER DATABASE
+============== installing extension "my_extension" ==============
+CREATE EXTENSION
+SET
+CREATE TABLE
+CREATE FUNCTION
+============== running regression test queries ==============
+SELECT
+--------
+(1 row)
+
+ my_function
+--------------
+
+(1 row)
+
+ id |  name  
+----+--------
+  1 | Example
+(1 row)
+============== dropping database "contrib_regression" ==============
+DROP DATABASE
+============== cleaning up ==============
+CLEANUP
+
+```
+- The output includes information about creating the test database, installing the extension, executing the test queries, and finally cleaning up the database.
 
 

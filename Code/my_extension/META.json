@@ -1,0 +1,18 @@
+{
+  "name": "my_extension",
+  "abstract": "A basic PostgreSQL extension.",
+  "version": "1.0.0",
+  "maintainer": "Ishaan Adarsh <ishaanad9@gmail.com>",
+  "license": "postgresql",
+  "provides": {
+    "my_extension": {
+      "file": "my_extension--1.0.sql",
+      "version": "1.0.0"
+    }
+  },
+  "meta-spec": {
+    "version": "1.0.0",
+    "url": "https://pgxn.org/meta/spec.txt"
+  }
+}
+

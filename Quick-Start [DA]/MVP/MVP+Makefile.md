@@ -3,7 +3,7 @@ A basic tutorial on creating a PostgreSQL extension using the bare minimum files
 
 - A **control file**, which tells PostgreSQL some basic information about the extension, such as its name, version, and schema.
 - A **SQL script file**, which contains the SQL commands to create the extension's objects.
-- A **Makefile** is an optional but highly recommended file that helps automate the build process of the extension. It defines the compilation and installation steps, making it easier to build and install the extension on different systems.
+- A **Makefile** is a file that helps automate the build process of the extension. It defines the compilation and installation steps, making it easier to build and install the extension on different systems.
 
 # [CODE](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/tree/main/Code/my_extension)
 
@@ -29,6 +29,7 @@ $ touch my_extension.control
 
 ```control
 # my_extension.control
+
 comment = 'Minimal Viable Product'
 default_version = '1.0'
 relocatable = true
@@ -41,26 +42,31 @@ relocatable = true
 ### Step 3: Create the Extension SQL File
 - Create a file named "my_extension--1.0.sql".
   - This file contains the SQL statements required to install or uninstall your extension.
+  - The format for a PostgreSQL extension file name is `extension_name--version.sql`, where `extension_name` is the name of the extension, and `version` is the version number. The double-dash serves as a delimiter to indicate the separation between the extension name and the version number.
 
 ```bash
 $ touch my_extension--1.0.sql
 ```
-
 - Open the "my_extension--1.0.sql" file and add the following content:
 
 ```sql
--- extension--1.0.sql
--- my_extension--1.0.sql
 -- Create necessary objects for version 1.0
 CREATE TABLE my_table (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL
 );
+
+-- Add 2 numbers using add function
+CREATE FUNCTION add(a integer, b integer) RETURNS integer
+    LANGUAGE SQL
+    IMMUTABLE
+    RETURNS NULL ON NULL INPUT
+    RETURN a + b;
 ```
 
 ### Step 4: Create the Makefile
 - Create a Makefile in the "extension" directory. 
-  - The Makefile is used to define the build process. It specifies the module name, object files, extension name, and SQL files. The PG_CONFIG variable retrieves the path to the pg_config utility, which is used to get the necessary configuration for building the extension.
+  - The Makefile is used to define the build process. It specifies the module name, extension name, and SQL files. The PG_CONFIG variable retrieves the path to the pg_config utility, which is used to get the necessary configuration for building the extension.
 
 ```bash
 $ touch Makefile
@@ -98,6 +104,10 @@ include $(PGXS)
 $ make
 $ make install
 ```
+> NOTE: make: Nothing to be done for 'all'
+
+> Makefile doesn't have any MODULE or other binary to build. You can go directly to the make install step
+
 - The "make" command compiles the extension code using the Makefile
 - The "make install" command copies the necessary files to the appropriate PostgreSQL directories.
 
@@ -105,7 +115,8 @@ $ make install
 - Connect to your PostgreSQL database and execute the following SQL statement to create the extension:
 
 ```sql
-CREATE EXTENSION IF NOT EXITS "my_extension";
+CREATE EXTENSION IF NOT EXISTS my_extension;
+-- Output: CREATE EXTENSION
 ```
 - The CREATE EXTENSION statement is executed in PostgreSQL to create the extension.
 
@@ -118,12 +129,23 @@ Once you have successfully implemented the `my_extension` in your PostgreSQL dat
    SELECT * FROM my_table;
    ```
 #### Output:
-```sql
+```
 id | name
 ----+------
 (0 rows)
 ```
-Remember to replace `my_table` with the actual table name you have chosen, and adjust the function call as needed based on your specific implementation.
+### 2. Use the add function to perform addition:
+  - The `add` function takes two integer arguments and returns their sum
+  ```sql
+  SELECT add(2, 3);
+  ```
+#### Output:
+```
+ add
+-----
+   5
+(1 row)
+```
 
 ## Regression Testing:
 
@@ -150,15 +172,13 @@ $ touch my_extension_regression.sql
 
 ```sql
 -- regression test script for my_extension
--- Create the my_table table
-CREATE TABLE my_table (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL
-);
--- Delete existing rows from my_table
-DELETE FROM my_table;
+CREATE EXTENSION my_extension;
+
 -- Verify the data in the my_table table
 SELECT * FROM my_table;
+
+-- Test the add function
+SELECT add(1, 2);
 ```
 
 ### Step 2: Update the Makefile:
@@ -196,22 +216,22 @@ $ touch my_extension--regress.out
 
 ```out
 -- regression test script for my_extension
--- Create the my_table table
-CREATE TABLE my_table (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL
-);
--- Delete existing rows from my_table
-DELETE FROM my_table;
+CREATE EXTENSION my_extension;
 -- Verify the data in the my_table table
 SELECT * FROM my_table;
  id | name 
 ----+------
 (0 rows)
 
+-- Test the add function
+SELECT add(1, 2);
+ add 
+-----
+   3
+(1 row)
 ```
 
-- If the expected file matched the results, the teat is passed.
+- If the expected file matched the results exactly then the regression test is passed.
 
 ### Step 4: Run `make installcheck`:
 
@@ -243,6 +263,39 @@ It is important to note that the success or failure of the `make installcheck` c
 - Keep a track of the problems you face using GitHub issues, so you can track the problem thoroughly.
 -->
 
+#### `make installcheck` test fails:
+If the `make installcheck` command doesn't work, it usually means that there are issues with the installation or configuration of the extension. This command is used to run the regression tests for the extension to ensure that it functions correctly.
+
+The `.diff` file and `.out` file are generated during the regression tests. Here's an explanation of each:
+
+1. `.diff` file: This file contains the differences between the expected output and the actual output of the regression tests. It shows the changes, additions, or deletions made to the expected output to match the actual output. Each difference is indicated with a line starting with a "-" or "+" sign, representing removed or added lines, respectively.
+
+2. `.out` file: This file contains the actual output of the regression tests. It shows the results, error messages, or any other output generated by the test scripts. The `.out` file is compared with the expected output to generate the `.diff` file.
+
+The purpose of comparing the expected output with the actual output is to validate that the extension behaves as intended and produces the correct results. Any differences between the expected and actual output are highlighted in the `.diff` file, allowing developers to identify and resolve any issues in the extension code.
+
+- **regression.diffs**
+```
+diff -U3 /Users/spartacus/Desktop/GSoC/CODE/my_extension/expected/my_extension--regress.out /Users/spartacus/Desktop/GSoC/CODE/my_extension/results/my_extension--regress.out
+--- /Users/spartacus/Desktop/GSoC/CODE/my_extension/expected/my_extension--regress.out	2023-06-28 19:50:09.086462000 +0530
++++ /Users/spartacus/Desktop/GSoC/CODE/my_extension/results/my_extension--regress.out	2023-06-28 19:54:53.312678363 +0530
+@@ -7,7 +7,7 @@
+ (0 rows)
+ 
+ -- Test the add function
+-SELECT add(1, 2)
++SELECT add(1, 2);
+  add 
+ -----
+    3
+```
+
+- **regression.out**
+```
+test my_extension--regress        ... FAILED       18 ms
+```
+
+
 ### Step 4: Analysing the output:
 The successful output of the `make installcheck` command for the `my_extension` extension:
 
@@ -262,7 +315,7 @@ ALTER DATABASE
 ALTER DATABASE
 ALTER DATABASE
 ============== running regression test queries        ==============
-test my_extension--regress        ... ok           17 ms
+test my_extension--regress        ... ok           10 ms
 
 =====================
  All 1 tests passed.
@@ -270,5 +323,66 @@ test my_extension--regress        ... ok           17 ms
 ```
 - The output includes information about creating the test database, installing the extension, executing the test queries, and finally cleaning up the database.
 
+## PGXN (PostgreSQL Extension Network):  
+- It is a collaborative platform and centralized repository for PostgreSQL extensions. It provides a platform for developers to share, distribute, and collaborate on PostgreSQL extensions, enhancing the overall ecosystem and community support for PostgreSQL. 
+
+To set up and use PGXN to publish and distribute your extension to other users, you can follow these steps: 
+
+1.  **Set up a PGXN Account:** Visit the PGXN website (<https://pgxn.org/>) and create an account. This will allow you to manage your extensions and publish them on the PGXN repository. 
+
+2.  **Prepare Your Extension:** Ensure that your extension is properly developed, tested, and ready for distribution. Make sure you have a well-documented README file, SQL scripts, and any necessary code files or dependencies. 
+
+3.  **Create a PGXN Metadata File:** PGXN requires a metadata file that provides information about your extension. Create a file named `META.json` that includes details such as the extension name, version, author, description, dependencies, and other relevant information. Refer to the PGXN documentation for the required format and fields. 
+
+### Code for META.json file for my_extension:
+```json
+{
+  "name": "my_extension",
+  "abstract": "A basic PostgreSQL extension.",
+  "version": "1.0.0",
+  "maintainer": "Ishaan Adarsh <ishaanad9@gmail.com>",
+  "license": "postgresql",
+  "provides": {
+    "my_extension": {
+      "file": "my_extension--1.0.sql",
+      "version": "1.0.0"
+    }
+  },
+  "meta-spec": {
+    "version": "1.0.0",
+    "url": "https://pgxn.org/meta/spec.txt"
+  }
+}
+
+```
+
+4.  **Build a Distribution Package:** Package your extension and the `META.json` file into a distribution package. This package should be in a compressed format (zip format) and include all the necessary files for installation and usage of your extension.
+
+### README.md:
+- Include a README file in your extension's repository that provides an overview of the extension, installation instructions, and basic usage examples. The README file serves as the starting point for users to understand your extension and its features. Here's an example structure for a README file:
+
+```markdown
+   # My Extension
+
+   A brief description of your extension.
+
+   ## Installation
+
+   Steps to install the extension.
+
+   ## Configuration
+
+   Configuration options and their explanations.
+
+   ## Usage
+
+   Instructions on how to use the extension with code examples.
+
+   ## Upgrading
+
+   Notes on upgrading to a new version and any migration steps required.
+```
+
+5.  **Publish Your Extension:** Use the PGXN command-line tool or web interface to publish your extension. Provide the distribution package created in the previous step and upload it to PGXN. The tool will validate the package and extract the metadata. 
 
 

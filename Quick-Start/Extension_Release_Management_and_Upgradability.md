@@ -109,7 +109,7 @@ Ensuring backward compatibility is crucial for extension release management. It 
 
    In this example, a new column is added to the `my_table` table if the PostgreSQL version is 10 or above, otherwise, a different column is added.
 
-By following these practices, you can ensure backward compatibility for your extension, allowing users to smoothly upgrade to newer versions without encountering major issues. It's important to document any changes, check for version compatibility within your code, issue deprecation warnings, and handle differences in data structures as needed. This approach demonstrates your commitment to supporting existing users and maintaining a stable and reliable extension ecosystem.
+By following these practices, you can ensure backward compatibility for your extension, allowing users to smoothly upgrade to newer versions without encountering major issues. It's important to document any changes, check for version compatibility within your code, issue deprecation warnings, and handle differences in data structures as needed. This approach demonstrates your commitment to supporting existing users and maintaining a stable and reliable extension ecosystem. 
     
 ## 4) Documentation:
 Maintaining up-to-date and comprehensive documentation is essential for extension release management. It helps users understand how to install, configure, and use your extension effectively. Additionally, documentation should cover any breaking changes or migration steps required when upgrading to a new version. Here's a detailed explanation of how to handle documentation and some code snippets:

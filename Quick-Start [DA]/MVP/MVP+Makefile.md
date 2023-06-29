@@ -1,5 +1,5 @@
 # Minimum Viable Product:
-A basic tutorial on creating a PostgreSQL extension using the bare minimum files and a Makefile:
+A basic tutorial on creating a PostgreSQL extension using the bare minimum files:
 
 - A **control file**, which tells PostgreSQL some basic information about the extension, such as its name, version, and schema.
 - A **SQL script file**, which contains the SQL commands to create the extension's objects.
@@ -15,6 +15,22 @@ A basic tutorial on creating a PostgreSQL extension using the bare minimum files
 ```bash
 $ mkdir my_extension
 $ cd my_extension
+```
+#### Directory Hierarchy:
+```
+my_extension/
+├── META.json
+├── README.md
+├── sql/
+│   └── my_extension--1.0.sql
+├── test/
+│   ├── expected/
+│   │   └── my_extension--regress.out
+│   └── sql/
+│       └── my_extension--regress.sql
+├── my_extension.control
+└── Makefile
+
 ```
 
 ### Step 2: Create the Extension Control File
@@ -384,5 +400,3 @@ To set up and use PGXN to publish and distribute your extension to other users, 
 ```
 
 5.  **Publish Your Extension:** Use the PGXN command-line tool or web interface to publish your extension. Provide the distribution package created in the previous step and upload it to PGXN. The tool will validate the package and extract the metadata. 
-
-

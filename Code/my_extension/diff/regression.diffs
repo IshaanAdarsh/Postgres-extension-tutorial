@@ -1,0 +1,32 @@
+diff -U3 /Users/spartacus/Desktop/GSoC/CODE/my_extension/expected/my_extension--regress.out /Users/spartacus/Desktop/GSoC/CODE/my_extension/results/my_extension--regress.out
+--- /Users/spartacus/Desktop/GSoC/CODE/my_extension/expected/my_extension--regress.out	2023-06-28 12:59:38.504209000 +0530
++++ /Users/spartacus/Desktop/GSoC/CODE/my_extension/results/my_extension--regress.out	2023-06-28 12:59:59.436285892 +0530
+@@ -1,21 +1,20 @@
+ -- regression test script for my_extension
+-
+ -- Create the my_table table
+ CREATE TABLE my_table (
+   id SERIAL PRIMARY KEY,
+   name VARCHAR(100) NOT NULL
+ );
+-
+ -- Delete existing rows from my_table
+ DELETE FROM my_table;
+-
+ -- Verify the data in the my_table table
+ SELECT * FROM my_table;
+-
+  id | name 
+ ----+------
++(0 rows)
+ 
+--- Test the add_two function
+- add
+------
+-   3
++-- Test the add function
++SELECT add(1::int, 2::int);
++ERROR:  function add(integer, integer) does not exist
++LINE 1: SELECT add(1::int, 2::int);
++               ^
++HINT:  No function matches the given name and argument types. You might need to add explicit type casts.

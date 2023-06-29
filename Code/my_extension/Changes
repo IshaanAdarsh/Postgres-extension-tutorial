@@ -1,0 +1,12 @@
+# Changelog for my_extension
+
+## Version 1.0.1
+- New Function: complex_add
+  - Description: Added a new function called complex_add.
+  - Usage: complex_add takes an array of integers as input and returns their sum.
+  - Example: SELECT complex_add(ARRAY[1, 2, 3, 4, 5]);
+
+## Version 1.0.0
+- Initial release of my_extension.
+- Implemented basic functionality for data management and operations.
+

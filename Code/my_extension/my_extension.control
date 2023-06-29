@@ -1,0 +1,4 @@
+# my_extension.control
+comment = 'Minimal Viable Product'
+default_version = '1.0.1'
+relocatable = true

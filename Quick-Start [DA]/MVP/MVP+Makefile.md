@@ -286,7 +286,6 @@ diff -U3 /Users/spartacus/Desktop/GSoC/CODE/my_extension/expected/my_extension--
 test my_extension--regress        ... FAILED       18 ms
 ```
 
-
 ### Step 4: Analysing the output:
 The successful output of the `make installcheck` command for the `my_extension` extension:
 
@@ -313,5 +312,7 @@ test my_extension--regress        ... ok           10 ms
 =====================
 ```
 - The output includes information about creating the test database, installing the extension, executing the test queries, and finally cleaning up the database.
+
+## Updating the Extension:
 
 

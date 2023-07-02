@@ -238,7 +238,7 @@ SELECT complex_add(ARRAY[1, 2, 3, 4, 5]) AS result;
   "provides": {
     "my_extension": {
       "file": "my_extension--1.0.1.sql",
-      "version": "1.0.1"
+      "version": "1.0.1" 
     }
   },
   "generated_by": "Ishaan Adarsh",

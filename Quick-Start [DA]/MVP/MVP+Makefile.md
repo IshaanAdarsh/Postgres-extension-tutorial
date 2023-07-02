@@ -313,6 +313,286 @@ test my_extension--regress        ... ok           10 ms
 ```
 - The output includes information about creating the test database, installing the extension, executing the test queries, and finally cleaning up the database.
 
-## Updating the Extension:
+# Updating the Extension:
+There are multiple ways to upgrade extensions in PostgreSQL:
 
+1. `ALTER EXTENSION`: The `ALTER EXTENSION` command allows you to upgrade an extension to a newer version. This command is specifically designed for managing extensions and provides a convenient way to apply updates without the need to drop and recreate the extension.
 
+2. `DROP EXTENSION` and then `CREATE EXTENSION`: Another approach is to drop the existing extension and then recreate it using the newer version. This involves removing the extension from the database and then installing the updated version as a fresh installation.
+
+Both methods have their advantages and may be suitable depending on the specific situation:
+
+- `ALTER EXTENSION` is typically the preferred method as it allows for seamless upgrades without the need to drop and recreate the extension. It preserves the existing configuration, dependencies, and privileges associated with the extension.
+
+- `DROP EXTENSION` and `CREATE EXTENSION` can be useful when significant changes or migrations are involved, or when there are conflicts or incompatibilities between versions that require a clean installation.
+
+It's important to consider the specific requirements, compatibility, and impact on dependencies when choosing the appropriate method for upgrading extensions in PostgreSQL.
+
+## Updating the Extension using the `ALTER EXTENSION` command:
+
+- The ALTER EXTENSION command in PostgreSQL enables users to efficiently modify extensions by upgrading to newer versions, adjusting configuration and behaviour, introducing additional functionality or objects, and modifying existing components within the extension. 
+
+- This command streamlines extension management, eliminating the need for manual interventions or complex administrative procedures. It simplifies the task of applying updates, incorporating new features, and ensuring compatibility with evolving requirements.
+
+- [POSTGRES DOCS](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.14)
+
+### Directory Hierarchy:
+```
+my_extension/
+├── README.md
+├── my_extension--1.0.0.sql
+├── my_extension--1.0.0--1.0.1.sql
+├── expected/
+│   └── my_extension--regress.out
+├── sql/
+│   └── my_extension--regress.sql
+├── my_extension.control
+└── Makefile
+
+```
+
+### Step 1: Create an Update Script:
+- If the user wants to upgrade the extension from the old_version to a new target_version.
+- These scripts encapsulate the necessary changes required to upgrade an extension from one version to another, ensuring smooth transitions and preserving data integrity.
+- Update scripts have names following the pattern `extension--old_version--target_version.sql` 
+
+```bash
+$ touch my_extension--1.0.0--1.0.1.sql
+:' We are upgrading from version 1.0.0 to 1.0.1 '
+```
+
+- Open the my_extension--1.0.0--1.0.1 file and make the changes you want to add to the current version of the extension:
+
+> Good Practice:
+
+> Commenting out unchanged code in upgrade scripts enhances readability, facilitates comprehension of modifications, and serves as a valuable reference for future updates or troubleshooting scenarios, ensuring effective management and clarity in extension upgrades.
+
+```sql
+-- Update path script for version 1.0.1
+
+-- Comment out the unchanged code 
+-- Create necessary objects for version 1.0.1
+-- CREATE TABLE my_table (
+--  id SERIAL PRIMARY KEY,
+--  name VARCHAR(100) NOT NULL
+-- );
+
+-- Add 2 numbers using add function
+-- CREATE FUNCTION add(a integer, b integer) RETURNS integer
+--    LANGUAGE SQL
+--    IMMUTABLE
+--    RETURNS NULL ON NULL INPUT
+--    RETURN a + b;
+
+-- Add complex_add function in version 1.0.1
+CREATE FUNCTION complex_add(integer[]) RETURNS integer
+    LANGUAGE SQL
+    IMMUTABLE
+    RETURNS NULL ON NULL INPUT
+    AS $$
+        SELECT COALESCE(SUM(val), 0)
+        FROM unnest($1) AS t(val)
+    $$
+;
+```
+
+### Step 2: Update the Control File:
+- Updating the default_version for an extension is necessary to indicate the latest version available
+
+```control
+# my_extension.control
+comment = 'Minimal Viable Product'
+default_version = '1.0.1'                # Reflect the newer version of the extension
+relocatable = true
+```
+
+### Step 3: Update the Makefile:
+- Update the `DATA` variable to include the update script to ensure that it is executed during the upgrade process of the extension, enabling the changes to be applied consistently across all installations.
+
+```makefile
+EXTENSION = my_extension
+DATA = my_extension--1.0.0--1.0.1.sql   # Update the DATA variable with the Upgrade Script file
+REGRESS = my_extension--regress
+
+PG_CONFIG  ?= pg_config
+PGXS := $(shell $(PG_CONFIG) --pgxs)
+include $(PGXS)
+```
+
+### Step 4: Build and Install the Extension
+- To build and install the updated extension, run the following commands:
+
+```bash
+$ make
+$ make install
+```
+
+### Step 5: Upgrade the Extension:
+- Finally, use the `ALTER EXTENSION` command to update the extension to the latest version.
+- Execute the following SQL statement:
+
+```sql
+ALTER EXTENSION my_extension UPDATE TO '1.0.1';
+-- Output: ALTER EXTENSION
+```
+The new objects introduced in the `my_extension--1.0.0--1.0.1.sql` file are included when updating an existing extension. This approach allows you to add new functionality without affecting the existing objects and ensures proper versioning and upgrade procedures.
+
+- To check for **unexpected update paths**, use this command:
+
+```sql
+SELECT * FROM pg_extension_update_paths('*`extension_name`*');
+```
+- This shows each pair of distinct known version names for the specified extension, together with the update path sequence that would be taken to get from the source version to the target version, or `NULL` if there is no available update path.
+
+**Output**:
+```
+ source | target |     path
+--------+--------+--------------
+ 1.0.1  | 1.0.0  |
+ 1.0.0  | 1.0.1  | 1.0.0--1.0.1
+(2 rows)
+```
+## `DROP EXTENSION` and `CREATE EXTENSION` method of upgrading extensions:
+
+### Step 1:  Check the existing version: 
+- Before performing the upgrade, check the current version of the extension using the following query:
+```sql
+SELECT * FROM pg_extension WHERE extname = 'my_extension';
+```
+
+#### Output:
+```
+  oid  |   extname    | extowner | extnamespace | extrelocatable | extversion | extconfig | extcondition
+-------+--------------+----------+--------------+----------------+------------+-----------+--------------
+ 17254 | my_extension |       10 |         2200 | t              | 1.0.0      |           |
+(1 row)
+```
+
+### Step 2: Backup the database: 
+- It is always recommended to take a backup of your database before performing any upgrade operation to ensure data safety.
+```
+pg_dump -U <username> -d <database_name> -f <backup_file_path>
+```
+
+Replace `<username>` with your PostgreSQL username, `<database_name>` with the name of the database you want to back up, and `<backup_file_path>` with the path where you want to save the backup file.
+
+### Step 3: Drop the existing extension: 
+- Execute the `DROP EXTENSION` command to remove the current version of the extension from the database:
+```sql
+DROP EXTENSION IF EXISTS your_extension_name;
+-- Output: DROP EXTENSION
+```
+### Step 4: Update the current extension documents to the new_version:
+
+### Directory Hierarchy:
+```
+my_extension/
+├── README.md
+├── my_extension--1.0.0.sql
+├── my_extension--1.0.1.sql
+├── expected/
+│   └── my_extension--regress.out
+├── sql/
+│   └── my_extension--regress.sql
+├── my_extension.control
+└── Makefile
+
+```
+
+#### 1) Update the Extension Control File:
+- Open the "my_extension.control" file and update the following content:
+
+```control
+# my_extension.control
+comment = 'Minimal Viable Product'
+default_version = '1.0.1'
+relocatable = true
+```
+
+#### 2) Create the new Extension SQL File:
+
+- Create a file named `my_extension--1.0.1.sql`.
+  - This file contains the new SQL statements for the extension.
+
+```bash
+$ touch my_extension--1.0.1.sql
+```
+
+- Open the `my_extension--1.0.1.sql` file and add the following content:
+  - The `complex_add` is a new function named complex_add that takes an array of integers as input. Inside the function, we use the unnest function to expand the array into individual elements and then calculate the sum using the SUM function. The result is returned as an integer.
+
+```sql
+-- Update path script for version 1.0.1
+-- Create necessary objects for version 1.0.1
+CREATE TABLE my_table (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
+-- Add 2 numbers using add function
+CREATE FUNCTION add(a integer, b integer) RETURNS integer
+    LANGUAGE SQL
+    IMMUTABLE
+    RETURNS NULL ON NULL INPUT
+    RETURN a + b;
+
+CREATE FUNCTION complex_add(integer[]) RETURNS integer
+    LANGUAGE SQL
+    IMMUTABLE
+    RETURNS NULL ON NULL INPUT
+    AS $$
+        SELECT COALESCE(SUM(val), 0)
+        FROM unnest($1) AS t(val)
+    $$
+;
+```
+#### 3) Update the Makefile:
+
+- In the given code, the changes made to the `Makefile` are related to the updated value of the `DATA` variable.
+
+```makefile
+EXTENSION = my_extension
+DATA = my_extension--1.0.1.sql
+REGRESS = my_extension--regress
+
+PG_CONFIG  ?= pg_config
+PGXS := $(shell $(PG_CONFIG) --pgxs)
+include $(PGXS)
+```
+
+### Step 4: Install the new version: 
+- Run the `CREATE EXTENSION` command to install the updated version of the extension:
+```sql
+CREATE EXTENSION your_extension_name;
+-- Output: CREATE EXTENSION
+```
+
+### Step 5: Verify the upgrade: 
+- Confirm that the upgrade was successful by checking the new version of the extension:
+```sql
+SELECT * FROM pg_extension WHERE extname = 'your_extension_name';
+```
+
+#### Output:
+```
+  oid  |   extname    | extowner | extnamespace | extrelocatable | extversion | extconfig | extcondition
+-------+--------------+----------+--------------+----------------+------------+-----------+--------------
+ 17254 | my_extension |       10 |         2200 | t              | 1.0.1      |           |
+(1 row)
+```
+
+### Step 6: Validate functionality: 
+- Test the functionality of the extension in your application or database to ensure that it is working as expected with the upgraded version.
+
+- The new functionality added is complex_add:
+```sql
+SELECT complex_add(ARRAY[1, 2, 3, 4, 5]);
+```
+
+#### Output:
+```
+ complex_add
+-------------
+          15
+(1 row)
+```

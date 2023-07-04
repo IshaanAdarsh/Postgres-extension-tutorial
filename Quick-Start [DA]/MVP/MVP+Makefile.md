@@ -14,7 +14,6 @@ A basic tutorial on creating a PostgreSQL extension using the bare minimum files
 $ mkdir my_extension
 $ cd my_extension
 ```
-
 #### Directory Hierarchy:
 ```
 my_extension/
@@ -50,6 +49,9 @@ default_version = '1.0.0'
 # Indicates whether the extension is relocatable, allowing it to be moved to a different location
 relocatable = true
 ```
+
+For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
+
 
 ### Step 3: Create the Extension SQL File
 - Create a file named "my_extension--1.0.0.sql".
@@ -94,6 +96,8 @@ PGXS := $(shell $(PG_CONFIG) --pgxs)     # Get the PostgreSQL Extension Makefile
 include $(PGXS)                          # Include the PostgreSQL Extension Makefile
 ```
 
+For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
+
 ### Step 5: Build and Install the Extension
 - To build and install the extension, run the following commands:
 
@@ -101,6 +105,8 @@ include $(PGXS)                          # Include the PostgreSQL Extension Make
 $ make
 $ make install
 ```
+
+For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).
 
 > NOTE: make: Nothing to be done for 'all'
 
@@ -117,6 +123,9 @@ CREATE EXTENSION IF NOT EXISTS my_extension;
 -- Output: CREATE EXTENSION
 ```
 - The CREATE EXTENSION statement is executed in PostgreSQL to create the extension.
+
+For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
+
 
 ## Implementation of the Extension:
 Once you have successfully implemented the `my_extension` in your PostgreSQL database, you can use it as follows:
@@ -192,6 +201,7 @@ PG_CONFIG  ?= pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
+For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
 
 - The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress`. This file will contain the SQL commands for the regression tests to be executed.
 
@@ -240,6 +250,8 @@ SELECT add(1, 2);
    ```
 
    This command will initiate the installation and regression testing process for your extension.
+
+For more information on the `make installcheck` command, you can refer to the [PostgreSQL documentation on `make installcheck`](https://www.postgresql.org/docs/current/regress-run.html#id-1.6.20.5.4).
 
 #### Working of the command `make installcheck`:
 - The `make installcheck` command will internally execute the `pg_regress` utility with the appropriate parameters. It will connect to a PostgreSQL server and run the regression tests specified in the `my_extension--regress.sql` file.
@@ -334,7 +346,7 @@ It's important to consider the specific requirements, compatibility, and impact 
 
 - This command streamlines extension management, eliminating the need for manual interventions or complex administrative procedures. It simplifies the task of applying updates, incorporating new features, and ensuring compatibility with evolving requirements.
 
-- [POSTGRES DOCS](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.14)
+- For more information on the Extension Updates, you can refer to the [PostgreSQL documentation on Extension Updates](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.14)
 
 ### Directory Hierarchy:
 ```
@@ -437,6 +449,8 @@ ALTER EXTENSION my_extension UPDATE TO '1.0.1';
 ```
 The new objects introduced in the `my_extension--1.0.0--1.0.1.sql` file are included when updating an existing extension. This approach allows you to add new functionality without affecting the existing objects and ensures proper versioning and upgrade procedures.
 
+- For more information on the `ALTER EXTENSION` command, you can refer to the [PostgreSQL documentation on `ALTER EXTENSION`](https://www.postgresql.org/docs/current/sql-alterextension.html)
+
 - To check for **unexpected update paths**, use this command:
 
 ```sql
@@ -482,6 +496,9 @@ Replace `<username>` with your PostgreSQL username, `<database_name>` with the n
 DROP EXTENSION IF EXISTS your_extension_name;
 -- Output: DROP EXTENSION
 ```
+
+- For more information on the `DROP EXTENSION` command, you can refer to the [PostgreSQL documentation on `DROP EXTENSION`](https://www.postgresql.org/docs/current/sql-dropextension.html)
+
 ### Step 4: Update the current extension documents to the new_version:
 
 ### Directory Hierarchy:
@@ -566,6 +583,9 @@ include $(PGXS)
 CREATE EXTENSION your_extension_name;
 -- Output: CREATE EXTENSION
 ```
+
+For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
+
 
 ### Step 5: Verify the upgrade: 
 - Confirm that the upgrade was successful by checking the new version of the extension:

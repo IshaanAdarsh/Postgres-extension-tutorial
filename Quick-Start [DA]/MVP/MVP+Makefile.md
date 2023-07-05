@@ -98,6 +98,16 @@ include $(PGXS)                          # Include the PostgreSQL Extension Make
 
 For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
 
+#### Tip: 
+```makefile
+EXTENSION = my_extension
+DATA = my_extension--1.0.0.sql my_extension--1.1.0.sql
+```
+
+- By including multiple SQL script files in the `DATA` variable of the `Makefile`, the user can ensure that different versions of the extension can have different sets of objects or functionality. 
+- Each SQL script file represents a specific version of the extension and can contain the necessary SQL commands for the desired changes.
+- This allows the user to easily manage and control the installation of specific features or modifications in different versions of your extension.
+
 ### Step 5: Build and Install the Extension
 - To build and install the extension, run the following commands:
 

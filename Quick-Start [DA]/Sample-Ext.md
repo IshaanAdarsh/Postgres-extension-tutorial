@@ -3,7 +3,8 @@
 In this quick start guide, we will explore the process of extending PostgreSQL using the `pg_sample_ext` extension. `pg_sample_ext` is a sample extension that gradually introduces various extension features which include
 - Functions
 - Data Types
-  - Domains
+  - `CREATE TYPE`
+  - `CREATE DOMAIN`
 - Operators
 - Indexam
 - Tableam.

@@ -84,7 +84,7 @@ By following these steps, you can create a PostgreSQL extension that includes a 
 The `CREATE TYPE` statement and the `CREATE DOMAIN` statement in PostgreSQL are used to create custom data types. While they both allow you to define custom data types, there are differences in how they are created and their intended purposes. Here's a differentiation between the two:
 
 ### 1. `CREATE TYPE` statement:
-- Creates a composite type or an enumerated type.
+Creates a composite type or an enumerated type.
 - Composite types (also known as row types) allow you to define a new data type that consists of multiple attributes or fields. They are similar to creating a table with named columns but without the storage aspect.
 - Enumerated types allow you to define a new data type with a predefined list of allowed values.
 
@@ -102,7 +102,6 @@ CREATE TYPE status_type AS ENUM ('active', 'inactive', 'pending');
 ```
 
 ### 2. `CREATE DOMAIN` statement:
-- Creates a domain type.
 - A domain type is a custom data type that is based on an existing base type but with additional constraints or rules applied. It provides a way to create a specialized version of an existing data type.
 - Domains are useful for adding constraints or business rules to a base type without duplicating those constraints across multiple columns.
 

@@ -110,3 +110,27 @@ A domain type using `CREATE DOMAIN`:
 CREATE DOMAIN email_address AS text
   CHECK (value ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
 ```
+
+## Custom Postgres Operators:
+In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations. There are different types of custom operators that can be created in PostgreSQL:
+
+1. **Unary Operators:**
+   Unary operators are operators that perform an operation on a single operand. They can be prefix operators or postfix operators.
+
+2. **Binary Operators:**
+   Binary operators are operators that perform an operation on two operands. They can be infix operators or prefix operators.
+
+3. **Comparison Operators:**
+   Comparison operators are used to compare two values and return a boolean result. Custom comparison operators can be defined to handle specific data types or implement custom comparison logic.
+
+4. **Arithmetic Operators:**
+   Arithmetic operators are used for mathematical operations such as addition, subtraction, multiplication, and division. Custom arithmetic operators can be defined to handle specialized numeric types or implement custom arithmetic logic.
+
+5. **Logical Operators:**
+   Logical operators are used for logical operations such as conjunction (AND), disjunction (OR), and negation (NOT). Custom logical operators can be defined to handle specialized conditions or implement custom logical operations.
+
+6. **Text Operators:**
+   Text operators are used for string concatenation, pattern matching, and other text-related operations. Custom text operators can be defined to handle specific string patterns or implement custom text manipulation logic.
+
+7. **Postfix Operators:**
+   Postfix operators are operators that are applied after their operand. They are useful for creating custom functions that can be called using a postfix syntax.

@@ -122,6 +122,7 @@ CREATE DOMAIN email_address AS text
 
 ## Custom Postgres Operators:
 [3rd Party Site](https://www.linuxtopia.org/online_books/database_guides/Practical_PostgreSQL_database/PostgreSQL_x15284_002.htm)
+
 In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations. There are different types of custom operators that can be created in PostgreSQL:
 
 1. **Unary Operators:**

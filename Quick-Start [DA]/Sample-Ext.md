@@ -6,8 +6,15 @@ In this quick start guide, we will explore the process of extending PostgreSQL u
   - `CREATE TYPE`
   - `CREATE DOMAIN`
 - Operators
+  - Unary Operators
+  - Binary Operators
+  - Comparison Operators
+  - Arithmetic Operators
+  - Logical Operators
+  - Text Operators
+  - Postfix Operators
 - Indexam
-- Tableam.
+- Tableam
 
 By following this guide, you will learn how to create, install, and upgrade the `pg_sample_ext` extension while understanding the different ways in which Postgres can be extended. Each section will introduce a specific feature, providing hands-on examples and explanations to help you grasp the concepts and apply them to your own extensions.
 
@@ -83,6 +90,8 @@ By following these steps, you can create a PostgreSQL extension that includes a 
 ## Custom Data Type: 
 The `CREATE TYPE` statement and the `CREATE DOMAIN` statement in PostgreSQL are used to create custom data types. While they both allow you to define custom data types, there are differences in how they are created and their intended purposes. Here's a differentiation between the two:
 
+[3rd Party Tutorial Content](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-user-defined-data-types/)
+
 ### 1. `CREATE TYPE` statement:
 Creates a composite type or an enumerated type.
 - Composite types (also known as row types) allow you to define a new data type that consists of multiple attributes or fields. They are similar to creating a table with named columns but without the storage aspect.
@@ -112,6 +121,7 @@ CREATE DOMAIN email_address AS text
 ```
 
 ## Custom Postgres Operators:
+[3rd Party Site](https://www.linuxtopia.org/online_books/database_guides/Practical_PostgreSQL_database/PostgreSQL_x15284_002.htm)
 In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations. There are different types of custom operators that can be created in PostgreSQL:
 
 1. **Unary Operators:**

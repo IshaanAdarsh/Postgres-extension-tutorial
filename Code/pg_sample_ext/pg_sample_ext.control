@@ -1,0 +1,4 @@
+# pg_sample_ext.control
+comment = 'Extendible Postgres Examples'
+default_version = '1.0.1'
+relocatable = true

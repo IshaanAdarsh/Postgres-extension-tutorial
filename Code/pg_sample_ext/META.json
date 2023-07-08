@@ -1,0 +1,37 @@
+{
+  "name": "pg_sample_ext",
+  "abstract": "A Sample PostgreSQL extension",
+  "description": "pg_sample_ext is a PostgreSQL extension that provides a sample function to demonstrate extending PostgreSQL's functionality.",
+  "version": "1.0.1",
+  "maintainer": [
+    "Ishaan Adarsh <ishaanad9@gmail.com>"
+  ],
+  "license": "postgresql",
+  "provides": {
+    "pg_sample_ext": {
+      "abstract": "A Sample PostgreSQL extension",
+      "file": "pg_sample_ext--1.0.1.sql",
+      "version": "1.0.1"
+    }
+  },
+  "resources": {
+    "repository": {
+      "url": "git://github.com/IshaanAdarsh/pg_sample_ext.git",
+      "web": "https://github.com/IshaanAdarsh/pg_sample_ext/",
+      "type": "git"
+    }
+  },
+  "generated_by": "Ishaan Adarsh",
+  "meta-spec": {
+    "version": "1.0.0",
+    "url": "https://pgxn.org/meta/spec.txt"
+  },
+  "tags": [
+    "PostgreSQL",
+    "extension",
+    "sample",
+    "function",
+    "custom"
+  ]
+}
+

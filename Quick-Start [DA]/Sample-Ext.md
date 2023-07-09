@@ -198,7 +198,7 @@ By defining this custom operator, you can now use it in your SQL queries and exp
 SELECT ROW(2)::my_type @* ROW(3)::my_type;
 ```
 
-The input and output for the example query:
+### Implementation:
 
 ```sql
 

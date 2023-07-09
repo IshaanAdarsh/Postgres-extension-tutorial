@@ -6,13 +6,6 @@ In this quick start guide, we will explore the process of extending PostgreSQL u
   - `CREATE TYPE`
   - `CREATE DOMAIN`
 - Operators
-  - Unary Operators
-  - Binary Operators
-  - Comparison Operators
-  - Arithmetic Operators
-  - Logical Operators
-  - Text Operators
-  - Postfix Operators
 - Indexam
 - Tableam
 
@@ -173,25 +166,74 @@ INSERT INTO my_table (quantity) VALUES (-5);
 ## Custom Postgres Operators:
 [3rd Party Site](https://www.linuxtopia.org/online_books/database_guides/Practical_PostgreSQL_database/PostgreSQL_x15284_002.htm)
 
-In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations. There are different types of custom operators that can be created in PostgreSQL:
+In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations.
 
-1. **Unary Operators:**
-   Unary operators are operators that perform an operation on a single operand. They can be prefix operators or postfix operators.
+```sql
+-- Custom Operator: @*
+-- Description: Custom operator that multiplies two values of type my_type
 
-2. **Binary Operators:**
-   Binary operators are operators that perform an operation on two operands. They can be infix operators or prefix operators.
+-- Create a new type to use in our operator.
+CREATE TYPE my_type AS (value int);
 
-3. **Comparison Operators:**
-   Comparison operators are used to compare two values and return a boolean result. Custom comparison operators can be defined to handle specific data types or implement custom comparison logic.
+-- Create a custom operator that multiplies two values of type my_type.
+-- The operator symbol is @*.
+-- It takes two operands of type my_type and returns a value of the same type.
+-- The behavior is defined by the SQL function multiply_values.
+CREATE OPERATOR @* (
+    PROCEDURE = multiply_values,
+    LEFTARG = my_type,
+    RIGHTARG = my_type
+);
 
-4. **Arithmetic Operators:**
-   Arithmetic operators are used for mathematical operations such as addition, subtraction, multiplication, and division. Custom arithmetic operators can be defined to handle specialized numeric types or implement custom arithmetic logic.
+-- Create a SQL function that defines the behavior of the custom operator.
+-- This function multiplies the values of two my_type operands.
+CREATE FUNCTION multiply_values(left my_type, right my_type) RETURNS my_type AS $$
+    SELECT ROW(left.value * right.value)::my_type;
+$$ LANGUAGE SQL;
+```
 
-5. **Logical Operators:**
-   Logical operators are used for logical operations such as conjunction (AND), disjunction (OR), and negation (NOT). Custom logical operators can be defined to handle specialized conditions or implement custom logical operations.
+By defining this custom operator, you can now use it in your SQL queries and expressions, such as:
 
-6. **Text Operators:**
-   Text operators are used for string concatenation, pattern matching, and other text-related operations. Custom text operators can be defined to handle specific string patterns or implement custom text manipulation logic.
+```sql
+SELECT ROW(2)::my_type @* ROW(3)::my_type;
+```
 
-7. **Postfix Operators:**
-   Postfix operators are operators that are applied after their operand. They are useful for creating custom functions that can be called using a postfix syntax.
+The input and output for the example query:
+
+```sql
+
+-- Input
+
+SELECT ROW(2)::my_type AS input_left, ROW(3)::my_type AS input_right;
+
+-- Output
+
+SELECT ROW(2)::my_type @* ROW(3)::my_type AS result;
+
+```
+
+The output will be:
+
+```
+
+ input_left | input_right
+
+------------+-------------
+
+ (2)        | (3)
+
+(1 row)
+
+ result
+
+---------
+
+ (6)
+
+(1 row)
+
+```
+
+Here, we first show the input values `input_left` and `input_right`, which are `my_type` values created using the `ROW` constructor.
+
+Then, we execute the query using the custom operator `@*` to multiply the `input_left` and `input_right` values. The result is `(6)`, which is the product of 2 and 3.

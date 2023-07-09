@@ -97,7 +97,8 @@ Creates a composite type or an enumerated type.
 - Composite types (also known as row types) allow you to define a new data type that consists of multiple attributes or fields. They are similar to creating a table with named columns but without the storage aspect.
 - Enumerated types allow you to define a new data type with a predefined list of allowed values.
 
-A composite type using `CREATE TYPE`:
+#### 1. A composite type using `CREATE TYPE`:
+   - The `person_type` is defined as a composite type consisting of two attributes: `name` of type `text` and `age` of type `integer`.
 ```sql
 CREATE TYPE person_type AS (
   name text,
@@ -105,10 +106,39 @@ CREATE TYPE person_type AS (
 );
 ```
 
-An enumerated type using `CREATE TYPE`:
+#### 2. An enumerated type using `CREATE TYPE`:
+   - The `status_type` is defined as an enumerated type that represents a set of predefined values: 'active', 'inactive', and 'pending'.
 ```sql
 CREATE TYPE status_type AS ENUM ('active', 'inactive', 'pending');
 ```
+
+Usage example:
+```sql
+-- Declare a variable of type person_type and assign values
+DECLARE
+  person_info person_type;
+BEGIN
+  person_info.name := 'John Doe';
+  person_info.age := 30;
+  
+  -- Perform operations using the composite type
+  RAISE NOTICE 'Name: %, Age: %', person_info.name, person_info.age;
+END;
+
+-- Use the enumerated type in a table column
+CREATE TABLE my_table (
+  id serial PRIMARY KEY,
+  status status_type
+);
+
+-- Insert a row with a value from the enumerated type
+INSERT INTO my_table (status) VALUES ('active');
+
+-- This insert will fail due to the constraint of the enumerated type
+INSERT INTO my_table (status) VALUES ('completed');
+```
+
+In the example above, we demonstrate how to use the `person_type` composite type to declare a variable and perform operations using its attributes. We also showcase the usage of the `status_type` enumerated type in a table column, ensuring that only the predefined values ('active', 'inactive', 'pending') can be inserted.
 
 ### 2. `CREATE DOMAIN` statement:
 - A domain type is a custom data type that is based on an existing base type but with additional constraints or rules applied. It provides a way to create a specialized version of an existing data type.
@@ -116,8 +146,28 @@ CREATE TYPE status_type AS ENUM ('active', 'inactive', 'pending');
 
 A domain type using `CREATE DOMAIN`:
 ```sql
-CREATE DOMAIN email_address AS text
-  CHECK (value ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$');
+-- Create a domain type for representing positive integers
+CREATE DOMAIN positive_integer AS integer
+   CHECK (VALUE > 0);
+```
+
+In the example above, we create a domain type called `positive_integer` based on the existing base type `integer`. The `CHECK` constraint ensures that any value assigned to this domain type must be greater than 0, effectively enforcing the concept of positive integers.
+
+By using the domain type `positive_integer`, you can apply this constraint to multiple columns or variables without the need to duplicate the constraint definition each time. It promotes consistency and simplifies the management of constraints by encapsulating them within the domain type.
+
+Usage example:
+```sql
+-- Create a table using the domain type
+CREATE TABLE my_table (
+   id serial PRIMARY KEY,
+   quantity positive_integer
+);
+
+-- Insert a row, ensuring the quantity is a positive integer
+INSERT INTO my_table (quantity) VALUES (10);
+
+-- This insert will fail due to the CHECK constraint
+INSERT INTO my_table (quantity) VALUES (-5);
 ```
 
 ## Custom Postgres Operators:

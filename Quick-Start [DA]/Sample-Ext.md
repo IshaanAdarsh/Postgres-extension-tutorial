@@ -105,30 +105,39 @@ CREATE TYPE person_type AS (
 CREATE TYPE status_type AS ENUM ('active', 'inactive', 'pending');
 ```
 
-Usage example:
+Implementing the Data Types:
 ```sql
--- Declare a variable of type person_type and assign values
-DECLARE
-  person_info person_type;
-BEGIN
-  person_info.name := 'John Doe';
-  person_info.age := 30;
-  
-  -- Perform operations using the composite type
-  RAISE NOTICE 'Name: %, Age: %', person_info.name, person_info.age;
-END;
+-- Use the composite type in a table column
+CREATE TABLE my_table (
+   id serial PRIMARY KEY,
+   person person_type
+);
 
 -- Use the enumerated type in a table column
-CREATE TABLE my_table (
+CREATE TABLE status_table (
   id serial PRIMARY KEY,
   status status_type
 );
 
--- Insert a row with a value from the enumerated type
-INSERT INTO my_table (status) VALUES ('active');
+-- Implementing Operations using Data Types
+-- 1) Insert a row with a value from the composite type
+INSERT INTO my_table (person) VALUES (('John Doe', 30));
 
--- This insert will fail due to the constraint of the enumerated type
-INSERT INTO my_table (status) VALUES ('completed');
+-- Output:
+ id |     person
+----+-----------------
+  1 | ("John Doe",30)
+(1 row)
+
+-- 2) Insert a row with a value from the enumerated type
+INSERT INTO status_table (status) VALUES ('active');
+
+-- Output:
+ id | status
+----+--------
+  1 | active
+(1 row)
+
 ```
 
 In the example above, we demonstrate how to use the `person_type` composite type to declare a variable and perform operations using its attributes. We also showcase the usage of the `status_type` enumerated type in a table column, ensuring that only the predefined values ('active', 'inactive', 'pending') can be inserted.
@@ -151,16 +160,25 @@ By using the domain type `positive_integer`, you can apply this constraint to mu
 Usage example:
 ```sql
 -- Create a table using the domain type
-CREATE TABLE my_table (
+CREATE TABLE quant_table (
    id serial PRIMARY KEY,
    quantity positive_integer
 );
 
 -- Insert a row, ensuring the quantity is a positive integer
-INSERT INTO my_table (quantity) VALUES (10);
+INSERT INTO quant_table (quantity) VALUES (10);
+
+-- Output:
+ id | quantity
+----+----------
+  1 |       10
+(1 row)
 
 -- This insert will fail due to the CHECK constraint
 INSERT INTO my_table (quantity) VALUES (-5);
+
+-- Output:
+ERROR:  value for domain positive_integer violates check constraint "positive_integer_check"
 ```
 
 ## Custom Postgres Operators:

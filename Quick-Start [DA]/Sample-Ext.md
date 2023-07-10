@@ -233,8 +233,6 @@ SELECT ROW(2)::my_type AS input_left, ROW(3)::my_type AS input_right;
  (2)        | (3)
 
 (1 row)
-
-
 ```
 
 Here, we first show the input values `input_left` and `input_right`, which are `my_type` values created using the `ROW` constructor.
@@ -256,4 +254,3 @@ SELECT ROW(2)::my_type @* ROW(3)::my_type AS result;
 ```
 
 Then, we execute the query using the custom operator `@*` to multiply the `input_left` and `input_right` values. The result is `(6)`, which is the product of 2 and 3.
-

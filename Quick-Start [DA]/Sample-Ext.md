@@ -187,27 +187,29 @@ ERROR:  value for domain positive_integer violates check constraint "positive_in
 In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations.
 
 ```sql
+-- Create necessary objects for version 1.0.2
+
 -- Custom Operator: @*
 -- Description: Custom operator that multiplies two values of type my_type
 
 -- Create a new type to use in our operator.
 CREATE TYPE my_type AS (value int);
 
+-- Create a SQL function that defines the behaviour of the custom operator.
+-- This function multiplies the values of two my_type operands.
+CREATE FUNCTION multiply_values(input1 my_type, input2 my_type) RETURNS my_type AS $$
+    SELECT ROW(input1.value * input2.value)::my_type;
+$$ LANGUAGE SQL IMMUTABLE;
+
 -- Create a custom operator that multiplies two values of type my_type.
 -- The operator symbol is @*.
 -- It takes two operands of type my_type and returns a value of the same type.
--- The behavior is defined by the SQL function multiply_values.
+-- The behaviour is defined by the SQL function multiply_values.
 CREATE OPERATOR @* (
     PROCEDURE = multiply_values,
     LEFTARG = my_type,
     RIGHTARG = my_type
 );
-
--- Create a SQL function that defines the behavior of the custom operator.
--- This function multiplies the values of two my_type operands.
-CREATE FUNCTION multiply_values(left my_type, right my_type) RETURNS my_type AS $$
-    SELECT ROW(left.value * right.value)::my_type;
-$$ LANGUAGE SQL;
 ```
 
 By defining this custom operator, you can now use it in your SQL queries and expressions, such as:
@@ -226,12 +228,9 @@ SELECT ROW(2)::my_type AS input_left, ROW(3)::my_type AS input_right;
 
 -- Output
 
- input_left | input_right
-
+ input_left | input_right
 ------------+-------------
-
- (2)        | (3)
-
+ (2)        | (3)
 (1 row)
 ```
 
@@ -244,12 +243,9 @@ SELECT ROW(2)::my_type @* ROW(3)::my_type AS result;
 
 -- Output
 
- result
-
----------
-
- (6)
-
+ result
+--------
+ (6)
 (1 row)
 ```
 

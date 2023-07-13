@@ -6,8 +6,6 @@ In this quick start guide, we will explore the process of extending PostgreSQL u
   - `CREATE TYPE`
   - `CREATE DOMAIN`
 - Operators
-- Indexam
-- Tableam
 
 By following this guide, you will learn how to create, install, and upgrade the `pg_sample_ext` extension while understanding the different ways in which Postgres can be extended. Each section will introduce a specific feature, providing hands-on examples and explanations to help you grasp the concepts and apply them to your own extensions.
 
@@ -45,6 +43,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 ```
+
+For more detailed information on `CREATE FUNCTION`, you can refer to the [PostgreSQL documentation on `CREATE FUNCTION`](https://www.postgresql.org/docs/current/sql-createfunction.html).
+
 
 ### Step 4: Create the Makefile
 Create a Makefile inside the extension directory. This file will define the build and installation instructions for the extension. For example, create a file named `Makefile` with the following contents:
@@ -105,6 +106,8 @@ CREATE TYPE person_type AS (
 CREATE TYPE status_type AS ENUM ('active', 'inactive', 'pending');
 ```
 
+For more detailed information on `CREATE TYPE`, you can refer to the [PostgreSQL documentation on `CREATE TYPE`](https://www.postgresql.org/docs/current/sql-createtype.html).
+
 Implementing the Data Types:
 ```sql
 -- Use the composite type in a table column
@@ -156,6 +159,8 @@ CREATE DOMAIN positive_integer AS integer
 In the example above, we create a domain type called `positive_integer` based on the existing base type `integer`. The `CHECK` constraint ensures that any value assigned to this domain type must be greater than 0, effectively enforcing the concept of positive integers.
 
 By using the domain type `positive_integer`, you can apply this constraint to multiple columns or variables without the need to duplicate the constraint definition each time. It promotes consistency and simplifies the management of constraints by encapsulating them within the domain type.
+
+For more detailed information on `CREATE DOMAIN`, you can refer to the [PostgreSQL documentation on `CREATE DOMAIN`](https://www.postgresql.org/docs/current/sql-createdomain.html).
 
 Usage example:
 ```sql
@@ -211,6 +216,8 @@ CREATE OPERATOR @* (
     RIGHTARG = my_type
 );
 ```
+For more detailed information on `CREATE OPERATOR`, you can refer to the [PostgreSQL documentation on `CREATE OPERATOR`](https://www.postgresql.org/docs/current/sql-createoperator.html).
+
 
 By defining this custom operator, you can now use it in your SQL queries and expressions, such as:
 

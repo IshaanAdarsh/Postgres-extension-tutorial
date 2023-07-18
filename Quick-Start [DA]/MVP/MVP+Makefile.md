@@ -96,6 +96,22 @@ PGXS := $(shell $(PG_CONFIG) --pgxs)     # Get the PostgreSQL Extension Makefile
 include $(PGXS)                          # Include the PostgreSQL Extension Makefile
 ```
 
+<!--
+We could explain PGXS inshort to give the user more idea about the last 3 lines in the makefile.
+#### PGXS (PostgreSQL Extension Build Infrastructure) 
+It is a framework that helps simplify the process of building and installing extensions for PostgreSQL. It provides a standard way to compile and install extensions, making it easier to distribute and use them.
+
+To use PGXS:
+1. Create your extension's files, including source code and control files.
+2. Create a Makefile in your extension's directory.
+3. Inside the Makefile, include PGXS by adding a few lines of code.
+4. Define any extension-specific instructions in the Makefile.
+5. Use the `make` command to build and install your extension.
+6. Enable the extension in PostgreSQL using the `CREATE EXTENSION` SQL command.
+
+PGXS takes care of locating your PostgreSQL installation, determining compilation options, and ensuring the extension files are in the right place. It simplifies the process, making it easier for you to build and install your extension in different PostgreSQL environments.
+-->
+
 For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
 
 #### Tip: 

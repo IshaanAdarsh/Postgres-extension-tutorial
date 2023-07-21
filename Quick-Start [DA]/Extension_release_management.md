@@ -1,5 +1,4 @@
-Extension Release Management for a Postgres Extension
-
+# Extension Release Management:
 Extension release management is a crucial aspect of maintaining a Postgres extension and ensuring its reliability and compatibility with different versions of PostgreSQL. Effective release management involves a systematic approach to versioning, testing, documentation, and distribution. Here are the key steps and best practices for managing releases of a Postgres extension:
 
 1. Versioning:
@@ -51,6 +50,7 @@ Adopt a robust testing strategy to ensure the extension functions as expected ac
 Enforce a code review process to ensure the quality and correctness of code changes. Code reviews involve team members evaluating each other's code, offering feedback, and ensuring that coding standards are followed.
 - React promptly to security issues and vulnerabilities. When a security issue is identified, release a new version with the necessary fixes and communicate the importance of the update to users.
 -->
+
 > Note: Tag each release in your version control system (e.g., Git) to create a reference point for each release. Additionally, create a stable branch for each major release to provide a stable codebase for users who might prefer to stick with a specific version.
 
 3. Distribution Platforms:

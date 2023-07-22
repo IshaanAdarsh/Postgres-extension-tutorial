@@ -816,3 +816,79 @@ Maintain a comprehensive changelog that documents all changes made in each relea
 - Updated the SQL file to include the definition of the `complex_add` function.
 
 ```
+
+## Extension Distribution:
+Once you have developed and tested your Postgres extension, it's time to distribute it to other users and developers. Distributing your extension ensures that others can benefit from your work and integrate it into their PostgreSQL databases. To achieve this, you can use various platforms and distribution methods to make your extension accessible to a diverse audience.
+
+### 1. PGXN (PostgreSQL Extension Network)
+
+PGXN is a centralized repository for PostgreSQL extensions, providing a convenient platform for extension distribution. By submitting your extension to PGXN, you can make it readily available to users and developers in the PostgreSQL community.
+
+#### Steps to Publish Your Extension on PGXN:
+
+1. Ensure your extension adheres to PGXN's packaging requirements and standard extension structure.
+
+2. Create a distribution package (tarball or zip) of your extension with all the necessary files, including the `.control`, `META.json`, SQL scripts, and documentation. For more detailed information on how to create a distribution package visit the [PGXN How To](https://manager.pgxn.org/howto)
+
+3. Register an account on [PGXN](https://pgxn.org).
+
+4. Use the PGXN client tool to package and publish your extension:
+
+```bash
+pgxn load path/to/your_extension-1.0.0.zip
+```
+
+Replace `path/to/your_extension-1.0.0.zip` with the actual path to your extension's distribution package.
+
+5. Your extension will now be available for others to discover and install using the PGXN client tool.
+
+### 2. Package Managers
+
+Utilizing package managers allows users to install your extension easily with a simple command. You can package your extension in formats compatible with various package managers like `apt`, `yum`, `brew`, or `pip`.
+
+#### Steps to Distribute Your Extension via Package Managers:
+
+1. Create a distribution package in the format required by the respective package manager. For example, `.deb` for `apt` on Debian-based systems, `.rpm` for `yum` on Red Hat-based systems, or a formula for `brew` on macOS.
+
+2. Host the distribution package on a repository or server accessible to users. You can use platforms like GitHub Releases, PackageCloud, or a custom repository.
+
+3. Users can then install your extension using the package manager's install command:
+
+```bash
+# For apt (Debian/Ubuntu):
+sudo apt-get install your-extension
+
+# For yum (CentOS/RHEL):
+sudo yum install your-extension
+
+# For brew (macOS):
+brew install your-extension
+```
+
+### 3. PostgreSQL Extensions on Platforms
+
+Various platforms provide extension management support for PostgreSQL, making it easier for users to find, install, and update extensions.
+#### Distributing Your Extension via PostgreSQL Extensions on Platforms:
+
+1. Submit your extension to PostgreSQL extensions platforms like Postgres.app for macOS or BigSQL for Windows and Linux.
+
+2. Users can then install your extension directly from the platform's interface or command-line tools.
+
+### 4. Custom Installation Script
+
+For users who prefer manual installation, you can provide a custom installation script that automates the installation process.
+
+#### Steps to Distribute Your Extension via a Custom Installation Script:
+
+1. Create a shell script that installs your extension by copying the necessary files to the appropriate PostgreSQL directories.
+
+2. Host the script on a repository, website, or include it in your extension's distribution package.
+
+3. Users can run the script to install your extension:
+
+```bash
+bash install_extension.sh
+```
+
+> Note:
+> Ensure that your extension adheres to licensing and copyright requirements when distributing it across various platforms. It's essential to provide clear information about the license under which your extension is distributed and any dependencies it relies upon.

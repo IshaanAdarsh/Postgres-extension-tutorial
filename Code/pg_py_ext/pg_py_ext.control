@@ -1,5 +1,0 @@
-# pg_py_ext
-comment = 'A Sample Python PostgreSQL extension'
-default_version = '1.0.0'
-relocatable = true
-module_pathname = '/Users/spartacus/Desktop/GSoC/CODE/pg_py_ext'

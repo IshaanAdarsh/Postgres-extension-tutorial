@@ -1,0 +1,10 @@
+# pg_py_ext.control
+
+# Extension name
+comment = 'A simple PostgreSQL extension using PL/Python3U.'
+
+# Default version of the extension
+default_version = '1.0'
+
+# Extension is relocatable
+relocatable = true

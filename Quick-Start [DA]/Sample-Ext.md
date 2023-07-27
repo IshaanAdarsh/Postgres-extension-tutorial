@@ -73,7 +73,7 @@ Connect to your PostgreSQL database and run the following command to enable the 
 CREATE EXTENSION pg_sample_ext;
 ```
 
-### Implementation:
+### Usage:
 Now, you can use the `pg_sample_ext` extension in your PostgreSQL database, specifically the `square` function to calculate the square of a number.
 ```sql
 SELECT square(5); -- Returns 25

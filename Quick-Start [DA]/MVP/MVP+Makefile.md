@@ -112,7 +112,7 @@ To use PGXS:
 PGXS takes care of locating your PostgreSQL installation, determining compilation options, and ensuring the extension files are in the right place. It simplifies the process, making it easier for you to build and install your extension in different PostgreSQL environments.
 -->
 
-For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
+For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/current/extend-pgxs.html).
 
 #### Tip: 
 ```makefile

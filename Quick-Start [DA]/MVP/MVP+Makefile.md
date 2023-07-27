@@ -304,7 +304,7 @@ The `regression.diffs` file and `regression.out` files are generated when the te
 The purpose of comparing the expected output with the actual output is to validate that the extension behaves as intended and produces the correct results. Any differences between the expected and actual output are highlighted in the `.diff` file, allowing developers to identify and resolve any issues in the extension code.
 
 - **regression.diffs**
-```
+```diff
 diff -U3 /Users/spartacus/Desktop/GSoC/CODE/my_extension/expected/my_extension--regress.out /Users/spartacus/Desktop/GSoC/CODE/my_extension/results/my_extension--regress.out
 --- /Users/spartacus/Desktop/GSoC/CODE/my_extension/expected/my_extension--regress.out	2023-06-28 19:50:09.086462000 +0530
 +++ /Users/spartacus/Desktop/GSoC/CODE/my_extension/results/my_extension--regress.out	2023-06-28 19:54:53.312678363 +0530

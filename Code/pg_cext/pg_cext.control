@@ -1,0 +1,4 @@
+comment = 'Postgres extension using C to add two numbers'
+default_version = '1.0.0'
+relocatable = true
+module_pathname = '$libdir/pg_cext'

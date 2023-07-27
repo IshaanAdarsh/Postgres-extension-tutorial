@@ -80,7 +80,7 @@ CREATE FUNCTION add(a integer, b integer) RETURNS integer
 
 ### Step 4: Create the Makefile
 - Create a Makefile in the "extension" directory. 
-  - The Makefile is used to define the build process. It specifies the module name, extension name, and SQL files. The PG_CONFIG variable retrieves the path to the pg_config utility, which is used to get the necessary configuration for building the extension.
+  - The Makefile is used to define the build process. It specifies extension name, and SQL files. The PG_CONFIG variable retrieves the path to the pg_config utility, which is used to get the necessary configuration for building the extension.
 
 ```bash
 $ touch Makefile
@@ -120,9 +120,8 @@ EXTENSION = my_extension
 DATA = my_extension--1.0.0.sql my_extension--1.1.0.sql
 ```
 
-- By including multiple SQL script files in the `DATA` variable of the `Makefile`, the user can ensure that different versions of the extension can have different sets of objects or functionality. 
-- Each SQL script file represents a specific version of the extension and can contain the necessary SQL commands for the desired changes.
-- This allows the user to easily manage and control the installation of specific features or modifications in different versions of your extension.
+- The `DATA` variable in the `Makefile` allows you to specify multiple SQL script files for different extension versions. Each file represents a specific version with distinct objects or functionality. 
+- When installing the extension, only the relevant script file is used based on the version specified, keeping the code organized and manageable.
 
 ### Step 5: Build and Install the Extension
 - To build and install the extension, run the following commands:
@@ -189,13 +188,13 @@ id | name
 $ mkdir sql
 $ cd sql
 ```
--   Create a new file called `my_extension--regress.sql`.
+-   Create a new file called `my_extension-regress.sql`.
 
 ```bash
-$ touch my_extension--regress.sql
+$ touch my_extension-regress.sql
 ```
 
-- Open the `my_extension--regress.sql` file and add the following content keeping in mind these instructions:
+- Open the `my_extension-regress.sql` file and add the following content keeping in mind these instructions:
 
   -   Write SQL statements that test the functionality of your `my_extension`.
 
@@ -216,22 +215,22 @@ SELECT add(1, 2);
 
 ### Step 2: Update the Makefile:
 
-- In the given code, the changes made to the `Makefile` are related to the addition of a new variable called `REGRESS` and the inclusion of a new SQL file `my_extension--regress`.
+- In the given code, the changes made to the `Makefile` are related to the addition of a new variable called `REGRESS` and the inclusion of a new SQL file `my_extension-regress`.
 
 ```makefile
 EXTENSION = my_extension
 DATA = my_extension--1.0.0.sql
-REGRESS = my_extension--regress
+REGRESS = my_extension-regress
 
 PG_CONFIG  ?= pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
-For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
+For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/current/extend-pgxs.html).
 
-- The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension--regress` (without the `.sql` extension). This file will contain the SQL commands for the regression tests to be executed.
+- The `REGRESS` variable is used to specify the name of the regression test script file for the extension. In this case, the name is `my_extension-regress` (without the `.sql` extension). This file will contain the SQL commands for the regression tests to be executed.
 
-- These changes in the `Makefile` enable the `my_extension--regress.sql` file to be recognized during the installation process, allowing the regression tests to be executed using `make installcheck` 
+- The changes made to the `Makefile` allow the `my_extension-regress.sql` file to be recognized during the testing process (`make installcheck`), enabling the execution of regression tests.
 
 ### Step 3: Create the `expected` subdirectory for expected result:
 - Create a subdirectory for your regression file. Name it `expected`
@@ -240,13 +239,12 @@ For more information on the Makefiles, you can refer to the [PostgreSQL document
 $ mkdir expected
 $ cd expected
 ```
--   Create a new file called `my_extension--regress.out`.
+-   Create a new file called `my_extension-regress.out`.
 
 ```bash
-$ touch my_extension--regress.out
+$ touch my_extension-regress.out
 ```
 
-- Add your assumption of what will be the result of the regression test:
 
 ```out
 -- regression test script for my_extension
@@ -278,7 +276,12 @@ SELECT add(1, 2);
    This command will initiate the installation and regression testing process for your extension.
 
 For more information on the `make installcheck` command, you can refer to the [PostgreSQL documentation on `make installcheck`](https://www.postgresql.org/docs/current/regress-run.html#id-1.6.20.5.4).
+#### Tip:
+- Another way of running the regression script is by running this command:
 
+`psql -f sql/my_extension--regress.sql > expected/my_extension--regress.out`
+
+The command `psql -f sql/my_extension--regress.sql > expected/my_extensions--regress.out` runs the regression test script `my_extension--regress.sql` and redirects the output to a file named `my_extensions--regress.out` in the `expected` directory.
 #### How `make installcheck` works:
 - The `make installcheck` command will internally execute the `pg_regress` utility with the appropriate parameters. It will connect to a PostgreSQL server and run the regression tests specified in the `my_extension--regress.sql` file.
 
@@ -301,7 +304,7 @@ The `regression.diffs` file and `regression.out` files are generated when the te
 
 2. `regression.out`: This file contains the actual output of the regression tests. It shows the results, error messages, or any other output generated by the test scripts. The `regression.out` file is compared with the expected output to generate the `regression.diff` file.
 
-The purpose of comparing the expected output with the actual output is to validate that the extension behaves as intended and produces the correct results. Any differences between the expected and actual output are highlighted in the `.diff` file, allowing developers to identify and resolve any issues in the extension code.
+The purpose of comparing the expected output with the actual output is to validate that the extension behaves as intended and produces the correct results. Any differences between the expected and actual output are highlighted in the `regression.diff` file, allowing developers to identify and resolve any issues in the extension code.
 
 - **regression.diffs**
 ```diff
@@ -327,7 +330,6 @@ test my_extension--regress        ... FAILED       18 ms
 ### Step 4: Analysing the output:
 The successful output of the `make installcheck` command for the `my_extension` extension:
 
-```bash
 echo "+++ regress install-check in  +++" && /Users/spartacus/.pgenv/pgsql-15.0/lib/pgxs/src/makefiles/../../src/test/regress/pg_regress --inputdir=./ --bindir='/Users/spartacus/.pgenv/pgsql-15.0/bin'    --dbname=contrib_regression my_extension--regress
 +++ regress install-check in  +++
 (using postmaster on Unix socket, default port)
@@ -449,7 +451,7 @@ relocatable = true
 
 ```makefile
 EXTENSION = my_extension
-DATA = my_extension--1.0.0--1.0.1.sql   # Update the DATA variable with the Upgrade Script file
+DATA = my_extension--1.0.0.sql my_extension--1.0.0--1.0.1.sql   # Update the DATA variable with the Upgrade Script file
 REGRESS = my_extension--regress
 
 PG_CONFIG  ?= pg_config
@@ -480,7 +482,7 @@ The new objects introduced in the `my_extension--1.0.0--1.0.1.sql` file are incl
 - To check for **unexpected update paths**, use this command:
 
 ```sql
-SELECT * FROM pg_extension_update_paths('*`extension_name`*');
+SELECT * FROM pg_extension_update_paths('extension_name');
 ```
 - This shows each pair of distinct known version names for the specified extension, together with the update path sequence that would be taken to get from the source version to the target version, or `NULL` if there is no available update path.
 
@@ -579,6 +581,8 @@ CREATE FUNCTION add(a integer, b integer) RETURNS integer
     RETURNS NULL ON NULL INPUT
     RETURN a + b;
 
+-- Version 1.0.1: Adding the complex_add function to the extension. 
+-- complex_add allows users to perform complex addition operations using an array of integers as input, returning the sum of all array elements. 
 CREATE FUNCTION complex_add(integer[]) RETURNS integer
     LANGUAGE SQL
     IMMUTABLE
@@ -595,7 +599,7 @@ CREATE FUNCTION complex_add(integer[]) RETURNS integer
 
 ```makefile
 EXTENSION = my_extension
-DATA = my_extension--1.0.1.sql
+DATA = my_extension--1.0.0.sql my_extension--1.0.1.sql
 REGRESS = my_extension--regress
 
 PG_CONFIG  ?= pg_config
@@ -616,7 +620,7 @@ For more information on the `CREATE EXTENSION` command, you can refer to the [Po
 ### Step 5: Verify the upgrade: 
 - Confirm that the upgrade was successful by checking the new version of the extension:
 ```sql
-SELECT * FROM pg_extension WHERE extname = 'your_extension_name';
+SELECT * FROM pg_extension WHERE extname = 'my_extension';
 ```
 
 #### Output:
@@ -730,7 +734,7 @@ my_extension is released under the [MIT License](LICENSE). Copyright &copy; [You
   - Contribution Guidelines
 
 ```md
-## Architecture and Design
+## Description
 
 my_extension provides a simple set of functions and a table in PostgreSQL to demonstrate a minimal viable product. It consists of a single table, "my_table," with two columns: "id" (a serial primary key) and "name" (a varchar).
 
@@ -784,6 +788,7 @@ The regression SQL file (`my_extension--regress.sql`) contains the test cases to
 Contributions to my_extension are welcome! If you wish to contribute, please follow these guidelines:
 
 1. Fork the repository.
+https://github.com/IshaanAdarsh/my_extension
 
 2. Make your changes in a feature branch.
 

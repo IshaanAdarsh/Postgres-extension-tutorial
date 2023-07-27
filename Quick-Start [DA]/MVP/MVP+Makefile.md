@@ -646,7 +646,7 @@ SELECT complex_add(ARRAY[1, 2, 3, 4, 5]);
 Effective release management involves a systematic approach to versioning, testing, documentation, and distribution. Here are the key steps and best practices for managing releases of a Postgres extension:
 
 ### Versioning:
-- Follow a consistent versioning scheme for your extension to indicate changes and updates. A common approach is to use Semantic Versioning (SemVer), which consists of three parts: `MAJOR.MINOR.PATCH`.
+- Follow a consistent versioning scheme for your extension to indicate changes and updates. A common approach is to use [Semantic Versioning (SemVer)](https://semver.org), which consists of three parts: `MAJOR.MINOR.PATCH`.
 
 - Increment the MAJOR version for backward-incompatible changes, the MINOR version for backward-compatible new features, and the PATCH version for backward-compatible bug fixes.
 

@@ -146,7 +146,7 @@ INSERT INTO status_table (status) VALUES ('active');
 In the example above, we demonstrate how to use the `person_type` composite type to declare a variable and perform operations using its attributes. We also showcase the usage of the `status_type` enumerated type in a table column, ensuring that only the predefined values ('active', 'inactive', 'pending') can be inserted.
 
 ### 2. `CREATE DOMAIN` statement:
-- A domain type is a custom data type that is based on an existing base type but with additional constraints or rules applied. It provides a way to create a specialized version of an existing data type.
+- A domain type is a custom data type that is based on an existing base type but with additional constraints applied. It provides a way to create a specialized version of an existing data type.
 - Domains are useful for adding constraints or business rules to a base type without duplicating those constraints across multiple columns.
 
 A domain type using `CREATE DOMAIN`:

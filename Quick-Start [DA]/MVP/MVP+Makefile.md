@@ -279,7 +279,7 @@ SELECT add(1, 2);
 
 For more information on the `make installcheck` command, you can refer to the [PostgreSQL documentation on `make installcheck`](https://www.postgresql.org/docs/current/regress-run.html#id-1.6.20.5.4).
 
-#### Working of the command `make installcheck`:
+#### How `make installcheck` works:
 - The `make installcheck` command will internally execute the `pg_regress` utility with the appropriate parameters. It will connect to a PostgreSQL server and run the regression tests specified in the `my_extension--regress.sql` file.
 
 - Review the output of the `make installcheck` command to see the results of the regression tests. The command will display the progress and status of each test case.

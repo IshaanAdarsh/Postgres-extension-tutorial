@@ -13,6 +13,7 @@ Throughout this quick start, we will start with the basics, such as creating a f
 
 By the end of this guide, you will have a solid understanding of how to extend PostgreSQL using the `pg_sample_ext` extension and be equipped with the knowledge to create your own powerful extensions, tailored to meet your specific needs.
 
+For a detailed tutorial on getting started with extension creation, refer to the [Extension Creation Quick Start](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/pull/14).
 ## Function: 
 
 ### Step 1: Create the Extension Directory
@@ -192,8 +193,6 @@ ERROR:  value for domain positive_integer violates check constraint "positive_in
 In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations.
 
 ```sql
--- Create necessary objects for version 1.0.2
-
 -- Custom Operator: @*
 -- Description: Custom operator that multiplies two values of type my_type
 

@@ -233,7 +233,7 @@ For more information on the Makefiles, you can refer to the [PostgreSQL document
 
 - These changes in the `Makefile` enable the `my_extension--regress.sql` file to be recognized during the installation process, allowing the regression tests to be executed using `make installcheck` 
 
-### Step 3: Create the Extension SubDirectory for Expected Result:
+### Step 3: Create the `expected` subdirectory for expected result:
 - Create a subdirectory for your regression file. Name it `expected`
 
 ```bash

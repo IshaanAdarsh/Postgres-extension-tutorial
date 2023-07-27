@@ -182,7 +182,7 @@ id | name
 
 ## Regression Testing:
 
-### Step 1: Create the Extension SubDirectory for Regression SQL File:
+### Step 1: Create the Extension subdirectory for test SQL files:
 - Create a subdirectory for your regression file. Name it `sql`
 
 ```bash

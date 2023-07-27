@@ -295,7 +295,7 @@ It is important to note that the success or failure of the `make installcheck` c
 #### `make installcheck` test fails:
 If the `make installcheck` command doesn't work, it usually means that there are issues with the installation or configuration of the extension. This command is used to run the regression tests for the extension to ensure that it functions correctly.
 
-The `.diff` file and `.out` file are generated during the regression tests. Here's an explanation of each:
+The `regression.diffs` file and `regression.out` files are generated when the tests fail. Here's an explanation of each:
 
 1. `.diff` file: This file contains the differences between the expected output and the actual output of the regression tests. It shows the changes, additions, or deletions made to the expected output to match the actual output. Each difference is indicated with a line starting with a "-" or "+" sign, representing removed or added lines, respectively.
 

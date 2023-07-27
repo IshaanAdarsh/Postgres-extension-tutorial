@@ -71,7 +71,7 @@ Create a control file named `pg_cext--1.0.0.sql` with the following content:
 
 ```sql
 CREATE OR REPLACE FUNCTION
-addme(int,int) RETURNS int AS 'MODULE_PATHNAME','addme'
+add_nums(int,int) RETURNS int AS 'MODULE_PATHNAME','add_nums'
 LANGUAGE C STRICT;
 ```
 

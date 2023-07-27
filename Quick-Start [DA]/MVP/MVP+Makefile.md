@@ -46,7 +46,7 @@ comment = 'Minimal Viable Product'
 # Specifies the default version of the extension
 default_version = '1.0.0'
 
-# Indicates whether the extension is relocatable, allowing it to be moved to a different location
+# Indicates whether the extension is relocatable, allowing it to be moved to a different location (true by default)
 relocatable = true
 ```
 

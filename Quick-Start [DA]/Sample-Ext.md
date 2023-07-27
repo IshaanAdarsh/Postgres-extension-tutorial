@@ -108,7 +108,7 @@ CREATE TYPE status_type AS ENUM ('active', 'inactive', 'pending');
 
 For more detailed information on `CREATE TYPE`, you can refer to the [PostgreSQL documentation on `CREATE TYPE`](https://www.postgresql.org/docs/current/sql-createtype.html).
 
-Implementing the Data Types:
+Using the Data Types:
 ```sql
 -- Use the composite type in a table column
 CREATE TABLE my_table (

@@ -63,6 +63,16 @@ Datum add_nums(PG_FUNCTION_ARGS)
 }
 ```
 
+### Step 5: Create the SQL Script file:
+
+Create a control file named `pg_cext--1.0.0.sql` with the following content:
+
+```sql
+CREATE OR REPLACE FUNCTION
+addme(int,int) RETURNS int AS 'MODULE_PATHNAME','addme'
+LANGUAGE C STRICT;
+```
+
 ### Step 5: Build and Install the Extension
 
 Build the extension using the following command:
@@ -90,5 +100,3 @@ Test the function:
 ```sql
 SELECT add_nums(2, 3);
 ```
-
-The output should be `5`, indicating that the extension is working correctly. Enjoy your simple C-based PostgreSQL extension!

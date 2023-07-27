@@ -4,7 +4,7 @@ In this quick start guide, we will create a simple PostgreSQL extension using C 
 
 ## Prerequisites
 
-- PostgreSQL installed and running on your system.
+- [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
 - Basic knowledge of C programming.
 - Familiarity with the PostgreSQL extension development process.
 
@@ -30,6 +30,7 @@ PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
+- For more information on the Makefiles, you can refer to the [PostgreSQL documentation on Makefile](https://www.postgresql.org/docs/current/extend-pgxs.html).
 
 ### Step 3: Create the Control File
 
@@ -41,6 +42,7 @@ default_version = '1.0.0'
 relocatable = true
 module_pathname = '$libdir/pg_cext'
 ```
+- For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
 
 ### Step 4: Write the C Function
 
@@ -73,7 +75,7 @@ addme(int,int) RETURNS int AS 'MODULE_PATHNAME','addme'
 LANGUAGE C STRICT;
 ```
 
-### Step 5: Build and Install the Extension
+### Step 6: Build and Install the Extension
 
 Build the extension using the following command:
 
@@ -87,16 +89,26 @@ Install the extension:
 make install
 ```
 
-### Step 6: Create and Test the Extension
+- For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).
+
+### Step 7: Create and Test the Extension
 
 Create the extension in your PostgreSQL database:
 
 ```sql
 CREATE EXTENSION pg_cext;
 ```
+- For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
 
 Test the function:
 
 ```sql
 SELECT add_nums(2, 3);
+
+-- Output:
+ add_nums
+-------
+     5
+(1 row)
+
 ```

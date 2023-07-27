@@ -265,7 +265,7 @@ SELECT add(1, 2);
 (1 row)
 ```
 
-- If the expected file matched the results exactly then the regression test is passed.
+- If the expected file matched the results exactly then the regression test passes.
 
 ### Step 4: Run `make installcheck`:
 

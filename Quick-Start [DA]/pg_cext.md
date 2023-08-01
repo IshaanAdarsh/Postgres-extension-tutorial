@@ -1,3 +1,26 @@
+# External Languages in PostgreSQL:
+External languages in PostgreSQL provide a powerful way to integrate additional programming languages, extending the database's capabilities beyond its native support. Developers can use these languages to implement custom functionality, access external libraries, and leverage their expertise in preferred programming languages.
+
+Using external languages offers several advantages:
+
+1. **Language Flexibility:** Integrate a wide range of languages like Python, Ruby, or Java to perform tasks that may not be as straightforward in SQL.
+
+2. **Code Reusability:** Reuse existing code written in preferred languages, reducing development time and effort.
+
+3. **Performance Optimization:** Choose languages with performance advantages for specific tasks, improving the overall extension efficiency.
+
+4. **Ecosystem Integration:** Tap into well-established language ecosystems, leveraging community-contributed libraries and best practices.
+
+To utilize external languages in a PostgreSQL extension, follow these steps:
+
+1. **Implement the Language:** Develop the code and functionality to support the external language within the extension.
+
+2. **Define the Language in Control File:** Specify the external language requirement and provide integration details in the extension's control file.
+
+3. **Register the Language:** Use `CREATE EXTENSION` in PostgreSQL to install and enable the extension, recognizing the external language.
+
+4. **Write Functions and Stored Procedures:** Utilize the external language to implement the desired functionality in functions and stored procedures.
+
 # Quick Start: Creating a PostgreSQL Extension using C as an External Language
 
 In this quick start guide, we will create a simple PostgreSQL extension using C as an external language. The extension will include a function to add two numbers.
@@ -77,13 +100,24 @@ LANGUAGE C STRICT;
 
 ### Step 6: Build and Install the Extension
 
-Build the extension using the following command:
+#### Build the extension using the following command:
 
 ```bash
 make
 ```
 
-Install the extension:
+When we run the command `make` in the terminal, it triggers the build process of the PostgreSQL extension. This process involves compiling the extension's source code and generating the necessary object files (.o) and shared object files (.so).
+
+1. **.o Files (Object Files):** During the build process, the source code of the extension (e.g., `my_extension.c`) is translated into machine-readable code represented by object files. These files contain the compiled code for individual functions or components of the extension. However, they are not yet directly executable on their own.
+
+2. **.so Files (Shared Object Files):** The next step in the build process is linking the object files together to create a shared object file (`.so`). This file is a dynamically linked library that contains all the compiled code from the object files. It is also referred to as a shared library or DLL (Dynamic Link Library) on some systems. The `.so` file is the final form of the extension that PostgreSQL can use.
+
+**PGXS (PostgreSQL Extension Build Infrastructure):** 
+The PostgreSQL Extension Build Infrastructure (PGXS) is a set of macros and rules that simplify the build process for PostgreSQL extensions. It automates common build tasks and allows developers to use predefined variables and targets in their `Makefile`. By including PGXS in the `Makefile`, developers can leverage its functionality and ensure a standardized build process.
+
+When using `PGXS` in the `Makefile`, it gets the necessary paths and configurations from `pg_config --pgxs`, ensuring correct building with dependencies. The build process generates `.o` and `.so` files in the build directory. The `.so` file is the extension, ready for installation in PostgreSQL, containing compiled code for all defined functions.
+
+#### Install the extension:
 
 ```bash
 make install

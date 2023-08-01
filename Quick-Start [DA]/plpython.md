@@ -1,3 +1,22 @@
+# Procedural languages:
+Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. These are natively supported by PostgreSQL and can be used directly within the database environment. These languages, also known as PL languages, offer developers the flexibility to implement complex business logic and computations directly within the database.
+
+Key points about procedural languages in PostgreSQL:
+
+1. **Extended Functionality:** Procedural languages enable developers to write custom functions and procedures in languages like PL/pgSQL, PL/Python, PL/Tcl, PL/Perl, PL/R, and more. This allows for the creation of complex computations and data processing within the database.
+
+2. **Control Flow and Logic:** Procedural languages offer control flow constructs like loops, conditionals, and exception handling, making it easier to implement business logic that goes beyond the capabilities of SQL.
+
+3. **Custom Aggregates and Window Functions:** Procedural languages allow developers to define custom aggregates and window functions, enabling advanced data analysis and processing directly within the database.
+
+4. **Performance Optimization:** By choosing the right procedural language for specific tasks, developers can achieve performance improvements over SQL, especially for complex data operations.
+
+To use procedural languages in PostgreSQL:
+
+1. **Enable the Language:** Before using a procedural language in a database, it needs to be enabled using the `CREATE LANGUAGE` command or by installing the relevant extensions.
+
+2. **Write Functions and Procedures:** After enabling the language, developers can write functions and stored procedures using the chosen procedural language. This allows them to implement complex business logic, data transformations, and data analysis directly within the database.
+
 ## Quick Start: Creating a Postgres Extension using PL/Python:
 
 In this quick start guide, we will create a simple PostgreSQL extension using [PL/Python](https://www.postgresql.org/docs/current/plpython.html). The extension will include a Python function to add two numbers.

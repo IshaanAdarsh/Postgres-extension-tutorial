@@ -1,19 +1,16 @@
-## PGXN (PostgreSQL Extension Network):
+# PGXN (PostgreSQL Extension Network):
+PGXN is a centralized repository solely focused on the distribution of PostgreSQL extensions. It facilitates developers in sharing and distributing their PostgreSQL extensions, contributing to the overall ecosystem and accessibility of extensions for the PostgreSQL community.
 
-### Uploading the Extension on PGXN:
-
-- It is a collaborative platform and centralized repository for PostgreSQL extensions. It provides a platform for developers to share, distribute, and collaborate on PostgreSQL extensions, enhancing the overall ecosystem and community support for PostgreSQL.
-
-To set up and use PGXN to publish using the website and distribute your extension to other users, you can follow these steps:
-
+## Uploading the Extension on PGXN:
 ### Step 1: Set up a PGXN Account: 
 Visit [PGXN manager](https://manager.pgxn.org/) and create an account. This will allow you to manage your extensions and publish them on the PGXN repository.
 
 ### Step 2: Prepare Your Extension: 
-Ensure that your extension is properly developed, tested, and ready for distribution. Make sure you have a well-documented README file, docfile, changelog, SQL scripts, and any necessary code files or dependencies.
+- Ensure that your extension is properly developed, tested, and ready for distribution. Make sure you have a well-documented README file, docfile, changelog, SQL scripts, and any necessary code files or dependencies.
+- Refer to documentation on how to create a [Simple Postgres Extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/pull/14)
 
 ### Step 3: Create a PGXN Metadata File: 
-PGXN requires a metadata file that provides information about your extension. Create a file named `META.json` that includes details such as the extension name, version, author, description, dependencies, and other relevant information. Refer to the PGXN documentation for the required format and fields.
+PGXN requires a metadata file that provides information about your extension. Create a file named `META.json` that includes details such as the extension name, version, author, description, dependencies, and other relevant information. Refer to the [PGXN documentation](https://pgxn.org/spec/) for the required format and fields.
 
 #### Code for META.json file for my_extension:
 ```json
@@ -25,7 +22,7 @@ PGXN requires a metadata file that provides information about your extension. Cr
   "license": "postgresql",
   "provides": {
     "my_extension": {
-      "file": "my_extension--1.0.sql",
+      "file": "my_extension--1.0.0.sql",
       "version": "1.0.0"
     }
   },
@@ -35,15 +32,46 @@ PGXN requires a metadata file that provides information about your extension. Cr
   }
 }
 ```
+1. "name": Specifies the name of the PostgreSQL extension. In this case, the extension is named "my_extension."
+
+2. "abstract": Provides a brief description or abstract of the extension's functionality. In this example, it describes the extension as a "basic PostgreSQL extension."
+
+3. "version": Indicates the version number of the extension. The current version of this extension is "1.0.0."
+
+4. "maintainer": Specifies the contact information of the person responsible for maintaining the extension. In this case, the maintainer is "Ishaan Adarsh" with the email address "ishaanad9@gmail.com."
+
+5. "license": Indicates the type of license under which the extension is distributed. In this example, the extension is distributed under the "postgresql" license.
+
+6. "provides": Specifies the details of the extension provided by this package. It includes the extension name, the file containing the SQL code for the extension ("my_extension--1.0.sql"), and the version of the provided extension ("1.0.0").
+
+7. "meta-spec": Refers to the specification for the format of the metadata in the package. It includes the version of the specification used ("1.0.0") and the URL where the [specification](https://pgxn.org/meta/spec.txt) can be found.
 
 > While updating the extension: The `meta-spec` must be version `1.0.0`.  That's referring to the version of the JSON specification, NOT your module version.  `1.0.0` is the only spec that exists.
 
 ### Step 4: Build a Distribution Package:
-- Ensure your extension follows the PGXN packaging guidelines and is ready for distribution.
+- Ensure your extension follows the [PGXN packaging guidelines](https://manager.pgxn.org/howto) and is ready for distribution.
 - Package your extension and the `META.json` file into a distribution package. This package should be in a compressed format (zip format) and include all the necessary files for installation and usage of your extension.
 
+To create the distribution package, follow these steps:
+
+#### 1) Create a new directory for the distribution package and copy all the necessary files into it.
+
+```
+mkdir my_extension_dist
+```
+
+#### 2) Compress the directory into a zip file.
+
+```
+zip -r my_extension-1.0.0.zip my_extension_dist/
+```
+
+This will create a zip file named `my_extension-1.0.0.zip` containing all the necessary files for the installation and usage of your extension.
+
+For additional details and guidelines on packaging PostgreSQL extensions, you can refer to the official [PGXN website](https://manager.pgxn.org/howto)
+
 ### Step 5: Publish Your Extension:
-- Use the PGXN command-line tool or web interface to publish your extension. Provide the distribution package created in the previous step and upload it to PGXN. The tool will validate the package and extract the metadata.
+- Use the PGXN web interface to publish your extension. Provide the distribution package created in the previous step and upload it to PGXN. The tool will validate the package and extract the metadata.
 
 ## pgxnclient: Exploring PostgreSQL Extensions
 
@@ -56,6 +84,7 @@ The `pgxn check` command is used to run tests for a specific distribution. It en
 ```bash
 pgxn check distribution_name
 ```
+> [Additional Information on `pgxn check`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-check)
 
 ### Command: `pgxn download`
 
@@ -64,6 +93,7 @@ The `pgxn download` command allows users to download a distribution from the PGX
 ```bash
 pgxn download distribution_name
 ```
+> [Additional Information on `pgxn download`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-download)
 
 ### Command: `pgxn help`
 
@@ -73,6 +103,7 @@ The `pgxn help` command displays helpful information about the pgxnclient tool. 
 pgxn help
 pgxn help command_name
 ```
+> [Additional Information on `pgxn help`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-help)
 
 ### Command: `pgxn info`
 
@@ -81,6 +112,7 @@ The `pgxn info` command provides detailed information about a specific distribut
 ```bash
 pgxn info distribution_name
 ```
+> [Additional Information on `pgxn info`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-info)
 
 ### Command: `pgxn install`
 
@@ -89,6 +121,7 @@ The `pgxn install` command is used to download, build, and install a distributio
 ```bash
 pgxn install distribution_name
 ```
+> [Additional Information on `pgxn install`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-install)
 
 ### Command: `pgxn load`
 
@@ -97,6 +130,7 @@ The `pgxn load` command allows users to load an extension's functions into a spe
 ```bash
 pgxn load distribution_name -d your_database_name
 ```
+> [Additional Information on `pgxn load`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-load)
 
 ### Command: `pgxn mirror`
 
@@ -105,6 +139,7 @@ The `pgxn mirror` command returns information about the available mirrors for PG
 ```bash
 pgxn mirror
 ```
+> [Additional Information on `pgxn mirror`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-mirror)
 
 ### Command: `pgxn search`
 
@@ -113,6 +148,7 @@ The `pgxn search` command is used to search for available extensions on PGXN bas
 ```bash
 pgxn search search_keyword
 ```
+> [Additional Information on `pgxn search`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-search)
 
 ### Command: `pgxn uninstall`
 
@@ -121,6 +157,7 @@ The `pgxn uninstall` command removes a distribution from the system. It uninstal
 ```bash
 pgxn uninstall distribution_name
 ```
+> [Additional Information on `pgxn uninstall`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-uninstall)
 
 ### Command: `pgxn unload`
 
@@ -129,3 +166,4 @@ The `pgxn unload` command unloads an extension's functions from a specific datab
 ```bash
 pgxn unload distribution_name -d your_database_name
 ```
+> [Additional Information on `pgxn unload`](https://pgxn.github.io/pgxnclient/usage.html#pgxn-unload)

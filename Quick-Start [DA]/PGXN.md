@@ -7,7 +7,7 @@
 To set up and use PGXN to publish using the website and distribute your extension to other users, you can follow these steps:
 
 ### Step 1: Set up a PGXN Account: 
-Visit the PGXN website (<https://pgxn.org/>) and create an account. This will allow you to manage your extensions and publish them on the PGXN repository.
+Visit [PGXN manager](https://manager.pgxn.org/) and create an account. This will allow you to manage your extensions and publish them on the PGXN repository.
 
 ### Step 2: Prepare Your Extension: 
 Ensure that your extension is properly developed, tested, and ready for distribution. Make sure you have a well-documented README file, docfile, changelog, SQL scripts, and any necessary code files or dependencies.

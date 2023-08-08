@@ -1,4 +1,4 @@
-# PGXN (PostgreSQL Extension Network):
+# [PGXN](https://pgxn.org) (PostgreSQL Extension Network):
 PGXN is a centralized repository solely focused on the distribution of PostgreSQL extensions. It facilitates developers in sharing and distributing their PostgreSQL extensions, contributing to the overall ecosystem and accessibility of extensions for the PostgreSQL community.
 
 ## Uploading the Extension on PGXN:

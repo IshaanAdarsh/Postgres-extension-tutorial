@@ -113,7 +113,7 @@ When we run the command `make` in the terminal, it triggers the build process of
 2. **.so Files (Shared Object Files):** The next step in the build process is linking the object files together to create a shared object file (`.so`). This file is a dynamically linked library that contains all the compiled code from the object files. It is also referred to as a shared library or DLL (Dynamic Link Library) on some systems. The `.so` file is the final form of the extension that PostgreSQL can use.
 
 **PGXS (PostgreSQL Extension Build Infrastructure):** 
-The PostgreSQL Extension Build Infrastructure (PGXS) is a set of macros and rules that simplify the build process for PostgreSQL extensions. It automates common build tasks and allows developers to use predefined variables and targets in their `Makefile`. By including PGXS in the `Makefile`, developers can leverage its functionality and ensure a standardized build process.
+The PostgreSQL Extension Build Infrastructure (PGXS) is a set of Makefile macros and rules that simplify the build process for PostgreSQL extensions. It automates common build tasks and allows developers to use predefined variables and targets in their `Makefile`. By including PGXS in the `Makefile`, developers can leverage its functionality and ensure a standardized build process.
 
 When using `PGXS` in the `Makefile`, it gets the necessary paths and configurations from `pg_config --pgxs`, ensuring correct building with dependencies. The build process generates `.o` and `.so` files in the build directory. The `.so` file is the extension, ready for installation in PostgreSQL, containing compiled code for all defined functions.
 

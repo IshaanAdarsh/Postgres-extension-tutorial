@@ -95,6 +95,7 @@ PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
+- For a basic explanation of Makefile and its various components (LINK to QS)
 - For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
 
 #### Explanation of the Makefile:

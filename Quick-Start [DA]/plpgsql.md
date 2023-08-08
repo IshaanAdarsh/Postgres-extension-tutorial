@@ -75,6 +75,7 @@ default_version = '1.0.0'
 # Extension is relocatable
 relocatable = true
 ```
+- For a basic explanation of Control file and its elements (LINK to QS)
 - For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
 
 #### Explanation of the Control File:

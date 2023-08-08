@@ -1,5 +1,5 @@
 # Procedural languages:
-Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. These are natively supported by PostgreSQL and can be used directly within the database environment. These languages, also known as PL languages, offer developers the flexibility to implement complex business logic and computations directly within the database.
+Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. These are natively supported by PostgreSQL and can be used directly within the database environment. These languages, also known as PLs, offer developers the flexibility to implement complex business logic and computations directly within the database.
 
 Key points about procedural languages in PostgreSQL:
 
@@ -7,7 +7,7 @@ Key points about procedural languages in PostgreSQL:
 
 2. **Control Flow and Logic:** Procedural languages offer control flow constructs like loops, conditionals, and exception handling, making it easier to implement business logic that goes beyond the capabilities of SQL.
 
-3. **Custom Aggregates and Window Functions:** Procedural languages allow developers to define custom aggregates and window functions, enabling advanced data analysis and processing directly within the database.
+3. **Custom Aggregates, Window Functions, and Triggers:** Procedural languages allow developers to define [custom aggregates](https://www.postgresql.org/docs/current/xaggr.html), [window functions](https://www.postgresql.org/docs/current/functions-window.html), and [triggers](https://www.postgresql.org/docs/current/triggers.html), enabling advanced data analysis, processing, and event-driven actions directly within the database.
 
 4. **Performance Optimization:** By choosing the right procedural language for specific tasks, developers can achieve performance improvements over SQL, especially for complex data operations.
 
@@ -25,6 +25,8 @@ In this quick start guide, we will create a simple PostgreSQL extension using [P
 
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
 - Basic knowledge of SQL and PL/pgSQL programming.
+- `make` utility for building and compiling software. 
+- Knowledge about the Postgres Development Libraries
 
 ### Step 1: Create the Extension Directory
 
@@ -68,7 +70,7 @@ Create a file named "pg_plpgsql_ext.control" in the "pg_plpgsql_ext" directory w
 comment = 'A simple PostgreSQL extension using PL/pgSQL.'
 
 # Default version of the extension
-default_version = '1.0'
+default_version = '1.0.0'
 
 # Extension is relocatable
 relocatable = true
@@ -76,8 +78,8 @@ relocatable = true
 - For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
 
 #### Explanation of the Control File:
-- `default_version = '1.0'`: This line specifies the default version of the extension.
-- `relocatable = true`: This line indicates that the extension is relocatable, allowing it to be moved to a different location.
+- `default_version = '1.0.0'`: This line specifies the default version of the extension.
+- `relocatable = true`: This line indicates that the extension is relocatable, meaning it does not have to live in a particular schema, and can be moved to a different schema if need be.
 
 ### Step 4: Create the Makefile:
 
@@ -86,7 +88,7 @@ Create a file named "Makefile" in the "pg_plpgsql_ext" directory with the follow
 ```makefile
 # Makefile for pg_plpgsql_ext
 EXTENSION = pg_plpgsql_ext
-DATA = pg_plpgsql_ext--1.0.sql
+DATA = pg_plpgsql_ext--1.0.0.sql
 
 PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
@@ -96,7 +98,7 @@ include $(PGXS)
 
 #### Explanation of the Makefile:
 - `EXTENSION = pg_plpgsql_ext`: This variable specifies the name of the extension.
-- `DATA = pg_plpgsql_ext--1.0.sql`: This variable includes the SQL script file ("pg_plpgsql_ext--1.0.sql") in the extension.
+- `DATA = pg_plpgsql_ext--1.0.0.sql`: This variable includes the SQL script file ("pg_plpgsql_ext--1.0.0.sql") in the extension.
 - `PG_CONFIG = pg_config`: This variable points to the `pg_config` executable, which is used to get PostgreSQL build information.
 - `include $(PGXS)`: This includes the PostgreSQL Extension Makefile infrastructure.
 
@@ -152,7 +154,11 @@ In this quick start guide, we will create a simple PostgreSQL extension using [P
 
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
 - [plpython3u]((https://www.postgresql.org/docs/current/plpython.html)) procedural language available in your PostgreSQL installation.
+
+> In the context of PostgreSQL's procedural languages, the "u" in "plpython3u" stands for "untrusted". This signifies that the language implementation allows for executing arbitrary code and potentially accessing external resources.
 - Basic knowledge of [Python](https://www.python.org) programming.
+- `make` utility for building and compiling software. 
+- Knowledge about the Postgres Development Libraries
 
 ### Step 1: Create the Extension Directory
 

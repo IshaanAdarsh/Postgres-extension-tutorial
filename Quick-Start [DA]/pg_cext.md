@@ -30,6 +30,14 @@ In this quick start guide, we will create a simple PostgreSQL extension using C 
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
 - Basic knowledge of C programming.
 - Familiarity with the PostgreSQL extension development process.
+- Prerequisites:
+
+- [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
+- Basic knowledge of C programming.
+- Familiarity with the PostgreSQL extension development process.
+- `make` utility for building and compiling software. 
+- Compiler to convert your source code into executable machine code.
+- Knowledge about the Postgres Development Libraries
 
 ### Step 1: Create the Extension Directory
 

@@ -329,7 +329,7 @@ test my_extension--regress        ... FAILED       18 ms
 
 ### Step 4: Analysing the output:
 The successful output of the `make installcheck` command for the `my_extension` extension:
-
+```
 echo "+++ regress install-check in  +++" && /Users/spartacus/.pgenv/pgsql-15.0/lib/pgxs/src/makefiles/../../src/test/regress/pg_regress --inputdir=./ --bindir='/Users/spartacus/.pgenv/pgsql-15.0/bin'    --dbname=contrib_regression my_extension--regress
 +++ regress install-check in  +++
 (using postmaster on Unix socket, default port)

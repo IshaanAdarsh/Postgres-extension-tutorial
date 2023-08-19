@@ -107,7 +107,6 @@ For more information on the installation procedures, you can refer to the [Postg
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS my_extension;
--- Output: CREATE EXTENSION
 ```
 For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
 
@@ -116,22 +115,20 @@ Once you have successfully implemented the `my_extension` in your PostgreSQL dat
 
 ### 1. Query the `my_table` table:
    - You can query the `my_table` table like any other table in your database. For example, you can retrieve all rows from the table using the following SQL query:
-   ```sql
-   SELECT * FROM my_table;
-   ```
-#### Output:
-```
+```sql
+SELECT * FROM my_table;
+
+-- Output
 id | name
 ----+------
 (0 rows)
 ```
 ### 2. Use the add function to perform addition:
   - The `add` function takes two integer arguments and returns their sum
-  ```sql
-  SELECT add(2, 3);
-  ```
-#### Output:
-```
+```sql
+SELECT add(2, 3);
+
+-- Output
  add
 -----
    5
@@ -349,7 +346,6 @@ $ make install
 
 ```sql
 ALTER EXTENSION my_extension UPDATE TO '1.0.1';
--- Output: ALTER EXTENSION
 ```
 
 - For more information on the `ALTER EXTENSION` command, you can refer to the [PostgreSQL documentation on `ALTER EXTENSION`](https://www.postgresql.org/docs/current/sql-alterextension.html)
@@ -360,7 +356,6 @@ ALTER EXTENSION my_extension UPDATE TO '1.0.1';
 - Execute the `DROP EXTENSION` command to remove the current version of the extension from the database:
 ```sql
 DROP EXTENSION IF EXISTS your_extension_name;
--- Output: DROP EXTENSION
 ```
 
 - For more information on the `DROP EXTENSION` command, you can refer to the [PostgreSQL documentation on `DROP EXTENSION`](https://www.postgresql.org/docs/current/sql-dropextension.html)
@@ -431,7 +426,6 @@ For more information on the Makefiles, you can refer to the [PostgreSQL document
 - Run the `CREATE EXTENSION` command to install the updated version of the extension:
 ```sql
 CREATE EXTENSION your_extension_name;
--- Output: CREATE EXTENSION
 ```
 
 For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
@@ -441,10 +435,8 @@ For more information on the `CREATE EXTENSION` command, you can refer to the [Po
 
 ```sql
 SELECT complex_add(ARRAY[1, 2, 3, 4, 5]);
-```
 
-#### Output:
-```
+-- Output
  complex_add
 -------------
           15
@@ -626,6 +618,21 @@ Maintain a comprehensive changelog that documents all changes made in each relea
 - Updated the SQL file to include the definition of the `complex_add` function.
 
 ```
+
+## Procedural Languages for the Extension Creation:
+Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. 
+
+#### For more information on the Procedural Languages in Extension Creation, you can refer to the [PostgreSQL documentation on Procedural Languages in Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Procedural-language.md). 
+
+## External Languages for the Extension Creation:
+External languages in PostgreSQL provide a powerful way to integrate additional programming languages, extending the database's capabilities beyond its native support.
+
+#### For more information on the External Languages in Extension Creation, you can refer to the [PostgreSQL documentation on External Languages in Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/External-language.md). 
+
+## [Extending PostgreSQL with `pg_sample_ext`](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Sample-Ext.md): A Quick Start Guide
+This guide offers step-by-step instructions on creating extensions, while introducing features like functions, custom data types, and operators. From foundational concepts to advanced techniques, this guide equips you with the skills to extend PostgreSQL effectively.
+
+#### See [Extending PostgreSQL with `pg_sample_ext`](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Sample-Ext.md) for details.
 
 ## Extension Distribution:
 Once you have developed and tested your Postgres extension, it's time to distribute it to other users and developers. Distributing your extension ensures that others can benefit from your work and integrate it into their PostgreSQL databases. To achieve this, you can use various platforms and distribution methods to make your extension accessible to a diverse audience.

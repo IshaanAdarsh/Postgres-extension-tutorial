@@ -666,29 +666,5 @@ sudo yum install your-extension
 brew install your-extension
 ```
 
-### 3. PostgreSQL Extensions on Platforms
-
-Various platforms provide extension management support for PostgreSQL, making it easier for users to find, install, and update extensions.
-
-#### Distributing Your Extension via PostgreSQL Extensions on Platforms:
-1. Submit your extension to PostgreSQL extensions platforms like Postgres.app for macOS or BigSQL for Windows and Linux.
-
-3. Users can then install your extension directly from the platform's interface or command-line tools.
-
-### 4. Custom Installation Script
-For users who prefer manual installation, you can provide a custom installation script that automates the installation process.
-
-#### Steps to Distribute Your Extension via a Custom Installation Script:
-
-1. Create a shell script that installs your extension by copying the necessary files to the appropriate PostgreSQL directories.
-
-2. Host the script on a repository, website, or include it in your extension's distribution package.
-
-3. Users can run the script to install your extension:
-
-```bash
-bash install_extension.sh
-```
-
 > Note:
 > Ensure that your extension adheres to licensing and copyright requirements when distributing it across various platforms. It's essential to provide clear information about the license under which your extension is distributed and any dependencies it relies upon.

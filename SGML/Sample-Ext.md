@@ -13,9 +13,9 @@ Throughout this quick start, we will start with the basics, such as creating a f
 
 By the end of this guide, you will have a solid understanding of how to extend PostgreSQL using the `pg_sample_ext` extension and be equipped with the knowledge to create your own powerful extensions, tailored to meet your specific needs.
 
-For a detailed tutorial on getting started with extension creation, refer to the [Extension Creation Quick Start](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/pull/14).
-## Function: 
+For a detailed tutorial on getting started with extension creation, refer to the [Extension Creation Quick Start](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md).
 
+## Function:
 ### Step 1: Create the Extension Directory
 Create a directory for your extension, preferably in the PostgreSQL extension directory. For example:
 ```
@@ -23,7 +23,7 @@ $ mkdir pg_sample_ext
 ```
 
 ### Step 2: Create the Control File
-Inside the extension directory, create a control file with the `.control` extension. This file will provide information about the extension.
+- Create a control file with the `.control` extension. This file will provide information about the extension.
 
 ```
 # pg_sample_ext extension
@@ -33,7 +33,7 @@ relocatable = true
 ```
 
 ### Step 3: Create the SQL Script File
-Create an SQL script file with the `.sql` extension inside the extension directory. This file will contain the SQL code to create the custom function. For example, create a file named `pg_sample_ext--1.0.sql` with the following contents:
+- This file will contain the SQL code to create the custom function. For example, create a file named `pg_sample_ext--1.0.sql` with the following contents:
 
 ```sql
 -- Create a function to calculate the square of a number
@@ -49,7 +49,7 @@ For more detailed information on `CREATE FUNCTION`, you can refer to the [Postgr
 
 
 ### Step 4: Create the Makefile
-Create a Makefile inside the extension directory. This file will define the build and installation instructions for the extension. For example, create a file named `Makefile` with the following contents:
+- Create a Makefile inside the extension directory. This file will define the build and installation instructions for the extension.
 
 ```
 EXTENSION = pg_sample_ext
@@ -61,7 +61,7 @@ include $(PGXS)
 ```
 
 ### Step 5: Build and Install the Extension
-Build and install the extension using the following commands:
+- Build and install the extension using the following commands:
 
 ```
 $ make
@@ -69,13 +69,13 @@ $ make install
 ```
 
 ### Step 6: Enable the Extension in PostgreSQL
-Connect to your PostgreSQL database and run the following command to enable the extension:
+- Connect to your PostgreSQL database and run the following command to enable the extension:
 ```sql
 CREATE EXTENSION pg_sample_ext;
 ```
 
 ### Usage:
-Now, you can use the `pg_sample_ext` extension in your PostgreSQL database, specifically the `square` function to calculate the square of a number.
+- Now, you can use the `pg_sample_ext` extension in your PostgreSQL database, specifically the `square` function to calculate the square of a number.
 ```sql
 SELECT square(5); -- Returns 25
 ```
@@ -85,12 +85,8 @@ By following these steps, you can create a PostgreSQL extension that includes a 
 ## Custom Data Type: 
 The `CREATE TYPE` statement and the `CREATE DOMAIN` statement in PostgreSQL are used to create custom data types. While they both allow you to define custom data types, there are differences in how they are created and their intended purposes. Here's a differentiation between the two:
 
-[3rd Party Tutorial Content](https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-user-defined-data-types/)
-
 ### 1. `CREATE TYPE` statement:
-Creates a composite type or an enumerated type.
-- Composite types (also known as row types) allow you to define a new data type that consists of multiple attributes or fields. They are similar to creating a table with named columns but without the storage aspect.
-- Enumerated types allow you to define a new data type with a predefined list of allowed values.
+Creates a composite type or an enumerated type. For more detailed information on `CREATE TYPE`, you can refer to the [PostgreSQL documentation on `CREATE TYPE`](https://www.postgresql.org/docs/current/sql-createtype.html).
 
 #### 1. A composite type using `CREATE TYPE`:
    - The `person_type` is defined as a composite type consisting of two attributes: `name` of type `text` and `age` of type `integer`.
@@ -106,8 +102,6 @@ CREATE TYPE person_type AS (
 ```sql
 CREATE TYPE status_type AS ENUM ('active', 'inactive', 'pending');
 ```
-
-For more detailed information on `CREATE TYPE`, you can refer to the [PostgreSQL documentation on `CREATE TYPE`](https://www.postgresql.org/docs/current/sql-createtype.html).
 
 Using the Data Types:
 ```sql
@@ -147,8 +141,7 @@ INSERT INTO status_table (status) VALUES ('active');
 In the example above, we demonstrate how to use the `person_type` composite type to declare a variable and perform operations using its attributes. We also showcase the usage of the `status_type` enumerated type in a table column, ensuring that only the predefined values ('active', 'inactive', 'pending') can be inserted.
 
 ### 2. `CREATE DOMAIN` statement:
-- A domain type is a custom data type that is based on an existing base type but with additional constraints applied. It provides a way to create a specialized version of an existing data type.
-- Domains are useful for adding constraints or business rules to a base type without duplicating those constraints across multiple columns.
+- A domain type is a custom data type that is based on an existing base type but with additional constraints applied. For more detailed information on `CREATE DOMAIN`, you can refer to the [PostgreSQL documentation on `CREATE DOMAIN`](https://www.postgresql.org/docs/current/sql-createdomain.html).
 
 A domain type using `CREATE DOMAIN`:
 ```sql
@@ -158,10 +151,6 @@ CREATE DOMAIN positive_integer AS integer
 ```
 
 In the example above, we create a domain type called `positive_integer` based on the existing base type `integer`. The `CHECK` constraint ensures that any value assigned to this domain type must be greater than 0, effectively enforcing the concept of positive integers.
-
-By using the domain type `positive_integer`, you can apply this constraint to multiple columns or variables without the need to duplicate the constraint definition each time. It promotes consistency and simplifies the management of constraints by encapsulating them within the domain type.
-
-For more detailed information on `CREATE DOMAIN`, you can refer to the [PostgreSQL documentation on `CREATE DOMAIN`](https://www.postgresql.org/docs/current/sql-createdomain.html).
 
 Usage example:
 ```sql
@@ -188,9 +177,7 @@ ERROR:  value for domain positive_integer violates check constraint "positive_in
 ```
 
 ## Custom Postgres Operators:
-[3rd Party Site](https://www.linuxtopia.org/online_books/database_guides/Practical_PostgreSQL_database/PostgreSQL_x15284_002.htm)
-
-In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations.
+In PostgreSQL, custom operators can be created to extend the functionality of the database by defining new operations or modifying the behaviour of existing operations. For more detailed information on `CREATE OPERATOR`, you can refer to the [PostgreSQL documentation on `CREATE OPERATOR`](https://www.postgresql.org/docs/current/sql-createoperator.html).
 
 ```sql
 -- Custom Operator: @*
@@ -214,14 +201,6 @@ CREATE OPERATOR @* (
     LEFTARG = my_type,
     RIGHTARG = my_type
 );
-```
-For more detailed information on `CREATE OPERATOR`, you can refer to the [PostgreSQL documentation on `CREATE OPERATOR`](https://www.postgresql.org/docs/current/sql-createoperator.html).
-
-
-By defining this custom operator, you can now use it in your SQL queries and expressions, such as:
-
-```sql
-SELECT ROW(2)::my_type @* ROW(3)::my_type;
 ```
 
 ### Implementation:

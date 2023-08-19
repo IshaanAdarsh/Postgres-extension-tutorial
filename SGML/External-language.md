@@ -26,12 +26,6 @@ To utilize external languages in a PostgreSQL extension, follow these steps:
 In this quick start guide, we will create a simple PostgreSQL extension using C as an external language. The extension will include a function to add two numbers.
 
 ## Prerequisites
-
-- [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
-- Basic knowledge of C programming.
-- Familiarity with the PostgreSQL extension development process.
-- Prerequisites:
-
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
 - Basic knowledge of C programming.
 - Familiarity with the PostgreSQL extension development process.
@@ -40,8 +34,7 @@ In this quick start guide, we will create a simple PostgreSQL extension using C 
 - Knowledge about the Postgres Development Libraries
 
 ### Step 1: Create the Extension Directory
-
-Create a new directory for your extension project.
+- Create a new directory for your extension project.
 
 ```bash
 mkdir pg_cext
@@ -49,8 +42,7 @@ cd pg_cext
 ```
 
 ### Step 2: Create the Makefile
-
-Create a Makefile that uses PGXS macros to build the extension:
+- Create a Makefile that uses PGXS macros to build the extension:
 
 ```makefile
 MODULES = pg_cext
@@ -64,8 +56,7 @@ include $(PGXS)
 - For more information on the Makefiles, you can refer to the [PostgreSQL documentation on Makefile](https://www.postgresql.org/docs/current/extend-pgxs.html).
 
 ### Step 3: Create the Control File
-
-Create a control file named `pg_cext.control` with the following content:
+- Create a control file named `pg_cext.control` with the following content:
 
 ```control
 comment = 'Postgres extension using C to add two numbers'
@@ -76,8 +67,7 @@ module_pathname = '$libdir/pg_cext'
 - For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
 
 ### Step 4: Write the C Function
-
-Write the C function in a file named `pg_cext.c`:
+- Write the C function in a file named `pg_cext.c`:
 
 ```c
 #include "postgres.h"
@@ -97,8 +87,7 @@ Datum add_nums(PG_FUNCTION_ARGS)
 ```
 
 ### Step 5: Create the SQL Script file:
-
-Create a control file named `pg_cext--1.0.0.sql` with the following content:
+- Create a control file named `pg_cext--1.0.0.sql` with the following content:
 
 ```sql
 CREATE OR REPLACE FUNCTION
@@ -134,15 +123,14 @@ make install
 - For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).
 
 ### Step 7: Create and Test the Extension
-
-Create the extension in your PostgreSQL database:
+- Create the extension in your PostgreSQL database:
 
 ```sql
 CREATE EXTENSION pg_cext;
 ```
 - For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
 
-Test the function:
+- Test the function:
 
 ```sql
 SELECT add_nums(2, 3);

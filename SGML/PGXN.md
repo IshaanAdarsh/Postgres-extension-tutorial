@@ -7,7 +7,7 @@ Visit [PGXN manager](https://manager.pgxn.org/) and create an account. This will
 
 ### Step 2: Prepare Your Extension: 
 - Ensure that your extension is properly developed, tested, and ready for distribution. Make sure you have a well-documented README file, docfile, changelog, SQL scripts, and any necessary code files or dependencies.
-- Refer to documentation on how to create a [Simple Postgres Extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/pull/14)
+- Refer to documentation on how to create a [Simple Postgres Extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md)
 
 ### Step 3: Create a PGXN Metadata File: 
 PGXN requires a metadata file that provides information about your extension. Create a file named `META.json` that includes details such as the extension name, version, author, description, dependencies, and other relevant information. Refer to the [PGXN Meta Specification](https://pgxn.org/spec/) for the required format and fields.

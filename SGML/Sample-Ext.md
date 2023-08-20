@@ -1,23 +1,19 @@
 # Extending Postgres with `pg_sample_ext`
 
-In this quick start guide, we will explore the process of extending PostgreSQL using the `pg_sample_ext` extension. `pg_sample_ext` is a sample extension that gradually introduces various extension features which include
+In this quick start guide, we will explore the process of extending PostgreSQL using the `pg_sample_ext` extension. `pg_sample_ext` is a sample extension that gradually introduces various extension features which include:
 - Functions
 - Data Types
   - `CREATE TYPE`
   - `CREATE DOMAIN`
 - Operators
 
-By following this guide, you will learn how to create, install, and upgrade the `pg_sample_ext` extension while understanding the different ways in which Postgres can be extended. Each section will introduce a specific feature, providing hands-on examples and explanations to help you grasp the concepts and apply them to your own extensions.
-
-Throughout this quick start, we will start with the basics, such as creating a function then we will progress to more advanced topics like defining custom data types and domains, implementing operators for custom types, and exploring advanced indexing and table access methods.
-
-By the end of this guide, you will have a solid understanding of how to extend PostgreSQL using the `pg_sample_ext` extension and be equipped with the knowledge to create your own powerful extensions, tailored to meet your specific needs.
+By following this guide, you will learn how to create, install, and upgrade the `pg_sample_ext` extension while understanding the different ways in which Postgres can be extended. Throughout this quick start, we will start with the basics, such as creating a function then we will progress to more advanced topics like defining custom data types and domains, and implementing operators for custom types.
 
 For a detailed tutorial on getting started with extension creation, refer to the [Extension Creation Quick Start](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md).
 
 ## Function:
 ### Step 1: Create the Extension Directory
-Create a directory for your extension, preferably in the PostgreSQL extension directory. For example:
+- Create a directory for your extension
 ```
 $ mkdir pg_sample_ext
 ```
@@ -33,7 +29,7 @@ relocatable = true
 ```
 
 ### Step 3: Create the SQL Script File
-- This file will contain the SQL code to create the custom function. For example, create a file named `pg_sample_ext--1.0.sql` with the following contents:
+- This file will contain the SQL code to create the custom function. 
 
 ```sql
 -- Create a function to calculate the square of a number
@@ -47,9 +43,8 @@ $$ LANGUAGE plpgsql;
 
 For more detailed information on `CREATE FUNCTION`, you can refer to the [PostgreSQL documentation on `CREATE FUNCTION`](https://www.postgresql.org/docs/current/sql-createfunction.html).
 
-
 ### Step 4: Create the Makefile
-- Create a Makefile inside the extension directory. This file will define the build and installation instructions for the extension.
+- Create a Makefile inside the extension directory.
 
 ```
 EXTENSION = pg_sample_ext
@@ -59,6 +54,7 @@ PG_CONFIG = pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
 ```
+For more information on the Makefiles, you can refer to the [PostgreSQL documentation on Makefile](https://www.postgresql.org/docs/current/extend-pgxs.html).
 
 ### Step 5: Build and Install the Extension
 - Build and install the extension using the following commands:
@@ -67,20 +63,20 @@ include $(PGXS)
 $ make
 $ make install
 ```
+For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).
 
 ### Step 6: Enable the Extension in PostgreSQL
 - Connect to your PostgreSQL database and run the following command to enable the extension:
 ```sql
 CREATE EXTENSION pg_sample_ext;
 ```
+For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
 
 ### Usage:
 - Now, you can use the `pg_sample_ext` extension in your PostgreSQL database, specifically the `square` function to calculate the square of a number.
 ```sql
 SELECT square(5); -- Returns 25
 ```
-
-By following these steps, you can create a PostgreSQL extension that includes a custom function to extend the functionality of the database.
 
 ## Custom Data Type: 
 The `CREATE TYPE` statement and the `CREATE DOMAIN` statement in PostgreSQL are used to create custom data types. While they both allow you to define custom data types, there are differences in how they are created and their intended purposes. Here's a differentiation between the two:
@@ -204,6 +200,7 @@ CREATE OPERATOR @* (
 ```
 
 ### Implementation:
+- Here, we first show the input values `input_left` and `input_right`, which are `my_type` values created using the `ROW` constructor.
 
 ```sql
 
@@ -219,7 +216,7 @@ SELECT ROW(2)::my_type AS input_left, ROW(3)::my_type AS input_right;
 (1 row)
 ```
 
-Here, we first show the input values `input_left` and `input_right`, which are `my_type` values created using the `ROW` constructor.
+- Then, we execute the query using the custom operator `@*` to multiply the `input_left` and `input_right` values. The result is `(6)`, which is the product of 2 and 3.
 
 ```sql
 -- Input
@@ -233,5 +230,3 @@ SELECT ROW(2)::my_type @* ROW(3)::my_type AS result;
  (6)
 (1 row)
 ```
-
-Then, we execute the query using the custom operator `@*` to multiply the `input_left` and `input_right` values. The result is `(6)`, which is the product of 2 and 3.

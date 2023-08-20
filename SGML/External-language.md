@@ -3,7 +3,7 @@ External languages in PostgreSQL provide a powerful way to integrate additional 
 
 Using external languages offers several advantages:
 
-1. **Language Flexibility:** Integrate a wide range of languages like Python, Ruby, or Java to perform tasks that may not be as straightforward in SQL.
+1. **Language Flexibility:** Integrate a wide range of languages like [Python](https://www.python.org), [Ruby](https://www.ruby-lang.org/en/), or [Java](https://www.java.com/en/) to perform tasks that may not be as straightforward in SQL.
 
 2. **Code Reusability:** Reuse existing code written in preferred languages, reducing development time and effort.
 
@@ -22,8 +22,7 @@ To utilize external languages in a PostgreSQL extension, follow these steps:
 4. **Write Functions and Stored Procedures:** Utilize the external language to implement the desired functionality in functions and stored procedures.
 
 # Quick Start: Creating a PostgreSQL Extension using C as an External Language
-
-In this quick start guide, we will create a simple PostgreSQL extension using C as an external language. The extension will include a function to add two numbers.
+In this quick start guide, we will create a simple PostgreSQL extension using C as an external language.
 
 ## Prerequisites
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.

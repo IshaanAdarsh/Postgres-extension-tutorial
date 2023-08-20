@@ -1,5 +1,5 @@
-# Procedural languages:
-Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. These are natively supported by PostgreSQL and can be used directly within the database environment. These languages, also known as PLs, offer developers the flexibility to implement complex business logic and computations directly within the database.
+# [Procedural Languages](https://www.postgresql.org/docs/current/xplang.html):
+- Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. PostgreSQL natively supports these and can be used directly within the database environment. These languages, also known as PLs, offer developers the flexibility to implement complex business logic and computations directly within the database.
 
 Key points about procedural languages in PostgreSQL:
 
@@ -17,20 +17,21 @@ To use procedural languages in PostgreSQL:
 
 2. **Write Functions and Procedures:** After enabling the language, developers can write functions and stored procedures using the chosen procedural language. This allows them to implement complex business logic, data transformations, and data analysis directly within the database.
 
+For more detailed information on Procedural Language, you can refer to the [PostgreSQL documentation on Procedural Language](https://www.postgresql.org/docs/current/xplang.html).
+ 
+
 ## Quick Start: Creating a Postgres Extension using PL/pgSQL
 
-In this quick start guide, we will create a simple PostgreSQL extension using [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql.html). The extension will include a PL/pgSQL function to subtract two numbers.
+In this quick start guide, we will create a simple PostgreSQL extension using [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql.html). 
 
 ### Prerequisites
-
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
 - Basic knowledge of SQL and PL/pgSQL programming.
 - `make` utility for building and compiling software. 
 - Knowledge about the Postgres Development Libraries
 
 ### Step 1: Create the Extension Directory
-
-Create a new directory for your extension project. You can choose any location on your system. Let's assume you create the directory in your home folder:
+- Create a new directory for your extension project. 
 
 ```bash
 mkdir ~/pg_plpgsql_ext
@@ -38,8 +39,7 @@ cd ~/pg_plpgsql_ext
 ```
 
 ### Step 2: Create the SQL Script File:
-
-Next, we'll create the SQL script file that defines the extension's functions and features. Create a file named `pg_plpgsql_ext--1.0.0.sql` in the `pg_plpgsql_ext` directory with the following content:
+- Create a file named `pg_plpgsql_ext--1.0.0.sql` in the `pg_plpgsql_ext` directory with the following content:
 
 ```sql
 -- pg_plpgsql_ext--1.0.0.sql
@@ -60,8 +60,7 @@ $$;
 - `RETURN a - b;`: This line calculates the subtraction of `b` from `a` and returns the result.
 
 ### Step 3: Create the Control File:
-
-Create a file named "pg_plpgsql_ext.control" in the "pg_plpgsql_ext" directory with the following content:
+- Create a file named "pg_plpgsql_ext.control" in the "pg_plpgsql_ext" directory with the following content:
 
 ```control
 # pg_plpgsql_ext.control
@@ -75,11 +74,11 @@ default_version = '1.0.0'
 # Extension is relocatable
 relocatable = true
 ```
+
 - For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
 
 ### Step 4: Create the Makefile:
-
-Create a file named "Makefile" in the "pg_plpgsql_ext" directory with the following content:
+- Create a Makefile in the "pg_plpgsql_ext" directory with the following content:
 
 ```makefile
 # Makefile for pg_plpgsql_ext
@@ -93,8 +92,7 @@ include $(PGXS)
 - For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
 
 ### Step 5: Build and Install the Extension
-
-Now, let's build and install the "pg_plpgsql_ext" extension:
+- Let's build and install the "pg_plpgsql_ext" extension:
 
 ```bash
 # Build the extension
@@ -107,24 +105,20 @@ make install
 - For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).
 
 ### Step 6: Enable the Extension in PostgreSQL
-
-Connect to your PostgreSQL database using `psql`:
+- Connect to your PostgreSQL database using `psql`:
 
 ```bash
 psql -U your_username -d your_database
 ```
 
-Inside the PostgreSQL interactive terminal, enable the extension:
-
+- Inside the PostgreSQL interactive terminal, enable the extension:
 ```sql
 CREATE EXTENSION pg_plpgsql_ext;
 ```
+
 - For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
 
 ### Step 7: Test the Extension
-
-Now that the extension is enabled, you can use the `subtract_numbers` function in SQL queries:
-
 ```sql
 -- Example usage of the function
 SELECT subtract_numbers(10, 5);
@@ -138,7 +132,7 @@ SELECT subtract_numbers(10, 5);
 
 ## Quick Start: Creating a Postgres Extension using PL/Python:
 
-In this quick start guide, we will create a simple PostgreSQL extension using [PL/Python](https://www.postgresql.org/docs/current/plpython.html). The extension will include a Python function to add two numbers.
+In this quick start guide, we will create a simple PostgreSQL extension using [PL/Python](https://www.postgresql.org/docs/current/plpython.html).
 
 ### Prerequisites
 
@@ -151,17 +145,14 @@ In this quick start guide, we will create a simple PostgreSQL extension using [P
 - Knowledge about the Postgres Development Libraries
 
 ### Step 1: Create the Extension Directory
-
-Create a new directory for your extension project. You can choose any location on your system. Let's assume you create the directory in your home folder:
-
+- Create a new directory for your extension project. 
 ```bash
 mkdir ~/pg_py_ext
 cd ~/pg_py_ext
 ```
 
 ### Step 2: Create the SQL Script File (pg_py_ext--1.0.sql)
-
-Next, we'll create the SQL script file that defines the extension's functions and features. Create a file named `pg_py_ext--1.0.0.sql` in the `pg_py_ext` directory with the following content:
+- Create a file named `pg_py_ext--1.0.0.sql` in the `pg_py_ext` directory with the following content:
 
 ```sql
 -- pg_py_ext--1.0.0.sql
@@ -181,6 +172,8 @@ $$;
 - `def add_numbers(a, b):`: This is the Python code block that defines the `add_numbers` function. The function takes two arguments (`a` and `b`) and returns their sum.
 
 ### Step 3: Create the Control File:
+- Create a file named "pg_py_ext.control" with the following content:
+
 ```control
 # pg_py_ext.control
 
@@ -210,7 +203,7 @@ include $(PGXS)
 - For more information on the Makefiles, you can refer to the [PostgreSQL documentation on makefile](https://www.postgresql.org/docs/15/extend-pgxs.html).
 
 ### Step 5: Build and Install the Extension
-- Now, let's build and install the "pg_py_ext" extension:
+- Let's build and install the "pg_py_ext" extension:
 
 ```bash
 # Build the extension
@@ -229,16 +222,14 @@ make install
 psql -U your_username -d your_database
 ```
 
-Inside the PostgreSQL interactive terminal, enable the extension:
-
+- Inside the PostgreSQL interactive terminal, enable the extension:
 ```sql
 CREATE EXTENSION pg_py_ext;
 ```
+
 - For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
  
 ### Step 7: Test the Extension
-- Now that the extension is enabled, you can use the `add_numbers` function in SQL queries:
-
 ```sql
 -- Example usage of the function
 SELECT add_numbers(3, 5);

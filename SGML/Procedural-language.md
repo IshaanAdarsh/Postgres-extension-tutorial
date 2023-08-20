@@ -26,7 +26,7 @@ In this quick start guide, we will create a simple PostgreSQL extension using [P
 
 ### Prerequisites
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
-- Basic knowledge of SQL and PL/pgSQL programming.
+- Basic knowledge of SQL and [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql.html) programming.
 - `make` utility for building and compiling software. 
 - Knowledge about the Postgres Development Libraries
 
@@ -137,7 +137,7 @@ In this quick start guide, we will create a simple PostgreSQL extension using [P
 ### Prerequisites
 
 - [PostgreSQL](https://www.postgresql.org/download/) installed and running on your system.
-- [plpython3u]((https://www.postgresql.org/docs/current/plpython.html)) procedural language available in your PostgreSQL installation.
+- [plpython3u](https://www.postgresql.org/docs/current/plpython.html) procedural language available in your PostgreSQL installation.
 > In the context of PostgreSQL's procedural languages, the "u" in "plpython3u" stands for "untrusted". This signifies that the language implementation allows for executing arbitrary code and potentially accessing external resources.
 
 - Basic knowledge of [Python](https://www.python.org) programming.

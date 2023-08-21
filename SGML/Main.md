@@ -1,9 +1,9 @@
 # Minimum Viable Product:
 A basic tutorial on creating a PostgreSQL extension using the bare minimum files:
 
-- A **[Control file](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11)**, which tells PostgreSQL some basic information about the extension, such as its name, version, and schema.
-- A **SQL script file**, which contains the SQL commands to create the extension's objects.
-- A **[Makefile](https://www.postgresql.org/docs/current/extend-pgxs.html)** is a file that helps automate the build process of the extension. It defines the compilation and installation steps, making it easier to build and install the extension on different systems.
+- **[Control file](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11)**
+- **SQL script file** 
+- **[Makefile](https://www.postgresql.org/docs/current/extend-pgxs.html)**
 
 ## A Postgres extension using only a control file, an SQL file and a Makefile:
 

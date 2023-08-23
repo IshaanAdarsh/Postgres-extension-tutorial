@@ -17,7 +17,7 @@ To utilize external languages in a PostgreSQL extension, follow these steps:
 
 2. **Define the Language in Control File:** Specify the external language requirement and provide integration details in the extension's control file.
 
-3. **Register the Language:** Use `CREATE EXTENSION` in PostgreSQL to install and enable the extension, recognizing the external language.
+3. **Register the Language:** Use [`CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html) in PostgreSQL to install and enable the extension, recognizing the external language.
 
 4. **Write Functions and Stored Procedures:** Utilize the external language to implement the desired functionality in functions and stored procedures.
 

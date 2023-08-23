@@ -3,7 +3,7 @@
 
 Key points about procedural languages in PostgreSQL:
 
-1. **Extended Functionality:** Procedural languages enable developers to write custom functions and procedures in languages like PL/pgSQL, PL/Python, PL/Tcl, PL/Perl, PL/R, and more. This allows for the creation of complex computations and data processing within the database.
+1. **Extended Functionality:** Procedural languages enable developers to write custom functions and procedures in languages like [PL/pgSQL](https://www.postgresql.org/docs/current/plpgsql.html), [PL/Python](https://www.postgresql.org/docs/current/plpython.html), [PL/Tcl](https://www.postgresql.org/docs/current/pltcl.html), [PL/Perl](https://www.postgresql.org/docs/current/plperl.html), and more. This allows for the creation of complex computations and data processing within the database.
 
 2. **Control Flow and Logic:** Procedural languages offer control flow constructs like loops, conditionals, and exception handling, making it easier to implement business logic that goes beyond the capabilities of SQL.
 
@@ -131,7 +131,6 @@ SELECT subtract_numbers(10, 5);
 ```
 
 ## Quick Start: Creating a Postgres Extension using PL/Python:
-
 In this quick start guide, we will create a simple PostgreSQL extension using [PL/Python](https://www.postgresql.org/docs/current/plpython.html).
 
 ### Prerequisites
@@ -188,7 +187,7 @@ relocatable = true
 ```
 - For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
 
-### Step 4: Create the Makefile (Makefile)
+### Step 4: Create the Makefile:
 - Create a file named "Makefile" in the "pg_py_ext" directory with the following content:
 
 ```makefile

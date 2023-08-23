@@ -9,7 +9,7 @@ In this quick start guide, we will explore the process of extending PostgreSQL u
 
 By following this guide, you will learn how to create, install, and upgrade the `pg_sample_ext` extension while understanding the different ways in which Postgres can be extended. Throughout this quick start, we will start with the basics, such as creating a function then we will progress to more advanced topics like defining custom data types and domains, and implementing operators for custom types.
 
-For a detailed tutorial on getting started with extension creation, refer to the [Extension Creation Quick Start](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md).
+For a detailed tutorial on getting started with extension creation, refer to the [Simple Postgres Extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md).
 
 ## Function:
 ### Step 1: Create the Extension Directory

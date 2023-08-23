@@ -21,6 +21,8 @@ To utilize external languages in a PostgreSQL extension, follow these steps:
 
 4. **Write Functions and Stored Procedures:** Utilize the external language to implement the desired functionality in functions and stored procedures.
 
+For a detailed tutorial on getting started with extension creation, refer to the [Simple Postgres Extension](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md).
+
 # Quick Start: Creating a PostgreSQL Extension using C as an External Language
 In this quick start guide, we will create a simple PostgreSQL extension using C as an external language.
 

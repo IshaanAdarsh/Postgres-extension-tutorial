@@ -348,7 +348,7 @@ ALTER EXTENSION my_extension UPDATE TO '1.0.1';
 ### Step 1: Drop the existing extension: 
 - Execute the `DROP EXTENSION` command to remove the current version of the extension from the database:
 ```sql
-DROP EXTENSION IF EXISTS your_extension_name;
+DROP EXTENSION IF EXISTS my_extension;
 ```
 
 - For more information on the `DROP EXTENSION` command, you can refer to the [PostgreSQL documentation on `DROP EXTENSION`](https://www.postgresql.org/docs/current/sql-dropextension.html)
@@ -418,7 +418,7 @@ For more information on the Makefiles, you can refer to the [PostgreSQL document
 ### Step 4: Install the new version: 
 - Run the `CREATE EXTENSION` command to install the updated version of the extension:
 ```sql
-CREATE EXTENSION your_extension_name;
+CREATE EXTENSION my_extension;
 ```
 
 For more information on the `CREATE EXTENSION` command, you can refer to the [PostgreSQL documentation on `CREATE EXTENSION`](https://www.postgresql.org/docs/current/sql-createextension.html).
@@ -512,7 +512,7 @@ A: my_extension is designed for PostgreSQL version Y (replace Y with the specifi
 
 ## License and Copyright Information
 
-my_extension is released under the [PostgreSQL License](LICENSE). Copyright &copy; [Your Name].
+my_extension is released under the [PostgreSQL License](LICENSE).
 ```
 ### docfile:
 - A docfile is an essential component of extension management and packaging. It is a documentation file that contains detailed information about the extension, its design, architecture, and usage. The docfile provides an outline for additional sections that can be expanded upon with more detailed information about the extension. It should contain the following information about the extension:

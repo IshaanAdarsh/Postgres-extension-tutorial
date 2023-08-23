@@ -13,7 +13,7 @@ Key points about procedural languages in PostgreSQL:
 
 To use procedural languages in PostgreSQL:
 
-1. **Enable the Language:** Before using a procedural language in a database, it needs to be enabled using the `CREATE LANGUAGE` command or by installing the relevant extensions.
+1. **Enable the Language:** Before using a procedural language in a database, it needs to be enabled using the [`CREATE LANGUAGE`](https://www.postgresql.org/docs/current/sql-createlanguage.html) command or by installing the relevant extensions.
 
 2. **Write Functions and Procedures:** After enabling the language, developers can write functions and stored procedures using the chosen procedural language. This allows them to implement complex business logic, data transformations, and data analysis directly within the database.
 

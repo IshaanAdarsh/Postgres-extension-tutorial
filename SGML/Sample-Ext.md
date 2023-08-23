@@ -1,11 +1,11 @@
 # Extending Postgres with `pg_sample_ext`
 
 In this quick start guide, we will explore the process of extending PostgreSQL using the `pg_sample_ext` extension. `pg_sample_ext` is a sample extension that gradually introduces various extension features which include:
-- Functions
-- Data Types
-  - `CREATE TYPE`
-  - `CREATE DOMAIN`
-- Operators
+- [Functions](https://www.postgresql.org/docs/current/sql-createfunction.html)
+- [Data Types](https://www.postgresql.org/docs/current/datatype.html)
+  - [`CREATE TYPE`](https://www.postgresql.org/docs/current/sql-createtype.html)
+  - [`CREATE DOMAIN`](https://www.postgresql.org/docs/current/sql-createdomain.html)
+- [Operators](https://www.postgresql.org/docs/current/sql-createoperator.html)
 
 By following this guide, you will learn how to create, install, and upgrade the `pg_sample_ext` extension while understanding the different ways in which Postgres can be extended. Throughout this quick start, we will start with the basics, such as creating a function then we will progress to more advanced topics like defining custom data types and domains, and implementing operators for custom types.
 
@@ -27,6 +27,7 @@ comment = 'Sample extension to demonstrate Postgres Extensibilty'
 default_version = '1.0.0'
 relocatable = true
 ```
+- For more detailed information on Control Files, you can refer to the [PostgreSQL documentation on Control Files](https://www.postgresql.org/docs/current/extend-extensions.html#id-1.8.3.20.11).
 
 ### Step 3: Create the SQL Script File
 - This file will contain the SQL code to create the custom function. 
@@ -40,8 +41,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 ```
-
-For more detailed information on `CREATE FUNCTION`, you can refer to the [PostgreSQL documentation on `CREATE FUNCTION`](https://www.postgresql.org/docs/current/sql-createfunction.html).
+- For more detailed information on `CREATE FUNCTION`, you can refer to the [PostgreSQL documentation on `CREATE FUNCTION`](https://www.postgresql.org/docs/current/sql-createfunction.html).
 
 ### Step 4: Create the Makefile
 - Create a Makefile inside the extension directory.

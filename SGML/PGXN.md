@@ -1,4 +1,4 @@
-# [PGXN](https://pgxn.org) (PostgreSQL Extension Network):
+# [PGXN (PostgreSQL Extension Network)](https://pgxn.org):
 PGXN is a centralized repository solely focused on the distribution of PostgreSQL extensions. It facilitates developers in sharing and distributing their PostgreSQL extensions, contributing to the overall ecosystem and accessibility of extensions for the PostgreSQL community.
 
 ## Uploading the Extension on PGXN:
@@ -73,7 +73,7 @@ For additional details and guidelines on packaging PostgreSQL extensions, you ca
 ### Step 5: Publish Your Extension:
 - Use the PGXN web interface to publish your extension. Provide the distribution package created in the previous step and upload it to PGXN. The tool will validate the package and extract the metadata.
 
-## pgxnclient: Exploring PostgreSQL Extensions
+## [pgxnclient](https://pgxn.github.io/pgxnclient/#): Exploring PostgreSQL Extensions
 
 pgxnclient is a versatile command-line tool that facilitates interaction with the PostgreSQL Extension Network (PGXN). It allows users to search, download, install, upgrade, and manage PostgreSQL extensions effortlessly. Let's dive into each of the available commands to understand how they work.
 

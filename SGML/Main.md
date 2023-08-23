@@ -650,13 +650,13 @@ Utilizing package managers allows users to install your extension easily with a 
 
 ```bash
 # For apt (Debian/Ubuntu):
-sudo apt-get install your-extension
+sudo apt-get install my_extension
 
 # For yum (CentOS/RHEL):
-sudo yum install your-extension
+sudo yum install my_extension
 
 # For brew (macOS):
-brew install your-extension
+brew install my_extension
 ```
 
 > Note:

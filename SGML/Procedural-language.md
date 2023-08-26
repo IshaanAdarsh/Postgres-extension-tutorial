@@ -34,8 +34,8 @@ In this quick start guide, we will create a simple PostgreSQL extension using [P
 - Create a new directory for your extension project. 
 
 ```bash
-mkdir ~/pg_plpgsql_ext
-cd ~/pg_plpgsql_ext
+$ mkdir ~/pg_plpgsql_ext
+$ cd ~/pg_plpgsql_ext
 ```
 
 ### Step 2: Create the SQL Script File:
@@ -96,10 +96,10 @@ include $(PGXS)
 
 ```bash
 # Build the extension
-make
+$ make
 
 # Install the extension
-make install
+$ make install
 ```
 
 - For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).
@@ -108,7 +108,7 @@ make install
 - Connect to your PostgreSQL database using `psql`:
 
 ```bash
-psql -U your_username -d your_database
+$ psql -U your_username -d your_database
 ```
 
 - Inside the PostgreSQL interactive terminal, enable the extension:
@@ -146,8 +146,8 @@ In this quick start guide, we will create a simple PostgreSQL extension using [P
 ### Step 1: Create the Extension Directory
 - Create a new directory for your extension project. 
 ```bash
-mkdir ~/pg_py_ext
-cd ~/pg_py_ext
+$ mkdir ~/pg_py_ext
+$ cd ~/pg_py_ext
 ```
 
 ### Step 2: Create the SQL Script File (pg_py_ext--1.0.sql)
@@ -206,10 +206,10 @@ include $(PGXS)
 
 ```bash
 # Build the extension
-make
+$ make
 
 # Install the extension
-make install
+$ make install
 ```
 
 - For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).
@@ -218,7 +218,7 @@ make install
 - Connect to your PostgreSQL database using `psql`:
 
 ```bash
-psql -U your_username -d your_database
+$ psql -U your_username -d your_database
 ```
 
 - Inside the PostgreSQL interactive terminal, enable the extension:

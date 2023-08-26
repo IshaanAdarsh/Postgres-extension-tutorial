@@ -38,8 +38,8 @@ In this quick start guide, we will create a simple PostgreSQL extension using C 
 - Create a new directory for your extension project.
 
 ```bash
-mkdir pg_cext
-cd pg_cext
+$ mkdir pg_cext
+$ cd pg_cext
 ```
 
 ### Step 2: Create the Makefile
@@ -101,7 +101,7 @@ LANGUAGE C STRICT;
 #### Build the extension using the following command:
 
 ```bash
-make
+$ make
 ```
 
 When we run the command `make` in the terminal, it triggers the build process of the PostgreSQL extension. This process involves compiling the extension's source code and generating the necessary object files (.o) and shared object files (.so).
@@ -118,7 +118,7 @@ When using `PGXS` in the `Makefile`, it gets the necessary paths and configurati
 #### Install the extension:
 
 ```bash
-make install
+$ make install
 ```
 
 - For more information on the installation procedures, you can refer to the [PostgreSQL documentation on Installing the Files](https://www.postgresql.org/docs/current/install-procedure.html#INSTALL).

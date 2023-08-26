@@ -57,13 +57,13 @@ To create the distribution package, follow these steps:
 #### 1) Create a new directory for the distribution package and copy all the necessary files into it.
 
 ```
-mkdir my_extension_dist
+$ mkdir my_extension_dist
 ```
 
 #### 2) Compress the directory into a zip file.
 
 ```
-zip -r my_extension-1.0.0.zip my_extension_dist/
+$ zip -r my_extension-1.0.0.zip my_extension_dist/
 ```
 
 This will create a zip file named `my_extension-1.0.0.zip` containing all the necessary files for the installation and usage of your extension.

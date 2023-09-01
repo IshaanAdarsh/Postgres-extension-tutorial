@@ -8,11 +8,14 @@ After completing this tutorial, you'll have a strong foundation in PostgreSQL ex
 
 ### Part I: Getting Started
 
-1.1. **Basic Extension Components**
-   - Understanding the core files required for an extension:
-     - Control file
-     - SQL script file
-     - Makefile
+1.1. **Introduction to PostgreSQL Extensions**
+
+1.2. **Setting Up Your Environment**
+
+1.3. **Basic Extension Components**
+     - 1.3.1. **Control file**
+     - 1.3.2. **SQL script file**
+     - 1.3.3. **Makefile**
 
 ### Part II: Building Your First Extension / Quick Start
 

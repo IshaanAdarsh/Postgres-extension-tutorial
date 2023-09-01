@@ -1,0 +1,19 @@
+ id | name 
+----+------
+(0 rows)
+
+ result 
+--------
+      3
+(1 row)
+
+ result 
+--------
+     15
+(1 row)
+
+ result 
+--------
+     12
+(1 row)
+

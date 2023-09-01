@@ -21,3 +21,10 @@ SELECT complex_add(ARRAY[1, 2, 3, 4, 5]) AS result;
      15
 (1 row)
 
+-- Test the multiply function
+SELECT multiply(3, 4) AS result;
+ result 
+--------
+     12
+(1 row)
+

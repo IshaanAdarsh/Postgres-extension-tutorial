@@ -1,0 +1,35 @@
+{
+  "name": "pg_py_ext",
+  "abstract": "A PostgreSQL extension using PL/Python3U to add numbers",
+  "description": "pg_py_ext is a simple PostgreSQL extension that demonstrates how to create a function using the PL/Python3U language to add two numbers.",
+  "version": "1.0.0",
+  "maintainer": [
+    "Ishaan Adarsh <ishaanad9@gmail.com>"
+  ],
+  "license": "postgresql",
+  "provides": {
+    "pg_py_ext": {
+      "abstract": "A PostgreSQL extension using PL/Python3U to add numbers",
+      "file": "pg_py_ext--1.0.0.sql",
+      "version": "1.0.0"
+    }
+  },
+  "resources": {
+    "repository": {
+      "url": "git://github.com/IshaanAdarsh/pg_py_ext.git",
+      "web": "https://github.com/IshaanAdarsh/pg_py_ext/",
+      "type": "git"
+    }
+  },
+  "generated_by": "Ishaan Adarsh",
+  "meta-spec": {
+    "version": "1.0.0",
+    "url": "https://pgxn.org/meta/spec.txt"
+  },
+  "tags": [
+    "PostgreSQL",
+    "extension",
+    "Procedural Language",
+    "addition"
+  ]
+}

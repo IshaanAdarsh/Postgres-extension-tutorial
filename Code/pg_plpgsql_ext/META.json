@@ -1,0 +1,36 @@
+{
+  "name": "pg_plpgsql_ext",
+  "abstract": "A PostgreSQL extension with a PL/pgSQL function to subtract numbers",
+  "description": "pg_plpgsql_ext is a simple PostgreSQL extension that demonstrates how to create a function using the PL/pgSQL language to subtract two numbers.",
+  "version": "1.0.0",
+  "maintainer": [
+    "Ishaan Adarsh <ishaanad9@gmail.com>"
+  ],
+  "license": "postgresql",
+  "provides": {
+    "pg_plpgsql_ext": {
+      "abstract": "A PostgreSQL extension with a PL/pgSQL function to subtract numbers",
+      "file": "pg_plpgsql_ext--1.0.0.sql",
+      "version": "1.0.0"
+    }
+  },
+  "resources": {
+    "repository": {
+      "url": "git://github.com/IshaanAdarsh/pg_plpgsql_ext.git",
+      "web": "https://github.com/IshaanAdarsh/pg_plpgsql_ext/",
+      "type": "git"
+    }
+  },
+  "generated_by": "Ishaan Adarsh",
+  "meta-spec": {
+    "version": "1.0.0",
+    "url": "https://pgxn.org/meta/spec.txt"
+  },
+  "tags": [
+    "PostgreSQL",
+    "extension",
+    "Procedural Language",
+    "subtraction"
+  ]
+}
+

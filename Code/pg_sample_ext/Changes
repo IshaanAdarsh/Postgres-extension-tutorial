@@ -1,0 +1,21 @@
+# Changelog for pg_sample_ext
+
+This document provides an overview of the changes made in each version of the pg_sample_ext extension.
+
+## Version 1.0.0
+
+- Added the `square` function to calculate the square of a number.
+- Initial release of the pg_sample_ext extension.
+
+## Version 1.0.1
+
+### New Features
+- Added support for composite types.
+- Introduced the `person_type` composite type that represents a person's name and age.
+- Introduced the `status_type` enumerated type with values 'active', 'inactive', and 'pending'.
+- Added the `positive_integer` domain type for representing positive integers.
+
+## Version 1.0.2
+
+### New Features
+- Added a custom operator `@*` for performing multiplication on values of type `my_type`.

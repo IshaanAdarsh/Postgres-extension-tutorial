@@ -1,5 +1,11 @@
 # Changelog for my_extension
 
+## Version 1.1.0
+- New Function: multiply
+  - Description: Added a new function called multiply.
+  - Usage: multiply takes two integers as input and returns their product.
+  - Example: SELECT multiply(3, 4);
+
 ## Version 1.0.1
 - New Function: complex_add
   - Description: Added a new function called complex_add.
@@ -9,4 +15,3 @@
 ## Version 1.0.0
 - Initial release of my_extension.
 - Implemented basic functionality for data management and operations.
-

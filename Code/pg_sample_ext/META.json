@@ -2,7 +2,7 @@
   "name": "pg_sample_ext",
   "abstract": "A Sample PostgreSQL extension",
   "description": "pg_sample_ext is a PostgreSQL extension that provides a sample function to demonstrate extending PostgreSQL's functionality.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "maintainer": [
     "Ishaan Adarsh <ishaanad9@gmail.com>"
   ],
@@ -10,8 +10,8 @@
   "provides": {
     "pg_sample_ext": {
       "abstract": "A Sample PostgreSQL extension",
-      "file": "pg_sample_ext--1.0.1.sql",
-      "version": "1.0.1"
+      "file": "pg_sample_ext--1.0.2.sql",
+      "version": "1.0.2"
     }
   },
   "resources": {

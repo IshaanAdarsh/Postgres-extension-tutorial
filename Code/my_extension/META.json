@@ -2,21 +2,38 @@
   "name": "my_extension",
   "abstract": "A Basic PostgreSQL extension",
   "description": "my_extension is a PostgreSQL extension that provides additional functionality for data management and operations.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "maintainer": [
     "Ishaan Adarsh <ishaanad9@gmail.com>"
   ],
   "license": "postgresql",
   "provides": {
     "my_extension": {
-      "file": "my_extension--1.0.1.sql",
+      "abstract": "A Basic PostgreSQL Extension",
+      "file": "my_extension--1.1.0.sql",
       "docfile": "doc/my_extension.md",
-      "version": "1.0.1"
+      "version": "1.1.0"
     }
   },
+  "resources": {
+      "repository": {
+        "url":  "git://github.com/IshaanAdarsh/my_extension.git",
+        "web":  "https://github.com/IshaanAdarsh/my_extension/",
+        "type": "git"
+      }
+   },
+  
   "generated_by": "Ishaan Adarsh",
   "meta-spec": {
     "version": "1.0.0",
     "url": "https://pgxn.org/meta/spec.txt"
-  }
+  },
+  "tags": [
+    "PostgreSQL",
+    "extension",
+    "data",
+    "calculation",
+    "utility"
+  ]
 }
+

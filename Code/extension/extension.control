@@ -1,4 +1,0 @@
-# extension.control
-comment = 'My PostgreSQL Extension'
-default_version = '1.0'
-module_pathname = '/Users/spartacus/Desktop/GSoC/CODE/extension/extension.so'

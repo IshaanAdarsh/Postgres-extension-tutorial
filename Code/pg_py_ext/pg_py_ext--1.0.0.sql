@@ -1,4 +1,4 @@
--- pg_py_ext--1.0.sql
+-- pg_py_ext--1.0.0.sql
 -- Create the function that uses the Python script
 CREATE OR REPLACE FUNCTION add_numbers(a integer, b integer)
 RETURNS integer

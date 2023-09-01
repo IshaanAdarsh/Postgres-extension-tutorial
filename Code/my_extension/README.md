@@ -7,6 +7,7 @@
 - Create a custom table `my_table` with an auto-incrementing `id` column and a `name` column.
 - Implement a function `add(a, b)` that returns the sum of two integers.
 - Implement a function `complex_add(numbers)` that returns the sum of multiple integers provided as an array.
+- Implement a function `multiply(a, b)` that returns the product of two integers. This function provides a new way to perform mathematical calculations in PostgreSQL.
 
 ## Installation
 
@@ -18,7 +19,7 @@
 
 1. Clone the repository:
    ```
-   git clone https://github.com/IshaanAdarsh/Postgres-extension-tutorial/tree/main/Code/my_extension
+   git clone https://github.com/IshaanAdarsh/my_extension.git
    ```
 
 2. Change to the extension directory:
@@ -40,7 +41,7 @@
 ## Usage
 
 ### Creating a custom table
-Table is created when the extension is Created automatically with an auto-incrementing `id` column and a `name` column.
+Table `my_table` is created automatically when the extension is enabled, with an auto-incrementing `id` column and a `name` column.
 
 ### Adding two numbers
 To add two numbers using the `add` function, execute the following SQL query:
@@ -54,6 +55,13 @@ To add multiple numbers using the `complex_add` function, provide an array of in
 
 ```
 SELECT complex_add(ARRAY[1, 2, 3, 4, 5]);
+```
+
+### Multiplying two numbers
+To multiply two numbers using the `multiply` function, execute the following SQL query:
+
+```
+SELECT multiply(3, 4);
 ```
 
 ## Contributing

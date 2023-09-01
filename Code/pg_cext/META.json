@@ -1,0 +1,36 @@
+{
+  "name": "pg_cext",
+  "abstract": "A PostgreSQL extension to add two numbers",
+  "description": "pg_cext is a PostgreSQL extension that provides a function to add two numbers together using the C language.",
+  "version": "1.0.0",
+  "maintainer": [
+    "Ishaan Adarsh <ishaanad9@gmail.com>"
+  ],
+  "license": "postgresql",
+  "provides": {
+    "pg_cext": {
+      "abstract": "A PostgreSQL extension to add two numbers",
+      "file": "pg_cext--1.0.0.sql",
+      "version": "1.0.0"
+    }
+  },
+  "resources": {
+    "repository": {
+      "url": "git://github.com/IshaanAdarsh/pg_cext.git",
+      "web": "https://github.com/IshaanAdarsh/pg_cext/",
+      "type": "git"
+    }
+  },
+  "generated_by": "Your Name",
+  "meta-spec": {
+    "version": "1.0.0",
+    "url": "https://pgxn.org/meta/spec.txt"
+  },
+  "tags": [
+    "PostgreSQL",
+    "extension",
+    "addition",
+    "custom",
+    "C"
+  ]
+}

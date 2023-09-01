@@ -30,9 +30,10 @@ After completing this tutorial, you'll have a strong foundation in PostgreSQL ex
   - [5.1.2. **`DROP EXTENSION` method**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#drop-extension-and-create-extension-method-of-upgrading-extensions)
   
 ### [Part VI: Extension Management](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#extension-management) 
-- [6.1. **README.md**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#readmemd)
-- [6.2. **docfile**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#docfile)
-- [6.3. **Changelog and Versioning**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#changelog)
+- [6.1 **Versioning**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#versioning)
+- [6.2. **README.md**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#readmemd)
+- [6.3. **docfile**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#docfile)
+- [6.4. **Changelog and Versioning**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#changelog)
 
 ### [Part VII: Extension Distribution](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#extension-distribution)
 - [7.1. **Using PGXN**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#1-pgxn-postgresql-extension-network)

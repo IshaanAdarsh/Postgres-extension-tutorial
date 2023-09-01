@@ -42,8 +42,8 @@ After completing this tutorial, you'll have a strong foundation in PostgreSQL ex
 ### Part IV: Extension Upgradability
 
 5.1. **Updating Your Extension**
-    - 5.1.1. **`ALTER EXTENSION` method**
-    - 5.1.2. **`DROP EXTENSION` method**
+  - 5.1.1. **`ALTER EXTENSION` method**
+  - 5.1.2. **`DROP EXTENSION` method**
   
 ### Part VI: Extension Management and Distribution
 
@@ -52,21 +52,21 @@ After completing this tutorial, you'll have a strong foundation in PostgreSQL ex
 6.2. **Changelog and Versioning**
 
 6.3. **Extension Distribution**
-    - 6.3.1. **Using PGXN** 
-    - 6.3.2. **Using package managers**
+  - 6.3.1. **Using PGXN** 
+  - 6.3.2. **Using package managers**
 
 ### Part VII: Advanced Topics
 
 7.1. **Procedural Languages for Extension Creation**
-      - 7.1.1. **Using PL/pgSQL**
-      - 7.1.2. **Using PL/Python**
+  - 7.1.1. **Using PL/pgSQL**
+  - 7.1.2. **Using PL/Python**
 
 7.2. **External Languages for Extension Creation**
-    - 7.2.1. **Using C(External Language) to extend Postgres**
+  - 7.2.1. **Using C(External Language) to extend Postgres**
 
 7.3. **Extending PostgreSQL with `pg_sample_ext`**
-    - 7.3.1. **Creating a Custom Function**
-      - 7.3.2. **Creating and using Custom Data Types**
-         - 7.3.2.1. **Using `CREATE TYPE`**
-         - 7.3.2.2. **Using `CREATE DOMAIN`**
-      - 7.3.3. **Creating and using Custom Postgres Operators**
+  - 7.3.1. **Creating a Custom Function**
+  - 7.3.2. **Creating and using Custom Data Types**
+      - 7.3.2.1. **Using `CREATE TYPE`**
+      - 7.3.2.2. **Using `CREATE DOMAIN`**
+  - 7.3.3. **Creating and using Custom Postgres Operators**

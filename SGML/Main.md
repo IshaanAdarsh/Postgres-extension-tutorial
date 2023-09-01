@@ -612,21 +612,6 @@ Maintain a comprehensive changelog that documents all changes made in each relea
 
 ```
 
-## [Procedural Languages for the Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Procedural-language.md):
-- Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. 
-
-- #### For more information on the Procedural Languages in Extension Creation, you can refer to the [PostgreSQL documentation on Procedural Languages in Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Procedural-language.md). 
-
-## [External Languages for the Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/External-language.md):
-- External languages in PostgreSQL provide a powerful way to integrate additional programming languages, extending the database's capabilities beyond its native support.
-
-- #### For more information on the External Languages in Extension Creation, you can refer to the [PostgreSQL documentation on External Languages in Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/External-language.md). 
-
-## [Extending PostgreSQL with `pg_sample_ext`](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Sample-Ext.md): A Quick Start Guide
-- This guide offers step-by-step instructions on creating extensions, while introducing features like functions, custom data types, and operators. From foundational concepts to advanced techniques, this guide equips you with the skills to extend PostgreSQL effectively.
-
-- #### See [Extending PostgreSQL with `pg_sample_ext`](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Sample-Ext.md) for details.
-
 ## Extension Distribution:
 Once you have developed and tested your Postgres extension, it's time to distribute it to other users and developers. Distributing your extension ensures that others can benefit from your work and integrate it into their PostgreSQL databases. To achieve this, you can use various platforms and distribution methods to make your extension accessible to a diverse audience.
 
@@ -661,3 +646,20 @@ brew install my_extension
 
 > Note:
 > Ensure that your extension adheres to licensing and copyright requirements when distributing it across various platforms. It's essential to provide clear information about the license under which your extension is distributed and any dependencies it relies upon.
+
+# Advanced Topics:
+
+## [Procedural Languages for the Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Procedural-language.md):
+- Procedural languages in PostgreSQL provide a powerful way to extend the database's functionality by writing functions and procedures in languages other than SQL. 
+
+- #### For more information on the Procedural Languages in Extension Creation, you can refer to the [PostgreSQL documentation on Procedural Languages in Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Procedural-language.md). 
+
+## [External Languages for the Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/External-language.md):
+- External languages in PostgreSQL provide a powerful way to integrate additional programming languages, extending the database's capabilities beyond its native support.
+
+- #### For more information on the External Languages in Extension Creation, you can refer to the [PostgreSQL documentation on External Languages in Extension Creation](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/External-language.md). 
+
+## [Extending PostgreSQL with `pg_sample_ext`](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Sample-Ext.md): A Quick Start Guide
+- This guide offers step-by-step instructions on creating extensions, while introducing features like functions, custom data types, and operators. From foundational concepts to advanced techniques, this guide equips you with the skills to extend PostgreSQL effectively.
+
+- #### See [Extending PostgreSQL with `pg_sample_ext`](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Sample-Ext.md) for details.

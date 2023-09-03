@@ -7,7 +7,7 @@ After completing this tutorial, you'll have a strong foundation in PostgreSQL ex
 ## Table of Contents
 
 ### [Part I: Getting Started](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/intro_and_toc.md#part-i-getting-started)
-- [1.1. **Introduction to PostgreSQL Extensions**](https://www.postgresql.org/docs/current/extend.html)
+- [1.1. **Introduction to PostgreSQL Extensions**](https://www.postgresql.org/docs/current/extend-extensions.html)
 - [1.2. **Setting Up Your Environment**](https://www.postgresql.org/docs/current/tutorial-install.html)
 - [1.3. **Basic Extension Components**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#minimum-viable-product)
 

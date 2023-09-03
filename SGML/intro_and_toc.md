@@ -20,7 +20,7 @@ After completing this tutorial, you'll have a strong foundation in PostgreSQL ex
 - [2.6. **Creating and Implementing the Extension in PostgreSQL**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#step-6-create-the-extension-in-postgresql)
 
 ### [Part III: Regression Testing](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#regression-testing)
-- [3.1. **Introduction to Regression Testing**](https://www.postgresql.org/docs/current/regress.html)
+- [3.1. **Introduction to Regression Testing**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#step-1-create-the-extension-subdirectory-for-test-sql-files)
 - [3.2. **Creating Regression Test Scripts**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#step-1-create-the-extension-subdirectory-for-test-sql-files)
 - [3.3. **Running Regression Tests**](https://github.com/IshaanAdarsh/Postgres-extension-tutorial/blob/main/SGML/Main.md#step-4-run-make-installcheck)
 
